@@ -1,0 +1,226 @@
+.container {
+  display: flex;
+  padding: 20px
+}
+
+#description {
+  height: 500px;
+  width: 50%;
+  border-radius: 20px;
+  padding: 20px;
+  margin: auto
+}
+
+#map {
+  height: 500px;
+  width: 50%;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.vegas-content-scrollable {
+  display: flex
+}
+
+.vegas-content {
+  margin: auto
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'text';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/zillaslab/v6/dFa5ZfeM_74wlPZtksIFYpEY6H2pW2hz.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'text';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/zillaslab/v6/dFa5ZfeM_74wlPZtksIFYpEY6HOpWw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* chinese */
+@font-face {
+  font-family: 'text';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(cwTeXQFangsongZH-Medium-subset.woff2);
+  unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
+}
+
+body {
+  font-family: text;
+}
+
+.vegas-slide {
+  opacity: 0.3;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  font-size: 1.5em;
+}
+
+td.header {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+td.center {
+  text-align: center;
+}
+
+td#location,
+p.small {
+  font-size: 1em;
+}
+
+table.dataTable td.link:hover {
+  cursor: pointer;
+}
+
+#xiaobaiyue_wrapper {
+  margin-top: 10px;
+}
+
+input[type='checkbox'] {
+  width: 2em;
+  height: 2em;
+}
+
+#progress-container {
+  height: 40px;
+  padding: 0px 20px 50px 20px;
+}
+
+#progress {
+  display: none;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 15px;
+  background-color: lightgrey;
+  font-size: 1.25em;
+}
+
+.leaflet-popup-content a {
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+.leaflet-container a.marker {
+  font-size: 1.1rem;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+.leaflet-right.leaflet-top {
+  height: 36px;
+  background-color: #3298dc;
+}
+
+.presets {
+  border: 0;
+  background-color: #3298dc;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  pointer-events: auto;
+  height: 36px;
+}
+
+select.presets {
+  height: 32px;
+}
+
+.btn {
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    display: block;
+    padding: 5px
+  }
+
+  #description {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto
+  }
+
+  #map {
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px
+  }
+
+  #progress-container {
+    padding: 0px 5px 0px 5px;
+    margin-top: 20px;
+  }
+
+  #progress {
+    font-size: 1em;
+  }
+
+  table.dataTable tbody td.header {
+    font-size: 1.5em;
+  }
+
+  input[type='checkbox'] {
+    width: revert;
+    height: revert;
+  }
+
+  table.dataTable tbody th,
+  table.dataTable tbody td {
+    padding: 5px 2px;
+    font-size: 1.2em;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  td#location,
+  p.small {
+    font-size: 0.8em;
+  }
+}
