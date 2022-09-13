@@ -1,66 +1,56 @@
+// Number of peaks
+const TOTAL_XIAOBAIYUE = 116;
+const TOTAL_BAIYUE = 100;
+
 // Map settings
 const MAP_LAYERS = [{url: 'https://tile.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png', attribution: ""}, { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '© OpenStreetMap' }]
 const DEFAULT_COORDINATES = [23.9739881, 120.9097797]
 const DEFAULT_ZOOM = 7
 const MAX_ZOOM = 19
 
-// Colors for progress bar
-const GRADIENT = {
-  100: "#57bb8a",
-  95: "#63b682",
-  90: "#73b87e",
-  85: "#84bb7b",
-  80: "#94bd77",
-  75: "#a4c073",
-  70: "#b0be6e",
-  65: "#c4c56d",
-  60: "#d4c86a",
-  55: "#e2c965",
-  50: "#f5ce62",
-  45: "#f3c563",
-  40: "#e9b861",
-  35: "#e6ad61",
-  30: "#ecac67",
-  25: "#e9a268",
-  20: "#e79a69",
-  15: "#e5926b",
-  10: "#e2886c",
-  5: "#e0816d",
-  0: "#dd776e"
-}
-
 // Map markers
 var markers = {};
 var layers = [];
-const GREEN_ICON = L.AwesomeMarkers.icon({
+const 百岳_VISITED_ICON = L.AwesomeMarkers.icon({
+  markerColor: 'blue',
+  prefix: 'fa',
+  icon: 'mountain'
+});
+const 小百岳_VISITED_ICON = L.AwesomeMarkers.icon({
   markerColor: 'green',
   prefix: 'fa',
   icon: 'mountain'
 });
-const RED_ICON = L.AwesomeMarkers.icon({
-  markerColor: 'red',
+const 百岳_ICON = L.AwesomeMarkers.icon({
+  markerColor: 'darkblue',
+  prefix: 'fa',
+  icon: 'mountain'
+});
+const 小百岳_ICON = L.AwesomeMarkers.icon({
+  markerColor: 'darkgreen',
   prefix: 'fa',
   icon: 'mountain'
 });
 
 // Load visited peaks from local storage.
-var cache = JSON.parse(localStorage.getItem('xiaobaiyue.markers')) || {};
+var baiyueMarkers = JSON.parse(localStorage.getItem('baiyue.markers')) || {};
+var xiaoBaiyueMarkers = JSON.parse(localStorage.getItem('xiaobaiyue.markers')) || {};
 
 // Update the progress bar.
 function updateProgress() {
-  var climbed = 0;
-  for (const [key, value] of Object.entries(cache)) {
+  var baiyueClimbed = 0;
+  for (const [key, value] of Object.entries(baiyueMarkers)) {
     if (value) {
-      climbed++;
+      baiyueClimbed++;
     }
   }
-  var percent = 100 * (climbed / TOTAL);
-  var label = percent.toFixed(2) + "%";
-  $("#progress").text(label);
-  $("#progress").css("width", label);
-  $("#progress").css("display", percent > 0 ? "block" : "none");
-  $("#progress").css("padding-left", document.getElementById("progress").offsetWidth / 2 - getTextWidth(label, getCanvasFont(document.getElementById("progress")) / 2) + "px");
-  $("#progress").css("background-color", GRADIENT[roundNearest5(percent)]);
+  var xiaoBaiyueClimbed = 0;
+  for (const [key, value] of Object.entries(xiaoBaiyueMarkers)) {
+    if (value) {
+      xiaoBaiyueClimbed++;
+    }
+  }
+  $("#progress").text("Baiyue: " + baiyueClimbed + "/" + TOTAL_BAIYUE + ", Xiaobaiyue: " + xiaoBaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
 }
 
 $(document).ready(function () {
@@ -69,9 +59,9 @@ $(document).ready(function () {
 
   // Set the background of the description box.
   $("#description").vegas({
-    "slides": [{
-      src: "qixingshan.jpg"
-    }]
+    slides: [
+        { src: 'qixingshan.jpg' },
+    ]
   });
   
   $("#layer-selector").change(function() { 
@@ -79,12 +69,11 @@ $(document).ready(function () {
     layers[$("#layer-selector").val()].addTo(map);
   });
   
-  $( window ).resize(function() {
-    $("#progress").css("padding-left", document.getElementById("progress").offsetWidth / 2 - getTextWidth($("#progress").text(), getCanvasFont(document.getElementById("progress")) / 2) + "px");
-  });
-
   // Set checkboxes based on cached values.
-  for (const [key, value] of Object.entries(cache)) {
+  for (const [key, value] of Object.entries(baiyueMarkers)) {
+    $("#" + key).prop("checked", value);
+  }
+  for (const [key, value] of Object.entries(xiaoBaiyueMarkers)) {
     $("#" + key).prop("checked", value);
   }
   updateProgress();
@@ -98,8 +87,44 @@ $(document).ready(function () {
   MAP_LAYERS.forEach((layer, index) => layers[index] = L.tileLayer(layer["url"], { maxZoom: MAX_ZOOM, attribution: layer["attribution"] }));
   layers[$("#layer-selector").val() || 0].addTo(map);
   map.attributionControl.setPrefix("");
-  var table = $("#xiaobaiyue").DataTable({
+  $("#baiyue").DataTable({
     paging: false,
+    info: false,
+    responsive: {
+      details: false
+    },
+    order: [
+      [1, 'asc']
+    ],
+    "columns": [{
+        "orderable": false,
+        "width": "5%"
+      },
+      {
+        "type": "natural",
+        "width": "5%"
+      },
+      {
+        "type": "html",
+        "width": "27%"
+      },
+      {
+        "type": "html",
+        "width": "33%"
+      },
+      {
+        "type": "natural",
+        "width": "10%"
+      },
+      {
+        "orderable": false,
+        "width": "20%"
+      }
+    ],
+  });
+  $("#xiaobaiyue").DataTable({
+    paging: false,
+    info: false,
     responsive: {
       details: false
     },
@@ -124,11 +149,11 @@ $(document).ready(function () {
       },
       {
         "type": "html",
-        "width": "25%"
+        "width": "22%"
       },
       {
         "type": "html",
-        "width": "40%"
+        "width": "33%"
       },
       {
         "type": "natural",
@@ -136,10 +161,21 @@ $(document).ready(function () {
       },
       {
         "orderable": false,
-        "width": "10%"
+        "width": "20%"
       }
     ],
   });
+  
+  /* Recalculates the size of the resposive DataTable */
+function recalculateDataTableResponsiveSize() {
+    $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
+}
+
+$('#tabs').tabs({
+    activate: recalculateDataTableResponsiveSize,
+    create: recalculateDataTableResponsiveSize
+});
+  
   // Initialize the center of the map and the zoom level.
   var lat = localStorage['xiaobaiyue.lat'] || 23.9739881;
   var lng = localStorage['xiaobaiyue.lng'] || 120.9097797;
@@ -156,27 +192,8 @@ $(document).ready(function () {
   });
 });
 
-// Utility functions
-function roundNearest5(num) {
-  return Math.round(num / 5) * 5;
-}
-
-function getTextWidth(text, font) {
-  const canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
-  const context = canvas.getContext("2d");
-  context.font = font;
-  const metrics = context.measureText(text);
-  return metrics.width;
-}
-
-function getCssStyle(element, prop) {
-  return window.getComputedStyle(element, null).getPropertyValue(prop);
-}
-
-function getCanvasFont(el = document.body) {
-  const fontWeight = getCssStyle(el, 'font-weight') || 'normal';
-  const fontSize = getCssStyle(el, 'font-size') || '16px';
-  const fontFamily = getCssStyle(el, 'font-family') || 'Times New Roman';
-
-  return `${fontWeight} ${fontSize} ${fontFamily}`;
+function jumpTo(type, id) {
+  $("#tabs").tabs("option", "active", type);
+  var tag = $("#"+id);
+  $("html,body").animate({scrollTop: tag.offset().top},"slow");
 }

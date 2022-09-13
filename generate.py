@@ -5,17 +5,19 @@ import yaml
 from yaml.loader import SafeLoader
 from airium import Airium
 
-with open("xiaobaiyue.yml") as f:
+with open("data.yml") as f:
     data = yaml.load(f, Loader=SafeLoader)
-
     markers = ""
     for x in data:
         if x["location"]:
             markers += """
-                markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? GREEN_ICON : RED_ICON}}).bindPopup('<a href="#{}">{} {}</a><br/><button class="btn" data-clipboard-text="{}">Copy coordinates</button>').addTo(map);""".format(
+                markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? {}_VISITED_ICON : {}_ICON}}).bindPopup('<a onClick="jumpTo({},{});">{} {}</a><br/><button class="btn" data-clipboard-text="{}">Copy coordinates</button>').addTo(map);""".format(
                 x["OSM"],
                 x["location"],
                 x["OSM"],
+                x["type"],
+                x["type"],
+                0 if x["type"]=="百岳" else 1,
                 x["OSM"],
                 x["chinese"],
                 x["english"],
@@ -27,7 +29,7 @@ with a.html(lang="en"):
     with a.head():
         a.meta(charset="utf-8")
         a.meta(content="width=device-width, initial-scale=1", name="viewport")
-        a.title(_t="Taiwan's Xiaobaiyue 小百岳")
+        a.title(_t="Taiwan's 百岳 Baiyue")
         a.link(
             href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css",
             rel="stylesheet",
@@ -59,7 +61,7 @@ with a.html(lang="en"):
         a.meta(content="width=device-width, initial-scale=1.0", name="viewport")
         a.meta(content="no-referrer", name="referrer")
         a.meta(content="Martin Schneider", name="author")
-        a.meta(content='Taiwan"s Xiaobaiyue 小百岳', name="description")
+        a.meta(content='Taiwan\'s 百岳 Baiyue', name="description")
         a.base(target="_parent")
         a.script(src="https://code.jquery.com/jquery-3.6.0.min.js")
         a.script(src="https://code.jquery.com/ui/1.13.1/jquery-ui.js")
@@ -86,8 +88,6 @@ with a.html(lang="en"):
         with a.script():
             a(
                 """
-          // Number of peaks
-          const TOTAL = 116;
           $(document).ready(function () {{{}}});
           """.format(
                     markers
@@ -97,23 +97,14 @@ with a.html(lang="en"):
         with a.div(klass="container"):
             with a.div(id="description"):
                 with a.h1():
-                    a("🌄 Taiwan's 小百岳 Xiaobaiyue 🌄")
+                    a("Taiwan's 百岳 Baiyue")
+                with a.p():
+                    a(""" In 1971, a group of Taiwanese hikers compiled a list that's since become known as the <b>百岳 Baiyue</b>. It's a collection of 100 peaks above 3000 m. As such it has become a bucket list for many Taiwanese hikers.""")
                 with a.p():
                     a(
-                        """In an effort to promote national mountaineering, the Sports Committee of Taiwan identified 100 entry-level hikes. These peaks are known as the 小百岳 Xiaobaiyue, Taiwan's 100 small peaks."""
-                    )
-                with a.p():
-                    a(
-                        """This page aims to collect information about all current and former 小百岳 and let's you keep track of which ones you've already been to."""
+                        """In 1992, in an effort to promote national mountaineering, the Sports Committee of Taiwan identified 100 entry-level hikes. These peaks are known as the <b>小百岳 Xiaobaiyue</b>, Taiwan's 100 "little" peaks."""
                     )
                 with a.p(klass="small"):
-                    a("Sources can be found on ")
-                    a.a(
-                        href="https://zh.m.wikipedia.org/zh-tw/%E5%8F%B0%E7%81%A3%E5%B0%8F%E7%99%BE%E5%B2%B3%E5%88%97%E8%A1%A8",
-                        _t="Wikipedia.",
-                    )
-                    a("Names, location and elevation data have been updated from ")
-                    a.a(href="https://www.openstreetmap.org", _t="OpenStreetMap.")
                     a("Please ")
                     a.a(
                         href="https://docs.google.com/spreadsheets/d/1F9N4VxXvDMfUJgLy6YUt6U7PTh9kFNGJjEzrriyXS_Y/edit?usp=sharing",
@@ -121,91 +112,168 @@ with a.html(lang="en"):
                     )
                     a("or provide ")
                     a.a(href="mailto:xiaobaiyue@5164.at", _t="other feedback.")
-                with a.p(klass="small"):
                     a(
-                        "This page is ad-free. If you find it useful, consider "
+                        "If you find this page useful, consider "
                     )
-                    a.a(href="http://buymeacoffee.com/mschneider", _t="donating.")
-                    a("❤️ Thank you!")
+                    a.a(href="http://buymeacoffee.com/mschneider", _t="donating")
+                    a("❤️")
             with a.div(id="map"):
                 with a.div(klass="leaflet-top leaflet-right"):
                     with a.select(klass="presets", id="layer-selector"):
                         a.option(value="0", _t="台灣魯地圖")
                         a.option(value="1", _t="OpenStreetMap", selected=True)
                     a.input(klass="presets", type="button", value="🇹🇼 台灣 Taiwan", onclick="map.setView(DEFAULT_COORDINATES, DEFAULT_ZOOM)")
-        with a.div(id="progress-container"):
-            a.div(id="progress", _t="25%")
-        with a.table(klass="display", id="xiaobaiyue", width="100%"):
-            with a.thead():
-                with a.tr():
-                    a.th(_t="✔️", **{"data-priority": "1"})
-                    a.th(_t="2017", **{"data-priority": "5"})
-                    a.th(_t="2006")
-                    a.th(_t="2003")
-                    a.th(_t="Chinese name", **{"data-priority": "1"})
-                    a.th(_t="English name", **{"data-priority": "2"})
-                    a.th(_t="Height", **{"data-priority": "3"})
-                    a.th(_t="Location", **{"data-priority": "4"})
-            with a.tbody():
-                for x in data:
+                with a.div(klass="leaflet-bottom leaflet-left"):
+                    a.span(id="progress", _t="Baiyue: 0/100<br />Xiaobaiyue: 0/100")
+        with a.div(klass="table-container"):
+          with a.div(id="tabs"):
+            with a.ul():
+                with a.li():
+                    a.a(href="#tab-baiyue", _t="百岳 Baiyue")
+                with a.li():
+                    a.a(href="#tab-xiaobaiyue", _t="小百岳 Xiaobaiyue")
+            with a.div(id="tab-baiyue"):
+              with a.table(klass="display", id="baiyue", width="100%"):
+                with a.thead():
                     with a.tr():
-                        with a.td(klass="center"):
-                            a.a(name="{}".format(str(x["OSM"])))
-                            a.input(
-                                type="checkbox",
-                                id="{}".format(x["OSM"]),
-                                onClick="""
-                            var checkbox = $("#{}");
-                            var checked = $("#{}").prop("checked");
-                            markers[{}].setIcon(checked ? GREEN_ICON : RED_ICON);
-                            cache[{}] = checked ? true : false;
-                            updateProgress();
-                            localStorage.setItem("xiaobaiyue.markers", JSON.stringify(cache));
-                            """.format(
-                                    x["OSM"], x["OSM"], x["OSM"], x["OSM"]
-                                ),
-                            )
-                        with a.td(klass="center"):
-                            a(str(x["id-2017"] or "-"))
-                        with a.td(klass="center"):
-                            a(str(x["id-2006"] or "-"))
-                        with a.td(klass="center"):
-                            a(str(x["id-2003"] or "-"))
-                        with a.td(klass="header"):
-                            a.span(id="chinese_" + str(x["OSM"]), _t=x["chinese"])
-                            a.button(
-                                klass="btn",
-                                **{
-                                    "data-clipboard-target": "#chinese_" + str(x["OSM"])
-                                },
-                                _t="Copy"
-                            )
-                        with a.td(
-                            klass="link",
-                            onClick='$("#map")[0].scrollIntoView();map.flyTo([{}], 15);markers[{}].openPopup()'.format(
-                                x["location"], x["OSM"]
-                            ),
-                        ):
-                            a(x["english"])
-                        with a.td():
-                            a("{}m".format(round(float(x["height"]))));
-                        with a.td(id="location"):
-                            if x["location"] != None:
-                                coords = str(x["location"]).split(",")
-                            a.span(
-                                id="location_" + str(x["OSM"]),
-                                _t="{}, {}".format(
-                                    round(float(coords[0]), 3),
-                                    round(float(coords[1]), 3),
-                                ),
-                            )
-                            a.button(
-                                klass="btn",
-                                **{
-                                    "data-clipboard-target": "#location_"
-                                    + str(x["OSM"])
-                                },
-                                _t="Copy"
-                            )
+                        a.th(_t="✔️", **{"data-priority": "1"}, klass="center")
+                        a.th(_t="#", **{"data-priority": "5"}, klass="center")
+                        a.th(_t="Chinese name", **{"data-priority": "1"})
+                        a.th(_t="English name", **{"data-priority": "2"})
+                        a.th(_t="Height", **{"data-priority": "3"})
+                        a.th(_t="Location", **{"data-priority": "4"})
+                with a.tbody():
+                        for x in data:
+                            if not x['type'] == "百岳": continue
+                            with a.tr():
+                                with a.td(klass="center"):
+                                    a.a(name="{}".format(str(x["OSM"])))
+                                    a.input(
+                                        type="checkbox",
+                                        id="{}".format(x["OSM"]),
+                                        onClick="""
+                                    var checkbox = $("#{}");
+                                    var checked = $("#{}").prop("checked");
+                                    markers[{}].setIcon(checked ? {}_VISITED_ICON : {}_ICON);
+                                    baiyueMarkers[{}] = checked ? true : false;
+                                    updateProgress();
+                                    localStorage.setItem("baiyue.markers", JSON.stringify(baiyueMarkers));
+                                    """.format(
+                                            x["OSM"], x["OSM"], x["OSM"], x["type"], x["type"], x["OSM"]
+                                        ),
+                                    )
+                                with a.td(klass="center"):
+                                     a(str(x["id"] or "-"))
+                                with a.td(klass="header"):
+                                    a.span(id="chinese_" + str(x["OSM"]), _t=x["chinese"])
+                                    a.button(
+                                        klass="btn",
+                                        **{
+                                            "data-clipboard-target": "#chinese_" + str(x["OSM"])
+                                        },
+                                        _t="Copy"
+                                    )
+                                with a.td(
+                                    klass="link",
+                                    onClick='$("#map")[0].scrollIntoView();map.flyTo([{}], 15);markers[{}].openPopup()'.format(
+                                        x["location"], x["OSM"]
+                                    ),
+                                ):
+                                    a(x["english"])
+                                with a.td():
+                                    a("{}m".format(round(float(x["height"]))));
+                                with a.td(id="location"):
+                                    if x["location"] != None:
+                                        coords = str(x["location"]).split(",")
+                                    a.span(
+                                        id="location_" + str(x["OSM"]),
+                                        _t="{}, {}".format(
+                                            round(float(coords[0]), 3),
+                                            round(float(coords[1]), 3),
+                                        ),
+                                    )
+                                    a.button(
+                                        klass="btn",
+                                        **{
+                                            "data-clipboard-target": "#location_"
+                                            + str(x["OSM"])
+                                        },
+                                        _t="Copy"
+                                    )
+            with a.div(id="tab-xiaobaiyue"):
+              with a.table(klass="display", id="xiaobaiyue", width="100%"):
+                with a.thead():
+                    with a.tr():
+                        a.th(_t="✔️", **{"data-priority": "1"}, klass="center")
+                        a.th(_t="2017", **{"data-priority": "5"}, klass="center")
+                        a.th(_t="2006", klass="center")
+                        a.th(_t="2003", klass="center")
+                        a.th(_t="Chinese name", **{"data-priority": "1"})
+                        a.th(_t="English name", **{"data-priority": "2"})
+                        a.th(_t="Height", **{"data-priority": "3"})
+                        a.th(_t="Location", **{"data-priority": "4"})
+                with a.tbody():
+                        for x in data:
+                            if not x['type'] == "小百岳": continue
+                            with a.tr():
+                                with a.td(klass="center"):
+                                    a.a(name="{}".format(str(x["OSM"])))
+                                    a.input(
+                                        type="checkbox",
+                                        id="{}".format(x["OSM"]),
+                                        onClick="""
+                                    var checkbox = $("#{}");
+                                    var checked = $("#{}").prop("checked");
+                                    markers[{}].setIcon(checked ? {}_VISITED_ICON : {}_ICON);
+                                    xiaoBaiyueMarkers[{}] = checked ? true : false;
+                                    updateProgress();
+                                    localStorage.setItem("xiaobaiyue.markers", JSON.stringify(xiaoBaiyueMarkers));
+                                    """.format(
+                                            x["OSM"], x["OSM"], x["OSM"], x["type"], x["type"], x["OSM"]
+                                        ),
+                                    )
+                                with a.td(klass="center"):
+                                     a(str(x["id-2017"] or "-"))
+                                with a.td(klass="center"):
+                                    a(str(x["id-2006"] or "-"))
+                                with a.td(klass="center"):
+                                    a(str(x["id-2003"] or "-"))
+                                with a.td(klass="header"):
+                                    a.span(id="chinese_" + str(x["OSM"]), _t=x["chinese"])
+                                    a.button(
+                                        klass="btn",
+                                        **{
+                                            "data-clipboard-target": "#chinese_" + str(x["OSM"])
+                                        },
+                                        _t="Copy"
+                                    )
+                                with a.td(
+                                    klass="link",
+                                    onClick='$("#map")[0].scrollIntoView();map.flyTo([{}], 15);markers[{}].openPopup()'.format(
+                                        x["location"], x["OSM"]
+                                    ),
+                                ):
+                                    a(x["english"])
+                                with a.td():
+                                    a("{}m".format(round(float(x["height"]))));
+                                with a.td(id="location"):
+                                    if x["location"] != None:
+                                        coords = str(x["location"]).split(",")
+                                    a.span(
+                                        id="location_" + str(x["OSM"]),
+                                        _t="{}, {}".format(
+                                            round(float(coords[0]), 3),
+                                            round(float(coords[1]), 3),
+                                        ),
+                                    )
+                                    a.button(
+                                        klass="btn",
+                                        **{
+                                            "data-clipboard-target": "#location_"
+                                            + str(x["OSM"])
+                                        },
+                                        _t="Copy"
+                                    )
+
 print(str(a))
 

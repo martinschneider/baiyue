@@ -3,6 +3,10 @@
   padding: 20px
 }
 
+.table-container {
+  padding: 20px
+}
+
 #description {
   height: 500px;
   width: 50%;
@@ -16,6 +20,66 @@
   width: 50%;
   border-radius: 20px;
   margin-left: 20px;
+}
+
+div#tabs {
+  border-radius: 20px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.ui-tabs .ui-tabs-nav li[aria-controls="tab-baiyue"] {
+  background: darkblue;
+  width: 15em;
+}
+
+.ui-tabs .ui-tabs-nav li[aria-controls="tab-xiaobaiyue"] {
+  background: darkgreen;
+  width: 15em;
+}
+
+.ui-tabs .ui-tabs-nav li[aria-controls="tab-baiyue"] a, .ui-tabs .ui-tabs-nav li[aria-controls="tab-xiaobaiyue"] a {
+  color: lightgrey;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor a {
+  color: white;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  float: unset;
+  text-align: center;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: 1px solid blue;
+  font-weight: bold;
+  color: white;
+}
+
+.ui-tabs .ui-tabs-nav li, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  margin: 0;
+  padding: 0;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+  color: white;
+}
+
+.ui-tabs .ui-tabs-nav {
+    text-align: center;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    float: none !important;
+    display: inline-block;
+}
+
+.ui-widget-header {
+  background: none;
+  border: none;
 }
 
 .vegas-content-scrollable {
@@ -54,12 +118,12 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(cwTeXQFangsongZH-Medium-subset.woff2);
+  src: url(chinese.woff2);
   unicode-range: U+3000-30FF, U+FF00-FFEF, U+4E00-9FAF;
 }
 
-body {
-  font-family: text;
+body, .ui-widget {
+  font-family: text; !important
 }
 
 .vegas-slide {
@@ -75,6 +139,10 @@ p {
   font-size: 1.5em;
 }
 
+#tab-xiaobaiyue, #tab-baiyue {
+  padding: 15px 0;
+}
+
 th {
   text-align: left;
 }
@@ -88,40 +156,26 @@ td.header {
   font-weight: bold;
 }
 
-td.center {
+td.center, th.center {
   text-align: center;
 }
 
 td#location,
 p.small {
-  font-size: 1em;
+  font-size: 1.25em;
 }
 
-table.dataTable td.link:hover {
+table.dataTable td.link {
   cursor: pointer;
 }
 
-#xiaobaiyue_wrapper {
-  margin-top: 10px;
+table.dataTable.no-footer {
+  border: none;
 }
 
 input[type='checkbox'] {
-  width: 2em;
-  height: 2em;
-}
-
-#progress-container {
-  height: 40px;
-  padding: 0px 20px 50px 20px;
-}
-
-#progress {
-  display: none;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 15px;
-  background-color: lightgrey;
-  font-size: 1.25em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .leaflet-popup-content a {
@@ -148,6 +202,13 @@ input[type='checkbox'] {
   background-color: #3298dc;
 }
 
+.leaflet-left.leaflet-bottom {
+  background-color: #3298dc;
+  color: white;
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
 .presets {
   border: 0;
   background-color: #3298dc;
@@ -162,13 +223,26 @@ select.presets {
   height: 32px;
 }
 
-.btn {
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  padding: .5em;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+  font-size: 1.5em;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button.btn {
   margin-left: 5px;
+  font-size: initial;
 }
 
 @media only screen and (max-width: 1024px) {
   .container {
     display: block;
+    padding: 5px
+  }
+  
+  .table-container {
     padding: 5px
   }
 
@@ -186,41 +260,8 @@ select.presets {
     margin: auto;
     margin-top: 20px
   }
-
-  #progress-container {
-    padding: 0px 5px 0px 5px;
-    margin-top: 20px;
-  }
-
-  #progress {
-    font-size: 1em;
-  }
-
-  table.dataTable tbody td.header {
-    font-size: 1.5em;
-  }
-
-  input[type='checkbox'] {
-    width: revert;
-    height: revert;
-  }
-
-  table.dataTable tbody th,
-  table.dataTable tbody td {
-    padding: 5px 2px;
-    font-size: 1.2em;
-  }
-
-  h1 {
-    font-size: 1.75em;
-  }
-
-  p {
-    font-size: 1.2em;
-  }
-
-  td#location,
-  p.small {
-    font-size: 0.8em;
+  
+  div#tabs {
+    border-radius: 10px;
   }
 }
