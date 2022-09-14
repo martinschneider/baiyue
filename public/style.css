@@ -3,8 +3,12 @@
   padding: 20px
 }
 
-.table-container {
+#table-container {
   padding: 20px
+}
+
+#btn-box {
+  text-align: center;
 }
 
 #description {
@@ -24,62 +28,23 @@
 
 div#tabs {
   border-radius: 20px;
+  padding: 0;
 }
 
 a {
   cursor: pointer;
 }
 
-.ui-tabs .ui-tabs-nav li[aria-controls="tab-baiyue"] {
-  background: darkblue;
-  width: 15em;
-}
-
-.ui-tabs .ui-tabs-nav li[aria-controls="tab-xiaobaiyue"] {
-  background: darkgreen;
-  width: 15em;
-}
-
-.ui-tabs .ui-tabs-nav li[aria-controls="tab-baiyue"] a, .ui-tabs .ui-tabs-nav li[aria-controls="tab-xiaobaiyue"] a {
-  color: lightgrey;
-}
-
-.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor a {
+a#baiyue-btn {
+  background: #0066a2;
   color: white;
+  font-size: 1.25em;
 }
 
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-  float: unset;
-  text-align: center;
-}
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-  border: 1px solid blue;
-  font-weight: bold;
+a#xiaobaiyue-btn {
+  background: #728224;
   color: white;
-}
-
-.ui-tabs .ui-tabs-nav li, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-  margin: 0;
-  padding: 0;
-}
-
-.ui-tabs .ui-tabs-nav li a {
-  color: white;
-}
-
-.ui-tabs .ui-tabs-nav {
-    text-align: center;
-}
-
-.ui-tabs .ui-tabs-nav li {
-    float: none !important;
-    display: inline-block;
-}
-
-.ui-widget-header {
-  background: none;
-  border: none;
+  font-size: 1.25em;
 }
 
 .vegas-content-scrollable {
@@ -223,26 +188,13 @@ select.presets {
   height: 32px;
 }
 
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-  padding: .5em;
-}
-
-.ui-tabs .ui-tabs-nav li a {
-  font-size: 1.5em;
-}
-
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button.btn {
-  margin-left: 5px;
-  font-size: initial;
-}
-
 @media only screen and (max-width: 1024px) {
   .container {
     display: block;
     padding: 5px
   }
   
-  .table-container {
+  #table-container {
     padding: 5px
   }
 

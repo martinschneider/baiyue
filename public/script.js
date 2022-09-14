@@ -166,16 +166,6 @@ $(document).ready(function () {
     ],
   });
   
-  /* Recalculates the size of the resposive DataTable */
-function recalculateDataTableResponsiveSize() {
-    $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
-}
-
-$('#tabs').tabs({
-    activate: recalculateDataTableResponsiveSize,
-    create: recalculateDataTableResponsiveSize
-});
-  
   // Initialize the center of the map and the zoom level.
   var lat = localStorage['xiaobaiyue.lat'] || 23.9739881;
   var lng = localStorage['xiaobaiyue.lng'] || 120.9097797;
@@ -192,8 +182,18 @@ $('#tabs').tabs({
   });
 });
 
-function jumpTo(type, id) {
-  $("#tabs").tabs("option", "active", type);
-  var tag = $("#"+id);
-  $("html,body").animate({scrollTop: tag.offset().top},"slow");
+function displayBaiyue() {
+  $("#tab-baiyue").css("display", "unset");
+  $("#tab-xiaobaiyue").css("display", "none");
+  $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
+}
+
+function displayXiaobaiyue() {
+  $("#tab-baiyue").css("display", "none");
+  $("#tab-xiaobaiyue").css("display", "unset");
+  $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
+}
+
+function jumpTo(id) {
+  $("html,body").animate({scrollTop: $("#"+id).offset().top},"slow");
 }

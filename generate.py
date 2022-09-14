@@ -11,13 +11,13 @@ with open("data.yml") as f:
     for x in data:
         if x["location"]:
             markers += """
-                markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? {}_VISITED_ICON : {}_ICON}}).bindPopup('<a onClick="jumpTo({},{});">{} {}</a><br/><button class="btn" data-clipboard-text="{}">Copy coordinates</button>').addTo(map);""".format(
+                markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? {}_VISITED_ICON : {}_ICON}}).bindPopup('<a onClick="{};jumpTo({});">{} {}</a><br/><button class="btn" data-clipboard-text="{}">Copy coordinates</button>').addTo(map);""".format(
                 x["OSM"],
                 x["location"],
                 x["OSM"],
                 x["type"],
                 x["type"],
-                0 if x["type"]=="百岳" else 1,
+                "displayBaiyue()" if x["type"]=="百岳" else "displayXiaobaiyue()",
                 x["OSM"],
                 x["chinese"],
                 x["english"],
@@ -124,15 +124,12 @@ with a.html(lang="en"):
                         a.option(value="1", _t="OpenStreetMap", selected=True)
                     a.input(klass="presets", type="button", value="🇹🇼 台灣 Taiwan", onclick="map.setView(DEFAULT_COORDINATES, DEFAULT_ZOOM)")
                 with a.div(klass="leaflet-bottom leaflet-left"):
-                    a.span(id="progress", _t="Baiyue: 0/100<br />Xiaobaiyue: 0/100")
-        with a.div(klass="table-container"):
-          with a.div(id="tabs"):
-            with a.ul():
-                with a.li():
-                    a.a(href="#tab-baiyue", _t="百岳 Baiyue")
-                with a.li():
-                    a.a(href="#tab-xiaobaiyue", _t="小百岳 Xiaobaiyue")
-            with a.div(id="tab-baiyue"):
+                    a.span(id="progress", _t="Baiyue: 0/100, Xiaobaiyue: 0/100")
+        with a.div(id="table-container"):
+         with a.div(id="btn-box"):
+          a.a(_t="Baiyue", id="baiyue-btn", klass="ui-button ui-widget ui-corner-all", onClick="displayBaiyue()")
+          a.a(_t="Xiaobaiyue", id="xiaobaiyue-btn", klass="ui-button ui-widget ui-corner-all", onClick="displayXiaobaiyue()")
+         with a.div(id="tab-baiyue"):
               with a.table(klass="display", id="baiyue", width="100%"):
                 with a.thead():
                     with a.tr():
@@ -200,7 +197,7 @@ with a.html(lang="en"):
                                         },
                                         _t="Copy"
                                     )
-            with a.div(id="tab-xiaobaiyue"):
+         with a.div(id="tab-xiaobaiyue"):
               with a.table(klass="display", id="xiaobaiyue", width="100%"):
                 with a.thead():
                     with a.tr():
