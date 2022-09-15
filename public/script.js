@@ -8,6 +8,9 @@ const DEFAULT_COORDINATES = [23.9739881, 120.9097797]
 const DEFAULT_ZOOM = 7
 const MAX_ZOOM = 19
 
+// Delay after which a (one-time) notice is shown that the page looks better in landscape mode
+const POPUP_DELAY = 30000
+
 // Map markers
 var markers = {};
 var layers = [];
@@ -68,9 +71,11 @@ $(document).ready(function () {
   });
   $("#dialog").dialog("close");
   
-  if (!localStorage['landscape.ack'] && window.innerHeight > window.innerWidth) {
+  setTimeout(function() {
+    if (!localStorage['landscape.ack'] && window.innerHeight > window.innerWidth) {
       $("#dialog").dialog("open");
-  }
+    }
+  }, POPUP_DELAY);
 
   // Add copy to clipboard function to buttons.
   new ClipboardJS('.btn');
@@ -78,7 +83,8 @@ $(document).ready(function () {
   // Set the background of the description box.
   $("#description").vegas({
     slides: [
-        { src: 'qixingshan.jpg' },
+        { src: "qixingshan.jpg" },
+        { src: "yushan.jpg" },
     ]
   });
   
