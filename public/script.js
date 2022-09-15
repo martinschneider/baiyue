@@ -50,10 +50,28 @@ function updateProgress() {
       xiaoBaiyueClimbed++;
     }
   }
-  $("#progress").text("Baiyue: " + baiyueClimbed + "/" + TOTAL_BAIYUE + ", Xiaobaiyue: " + xiaoBaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
+  $("label[for='baiyue-checkbox']").text("Baiyue: " + baiyueClimbed + "/" + TOTAL_BAIYUE);
+  $("label[for='xiaobaiyue-checkbox']").text("Xiaobaiyue: " + xiaoBaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
 }
 
 $(document).ready(function () {
+  $("#dialog").dialog(
+  {
+    modal:true,
+    title:'Taiwan\'s 百岳 Baiyue',
+    buttons: {
+      Ok: function() {
+        localStorage.setItem("landscape.ack", true);
+        $( this ).dialog("close");
+      }
+    }
+  });
+  $("#dialog").dialog("close");
+  
+  if (!localStorage['landscape.ack'] && window.innerHeight > window.innerWidth) {
+      $("#dialog").dialog("open");
+  }
+
   // Add copy to clipboard function to buttons.
   new ClipboardJS('.btn');
 
@@ -69,6 +87,15 @@ $(document).ready(function () {
     layers[$("#layer-selector").val()].addTo(map);
   });
   
+  $("#baiyue-checkbox, #xiaobaiyue-checkbox").change(function() { 
+    updateMarkers();
+  });
+  
+  $("label[for='baiyue-checkbox'],label[for='xiaobaiyue-checkbox']").on("click", function(e) { 
+    updateMarkers();
+    e.stopPropagation();
+  });
+  
   // Set checkboxes based on cached values.
   for (const [key, value] of Object.entries(baiyueMarkers)) {
     $("#" + key).prop("checked", value);
@@ -76,6 +103,7 @@ $(document).ready(function () {
   for (const [key, value] of Object.entries(xiaoBaiyueMarkers)) {
     $("#" + key).prop("checked", value);
   }
+
   updateProgress();
 
   // Initialize map.
@@ -86,7 +114,8 @@ $(document).ready(function () {
   }).setView(DEFAULT_COORDINATES, DEFAULT_ZOOM);
   MAP_LAYERS.forEach((layer, index) => layers[index] = L.tileLayer(layer["url"], { maxZoom: MAX_ZOOM, attribution: layer["attribution"] }));
   layers[$("#layer-selector").val() || 0].addTo(map);
-  map.attributionControl.setPrefix("");
+  map.attributionControl.setPrefix("");  
+  
   $("#baiyue").DataTable({
     paging: false,
     info: false,
@@ -181,6 +210,17 @@ $(document).ready(function () {
     localStorage['xiaobaiyue.lng'] = map.getCenter().lng;
   });
 });
+
+function updateMarkers() {
+  var baiyue = $("#baiyue-checkbox").is(":checked");
+  var xiaobaiyue = $("#xiaobaiyue-checkbox").is(":checked");
+  for (const [key, value] of Object.entries(markers)) {
+    markers[key].removeFrom(map);
+    if ((BAIYUE.includes(parseInt(key)) && baiyue) || (XIAOBAIYUE.includes(parseInt(key)) && xiaobaiyue)) {
+      markers[key].addTo(map);
+    }
+  }
+}
 
 function displayBaiyue() {
   $("#tab-baiyue").css("display", "unset");

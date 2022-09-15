@@ -174,6 +174,11 @@ input[type='checkbox'] {
   padding: 0 10px;
 }
 
+.leaflet-bottom {
+  pointer-events: all;
+  display: flex;
+}
+
 .presets {
   border: 0;
   background-color: #3298dc;
@@ -186,6 +191,10 @@ input[type='checkbox'] {
 
 select.presets {
   height: 32px;
+}
+
+.ui-dialog {
+  z-index: 9999;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -212,8 +221,12 @@ select.presets {
     margin: auto;
     margin-top: 20px
   }
-  
+    
   div#tabs {
     border-radius: 10px;
+  }
+  
+  .leaflet-bottom {
+    display: unset;
   }
 }

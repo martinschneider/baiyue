@@ -8,21 +8,26 @@ from airium import Airium
 with open("data.yml") as f:
     data = yaml.load(f, Loader=SafeLoader)
     markers = ""
+    constants = ""
+    baiyue = []
+    xiaobaiyue = []
     for x in data:
-        if x["location"]:
-            markers += """
-                markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? {}_VISITED_ICON : {}_ICON}}).bindPopup('<a onClick="{};jumpTo({});">{} {}</a><br/><button class="btn" data-clipboard-text="{}">Copy coordinates</button>').addTo(map);""".format(
-                x["OSM"],
-                x["location"],
-                x["OSM"],
-                x["type"],
-                x["type"],
-                "displayBaiyue()" if x["type"]=="百岳" else "displayXiaobaiyue()",
-                x["OSM"],
-                x["chinese"],
-                x["english"],
-                x["location"]
-            )
+        baiyue.append(x["OSM"]) if x["type"]=="百岳" else xiaobaiyue.append(x["OSM"])
+        markers += """
+            markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? {}_VISITED_ICON : {}_ICON}}).bindPopup('<a onClick="{};jumpTo({});">{} {}</a><br/><button class="btn" data-clipboard-text="{}">Copy coordinates</button>').addTo(map);""".format(
+            x["OSM"],
+            x["location"],
+            x["OSM"],
+            x["type"],
+            x["type"],
+            "displayBaiyue()" if x["type"]=="百岳" else "displayXiaobaiyue()",
+            x["OSM"],
+            x["chinese"],
+            x["english"],
+            x["location"]
+        )
+    constants += """const BAIYUE = {};
+                    const XIAOBAIYUE ={};""".format(baiyue, xiaobaiyue)
 a = Airium()
 a("<!DOCTYPE html>")
 with a.html(lang="en"):
@@ -88,12 +93,16 @@ with a.html(lang="en"):
         with a.script():
             a(
                 """
-          $(document).ready(function () {{{}}});
+                {}
+          $(document).ready(function () {{{};
+            updateMarkers();}});
           """.format(
-                    markers
+                    constants, markers
                 )
             )
     with a.body():
+        with a.div(id="dialog"):
+          a.p(_t="This page displays more details in landscape mode.")
         with a.div(klass="container"):
             with a.div(id="description"):
                 with a.h1():
@@ -124,7 +133,13 @@ with a.html(lang="en"):
                         a.option(value="1", _t="OpenStreetMap", selected=True)
                     a.input(klass="presets", type="button", value="🇹🇼 台灣 Taiwan", onclick="map.setView(DEFAULT_COORDINATES, DEFAULT_ZOOM)")
                 with a.div(klass="leaflet-bottom leaflet-left"):
-                    a.span(id="progress", _t="Baiyue: 0/100, Xiaobaiyue: 0/100")
+                  with a.div("checkboxes"):
+                    a.input(id="baiyue-checkbox", type="checkbox", checked=True)
+                    a.label(_t="Baiyue", **{"for": "baiyue-checkbox"})
+                  with a.div("checkboxes"):
+                    a.input(id="xiaobaiyue-checkbox", type="checkbox", checked=True)
+                    a.label(_t="Xiaobaiyue", **{"for": "xiaobaiyue-checkbox"})
+                        
         with a.div(id="table-container"):
          with a.div(id="btn-box"):
           a.a(_t="Baiyue", id="baiyue-btn", klass="ui-button ui-widget ui-corner-all", onClick="displayBaiyue()")
