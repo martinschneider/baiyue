@@ -14,7 +14,7 @@ with open("data.yml") as f:
     for x in data:
         baiyue.append(x["OSM"]) if x["type"]=="百岳" else xiaobaiyue.append(x["OSM"])
         markers += """
-            markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? {}_VISITED_ICON : {}_ICON}}).bindPopup('<a onClick="{};jumpTo({});">{} {}</a><br/><button class="btn" data-clipboard-text="{}">Copy coordinates</button>').addTo(map);""".format(
+            markers["{}"] = L.marker([{}], {{icon: $("#{}").prop("checked") ? {}_VISITED_ICON : {}_ICON}}).bindPopup('<h2><a onClick="{};jumpTo({});">{} {}</a></h2><ul><li><button class="btn" data-clipboard-text="{}">Copy location (WGS84)</button></li><li><button class="btn" data-clipboard-text="{}">Copy Chinese name</button></li><li><a href="https://hiking.biji.co/index.php?q=mountain&category={}&page=1&keyword={}" target="_blank">Tour descriptions (健行筆記)</a></li></ul>').addTo(map);""".format(
             x["OSM"],
             x["location"],
             x["OSM"],
@@ -24,7 +24,10 @@ with open("data.yml") as f:
             x["OSM"],
             x["chinese"],
             x["english"],
-            x["location"]
+            x["location"],
+            x["chinese"],
+            1 if x["type"]=="百岳" else 2,
+            x["chinese"],
         )
     constants += """const BAIYUE = {};
                     const XIAOBAIYUE ={};""".format(baiyue, xiaobaiyue)

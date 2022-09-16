@@ -82,6 +82,7 @@ $(document).ready(function () {
 
   // Set the background of the description box.
   $("#description").vegas({
+    delay: 10000,
     slides: [
         { src: "qixingshan.jpg" },
         { src: "yushan.jpg" },

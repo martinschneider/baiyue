@@ -154,6 +154,24 @@ input[type='checkbox'] {
   font-size: 1.1rem;
 }
 
+.leaflet-popup-content h2 a{
+  font-size: 1.2em;
+}
+
+.leaflet-popup-content a {
+  font-size: 1.5em;
+}
+
+.leaflet-popup-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaflet-popup-content ul li{
+  margin: 10px;
+}
+
 .leaflet-popup-content {
   text-align: center;
 }
