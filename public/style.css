@@ -1,3 +1,30 @@
+div.menu {
+  text-align: right;
+}
+
+div.menu a {
+  font-size: 2em;
+  text-decoration: none;
+  color: black;
+}
+
+.swal2-html-container a {
+  text-decoration: none;
+  color: gray;
+}
+
+.swal2-html-container a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.swal2-html-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6em;
+}
+
 .container {
   display: flex;
   padding: 20px
@@ -9,6 +36,7 @@
 
 #btn-box {
   text-align: center;
+  margin-top: 20px;
 }
 
 #description {
@@ -51,10 +79,6 @@ a#xiaobaiyue-btn {
   display: flex
 }
 
-.vegas-content {
-  margin: auto
-}
-
 * {
   box-sizing: border-box;
 }
@@ -92,12 +116,15 @@ body, .ui-widget {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.1em;
   text-align: center;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.6em;
+  text-align: center;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
 }
 
 #tab-xiaobaiyue, #tab-baiyue {
@@ -112,7 +139,7 @@ td {
   font-size: 1.5em;
 }
 
-td.header {
+.header {
   font-size: 1.75em;
   font-weight: bold;
 }
@@ -139,27 +166,13 @@ input[type='checkbox'] {
   height: 1.5em;
 }
 
-.leaflet-popup-content a {
-  text-decoration: none;
-  font-size: 1.25em;
-  font-weight: bold;
-}
-
 .leaflet-container a.leaflet-popup-close-button {
-  font-size: 1.5em;
+  font-size: 1.75em;
   margin: 5px;
 }
 
 .leaflet-container a.marker {
   font-size: 1.1rem;
-}
-
-.leaflet-popup-content h2 a{
-  font-size: 1.2em;
-}
-
-.leaflet-popup-content a {
-  font-size: 1.5em;
 }
 
 .leaflet-popup-content ul {
@@ -211,6 +224,10 @@ select.presets {
   z-index: 9999;
 }
 
+.btn {
+  font-size: 1rem;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     display: block;
@@ -242,5 +259,11 @@ select.presets {
   
   .leaflet-bottom {
     display: unset;
+  }
+  
+  div.menu ul {
+    top: -3px;
+    left: 90px;
+    border-radius: 5px;
   }
 }

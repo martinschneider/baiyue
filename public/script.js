@@ -37,7 +37,7 @@ const 小百岳_ICON = L.AwesomeMarkers.icon({
 
 // Load visited peaks from local storage.
 var baiyueMarkers = JSON.parse(localStorage.getItem('baiyue.markers')) || {};
-var xiaoBaiyueMarkers = JSON.parse(localStorage.getItem('xiaobaiyue.markers')) || {};
+var xiaobaiyueMarkers = JSON.parse(localStorage.getItem('xiaobaiyue.markers')) || {};
 
 // Update the progress bar.
 function updateProgress() {
@@ -47,19 +47,26 @@ function updateProgress() {
       baiyueClimbed++;
     }
   }
-  var xiaoBaiyueClimbed = 0;
-  for (const [key, value] of Object.entries(xiaoBaiyueMarkers)) {
+  var xiaobaiyueClimbed = 0;
+  for (const [key, value] of Object.entries(xiaobaiyueMarkers)) {
     if (value) {
-      xiaoBaiyueClimbed++;
+      xiaobaiyueClimbed++;
     }
   }
   $("label[for='baiyue-checkbox']").text("Baiyue: " + baiyueClimbed + "/" + TOTAL_BAIYUE);
-  $("label[for='xiaobaiyue-checkbox']").text("Xiaobaiyue: " + xiaoBaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
+  $("label[for='xiaobaiyue-checkbox']").text("Xiaobaiyue: " + xiaobaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
 }
 
 $(document).ready(function () {
-  $("#dialog").dialog(
-  {
+  $("a#menu").click(function() {
+    Swal.fire({
+  title: 'Taiwan\'s 百岳 Baiyue',
+  html: '<ul><li><a href="mailto:xiaobaiyue@5164.at">Contact</a></li><li>❤️ <a href="https://coindrop.to/xiaobaiyue">Donate</a></li></ul>',
+  confirmButtonColor: '#3298dc',
+})
+  });
+
+  $("#dialog").dialog({
     modal:true,
     title:'Taiwan\'s 百岳 Baiyue',
     buttons: {
@@ -107,7 +114,7 @@ $(document).ready(function () {
   for (const [key, value] of Object.entries(baiyueMarkers)) {
     $("#" + key).prop("checked", value);
   }
-  for (const [key, value] of Object.entries(xiaoBaiyueMarkers)) {
+  for (const [key, value] of Object.entries(xiaobaiyueMarkers)) {
     $("#" + key).prop("checked", value);
   }
 
@@ -216,6 +223,8 @@ $(document).ready(function () {
     localStorage['xiaobaiyue.lat'] = map.getCenter().lat;
     localStorage['xiaobaiyue.lng'] = map.getCenter().lng;
   });
+
+  displayBaiyue();
 });
 
 function updateMarkers() {
@@ -244,3 +253,35 @@ function displayXiaobaiyue() {
 function jumpTo(id) {
   $("html,body").animate({scrollTop: $("#"+id).offset().top},"slow");
 }
+
+function flyTo(lon, lat, osm) {
+  $("#map")[0].scrollIntoView();
+  map.flyTo([lon, lat], 15);
+  markers[osm].openPopup();
+}
+
+function toggleVisited(type, osm) {
+  var checkbox = $("#"+osm);
+  var checked = $("#"+osm).prop("checked");
+  var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
+  var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
+  markers[osm].setIcon(checked ? visitedIcon : notVisitedIcon);
+  if (type == "百岳") {
+    baiyueMarkers[osm] = checked ? true : false;
+    localStorage.setItem("baiyue.markers", JSON.stringify(baiyueMarkers));
+  }
+  else {
+    xiaobaiyueMarkers[osm] = checked ? true : false;
+    localStorage.setItem("xiaobaiyue.markers", JSON.stringify(xiaobaiyueMarkers));
+  }
+  updateProgress();
+}
+
+function addMarker(osm, lon, lat, type, chinese, english, elevation) {
+  var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
+  var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
+  var displayFunction = type == "百岳" ? "displayBaiyue()" : "displayXiaobaiyue()";
+  var hikingBijiCategory = type =="百岳" ? 1 : 2;
+  markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup('<h2><a onClick="' + displayFunction + ';jumpTo(' + osm + ');">' + chinese + ' ' + english + ' ' + elevation +'m' + '</a></h2><ul><li><button class="btn ui-button ui-widget ui-corner-all" data-clipboard-text="' + lon + ', ' + lat +'">Copy location (WGS84)</button></li><li><a class="btn ui-button ui-widget ui-corner-all" href="https://hiking.biji.co/index.php?q=mountain&category='+ hikingBijiCategory + '&page=1&keyword=' + chinese + '" target="_blank">健行筆記</a>&nbsp;<a class="btn ui-button ui-widget ui-corner-all" target="_blank" href="https://www.google.com/maps/place/' + lon+','+lat +'">Google Maps</a></li></ul>').addTo(map);
+}
+
