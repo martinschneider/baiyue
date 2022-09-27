@@ -90,13 +90,10 @@ with a.html(lang="en"):
                 )
             )
     with a.body():
-        with a.div(id="dialog"):
-          a.p(_t="This page displays more details in landscape mode.")
-
         with a.div(klass="container"):
             with a.div(id="description"):
                 with a.div(klass="menu"):
-                  a.a(href="#", id="menu", _t="ℹ️")
+                  a.a(href="#", id="menu", _t="≡")
                 with a.h1():
                     a("Taiwan's 百岳 Baiyue")
                 with a.p():

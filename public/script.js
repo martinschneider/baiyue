@@ -60,27 +60,21 @@ function updateProgress() {
 $(document).ready(function () {
   $("a#menu").click(function() {
     Swal.fire({
-  title: 'Taiwan\'s 百岳 Baiyue',
-  html: '<ul><li><a href="mailto:xiaobaiyue@5164.at">Contact</a></li><li>❤️ <a href="https://coindrop.to/xiaobaiyue">Donate</a></li></ul>',
-  confirmButtonColor: '#3298dc',
-})
+      title: 'Taiwan\'s 百岳 Baiyue',
+      html: '<ul><li><a href="mailto:xiaobaiyue@5164.at">Contact</a></li><li>❤️ <a href="https://coindrop.to/xiaobaiyue">Donate</a></li></ul>',
+      showCloseButton: true,
+      showConfirmButton: false
+    })
   });
 
-  $("#dialog").dialog({
-    modal:true,
-    title:'Taiwan\'s 百岳 Baiyue',
-    buttons: {
-      Ok: function() {
-        localStorage.setItem("landscape.ack", true);
-        $( this ).dialog("close");
-      }
-    }
-  });
-  $("#dialog").dialog("close");
-  
   setTimeout(function() {
     if (!localStorage['landscape.ack'] && window.innerHeight > window.innerWidth) {
-      $("#dialog").dialog("open");
+      Swal.fire({
+        icon: 'info',
+        html: '<p>This page displays more details in landscape mode.</p>',
+        showCloseButton: true,
+        showConfirmButton: false
+      })
     }
   }, POPUP_DELAY);
 
