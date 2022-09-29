@@ -97,11 +97,12 @@ with a.html(lang="en"):
                 with a.h1():
                     a("Taiwan's 百岳 Baiyue")
                 with a.p():
-                    a(""" In 1971, a group of Taiwanese hikers compiled a list known as the <b>百岳 Baiyue</b>, a collection of 100 peaks above 3000 m. It has since become a bucket list for many Taiwanese hikers.""")
+                    a("""A group of Taiwanese hikers compiled a list known as the <b>百岳 Baiyue</b>, a collection of 100 peaks above 3000 m that has become a bucket list for many Taiwanese hikers.""")
                 with a.p():
                     a(
-                        """In 1992, in an effort to promote national mountaineering, the Sports Committee of Taiwan identified 100 entry-level hikes. These peaks are known as the <b>小百岳 Xiaobaiyue</b>, Taiwan's 100 "little" peaks."""
+                        """In an effort to promote national mountaineering, the Sports Committee of Taiwan identified 100 entry-level hikes. These peaks are known as the <b>小百岳 Xiaobaiyue</b>, Taiwan's 100 "little" peaks."""
                     )
+                a.p(_t="This page let's you view information about these peaks and track your climbing progress.")
             with a.div(id="map"):
                 with a.div(klass="leaflet-top leaflet-right"):
                     with a.select(klass="presets", id="layer-selector"):
