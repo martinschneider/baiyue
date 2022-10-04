@@ -61,7 +61,7 @@ $(document).ready(function () {
   $("a#menu").click(function() {
     Swal.fire({
       title: 'Taiwan\'s 百岳 Baiyue',
-      html: '<ul><li><a href="#" onClick="showFaq()">About</a></li><li><a href="mailto:xiaobaiyue@5164.at">Contact</a></li><li>❤️ <a href="https://coindrop.to/xiaobaiyue">Give a tip</a></li></ul>',
+      html: '<ul><li><a href="#" onClick="swal.close();jumpTo(\'about\');">About</a></li><li><a href="mailto:xiaobaiyue@5164.at">Contact</a></li><li>❤️ <a href="https://coindrop.to/xiaobaiyue">Give a tip</a></li></ul>',
       showCloseButton: true,
       showConfirmButton: false
     })
@@ -77,6 +77,8 @@ $(document).ready(function () {
       })
     }
   }, POPUP_DELAY);
+  
+  $("#accordion").accordion({heightStyle: "content", collapsible: true, active: false });
 
   // Add copy to clipboard function to buttons.
   new ClipboardJS('.btn');
@@ -269,70 +271,6 @@ function toggleVisited(type, osm) {
     localStorage.setItem("xiaobaiyue.markers", JSON.stringify(xiaobaiyueMarkers));
   }
   updateProgress();
-}
-
-function showFaq() {
-  Swal.fire({
-      width: '100%',
-      html: `<div id="accordion"><h3>What is the purpose of this project?</h3>
-<div><p>There are many online resources about hiking in Taiwan, but English-language information (especially about the Xiaobaiyue) is limited and often outdated or incomplete. This project aims to create an easy-to-use bucket list that also provides a starting point to plan a trip to each Baiyue and Xiaobaiyue.</p></div>
-
-<h3>How to use this page?</h3>
-<div><p>At the top of the page, you will find a map of Taiwan. Baiyue peaks are marked in blue, Xiaobaiyue in green. You can see how the Baiyue are situated in the center of the main island, while the Xiaobaiyue cover all of Taiwan's territory.</p>
-<p>If you click on one of the markers, additional information is displayed. From there, you can jump to Hiking Biji, Google Maps or copy the GPS coordinates (WSG-84) or Chinese name of the peak into the clipboard to use in other apps.</p>
-<p>Below the map is a table of all Baiyue and Xiaobaiyue. You can use the corresponding buttons to switch between the two.</p>
-<p>Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) will update accordingly. You can jump back to the map where that peak will be highlighted by clicking on the name of a mountain.</p></div>
-
-<h3>Where is the progress stored? Is my data secure?</h3>
-<div><p>All information is stored client-side, which means <a href="https://en.wikipedia.org/wiki/Web_storage">locally in your browser</a>. Hiking progress is never uploaded to any server.</p>
-<p>Please note that this also means that your information will <em>NOT</em> synchronize between multiple devices, for example, your desktop and your phone.</p></div>
-
-<h3>What is the history of the Baiyue?</h3>
-<div><p>The 1964 book "100 Famous Japanese Mountains" influenced Taiwanese hiking legend Wen-An Lin to compile a similar list of mountains in Taiwan. Together with other local mountaineers, he selected 100 peaks known at the time to be above 3000 m. The peaks were chosen by criteria like uniqueness, danger, height, beauty and prominence.</p>
-<p>The Baiyue list was released in 1971 and has since become a bucket list for many Taiwanese hikers.</p></div>
-
-<h3>What is the history of the Xiaobaiyue?</h3>
-<div><p>In 1992, the Sports Committee of Taiwan identified 100 entry-level hikes to promote national mountaineering. These peaks are known as the Xiaobaiyue, Taiwan's 100 "little" peaks.</p></div>
-
-<h3>Are all Baiyue over 3000 meters?</h3>
-<div><p>They were supposed to be. However, 鹿山 Lushan has since been re-surveyed to be "only" 2981 meters high. It has been kept on the list, regardless. There has also been some confusion about whether 六順山 Liushunshan is above 3000 meters, but its latest surveying came in at 3009 meters.</p></div>
-
-<h3>Why are there more than 100 Xiaobaiyue?</h3>
-<div><p>In contrast to the Baiyue, the Xiaobaiyue list has been updated several times, and peaks have been replaced for various reasons (for example, difficulty of access). This page displays all versions of the list (at least all that I could find so far).</p></div>
-
-<h3>Where does the data come from?</h3>
-<div><p>I used the Chinese Wikipedia pages for the Baiyue and Xiaobaiyue and some of the primary sources mentioned there. I also consulted Richard Saunders books on Taiwan and 台灣小百岳．走遍全台１００登山輕旅行.
-<p>Elevation data is taken from <a href="https://openstreetmap.org">OpenStreetMap (OSM)</a>.</p></div>
-
-<h3>How are the English translations of the peaks chosen?</h3>
-<div><p>The naming pattern uses the Hanyu Pinyin transliteration of the Chinese name while keeping 山 shan untranslated, for example, <em>Qixingshan</em> instead of Mt. Qixing, Mt. Cising, Mt. Chihsing or Seven Star Mountain.</p>
-<p>If there are multiple peaks (North, South, East, West etc.), that distinction is translated into English, such as <em>Yushan East Peak</em>.</p></div>
-
-<h3>Are you planning to add route descriptions for each peak?</h3>
-<div><p>Maybe.</p>
-<p>The challenge is that it would be difficult to keep this information accurate and up to date, especially given that there are many different route combinations for most peaks (and I wouldn't want to select just one). Ultimately, a community-maintained platform seems to be a better place to find route descriptions. For this reason, I link to a <a href="https://hiking.biji.co/">Hiking Biji</a> entry for most peaks.</p></div>
-
-<h3>How can I report an error or a problem?</h3>
-<div><p>
-  <a href="mailto:xiaobaiyue@5164.at" target="_blank">E-mail me</a>. I&rsquo;m looking forward to hearing from you.
-</p></div>
-
-<h3>Have you climbed all the peaks?</h3>
-<div><p>Not yet, but I&rsquo;m enjoying the journey.</p></div>
-
-<h3>What programming languages did you use?</h3>
-<div><p>Some Python and a bit of Javascript.</p></div>
-
-<h3>How is this project paid for?</h3>
-<div><p>This is a hobby project. If you find it useful, you can <a href="https://coindrop.to/xiaobaiyue">give a tip</a>, but there is no obligation.</p></div></div>`,
-      showCloseButton: true,
-      showCancelButton: true,
-      cancelButtonText: 'Close',
-      showConfirmButton: false,
-      didOpen: () => {
-    $("#accordion").accordion({heightStyle: "content" });
-  },
-    });
 }
 
 function addMarker(osm, lon, lat, type, chinese, english, elevation) {
