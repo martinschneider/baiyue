@@ -71,14 +71,21 @@ $(document).ready(function () {
     if (!localStorage['landscape.ack'] && window.innerHeight > window.innerWidth) {
       Swal.fire({
         icon: 'info',
-        html: '<p>This page displays more details in landscape mode.</p>',
+        html: '<p class="center">This page displays more details in landscape mode.</p>',
         showCloseButton: true,
         showConfirmButton: false
+      }).then((result) => {
+        localStorage.setItem('landscape.ack', true);
       })
     }
   }, POPUP_DELAY);
   
-  $("#accordion").accordion({heightStyle: "content", collapsible: true, active: false });
+  $("#accordion").accordion({
+    heightStyle: "content",
+    collapsible: true,
+    active: false,
+    icons: false
+  });
 
   // Add copy to clipboard function to buttons.
   new ClipboardJS('.btn');

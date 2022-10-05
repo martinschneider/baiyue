@@ -38,14 +38,14 @@ with a.html(lang="en"):
             rel="stylesheet",
         )
         a.link(
-            href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css",
+            href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.min.css",
             rel="stylesheet",
         )
         a.link(
             href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css", rel="stylesheet"
         )
         a.link(
-            href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.css",
+            href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css",
             rel="stylesheet",
         )
         a.link(
@@ -130,7 +130,7 @@ with a.html(lang="en"):
                         a.label(_t="Xiaobaiyue", **{"for": "xiaobaiyue-checkbox"})
 
         with a.div(id="table-container"):
-            with a.div(id="btn-box"):
+            with a.div(klass="btn-box"):
                 a.a(
                     _t="Baiyue",
                     id="baiyue-btn",
@@ -147,10 +147,10 @@ with a.html(lang="en"):
                 with a.table(klass="display", id="baiyue", width="100%"):
                     with a.thead():
                         with a.tr():
-                            a.th(_t="✔️", **{"data-priority": "1"}, klass="center")
+                            a.th(_t="✔️", **{"data-priority": "2"}, klass="center")
                             a.th(_t="#", **{"data-priority": "5"}, klass="center")
-                            a.th(_t="Chinese name", **{"data-priority": "1"})
-                            a.th(_t="English name", **{"data-priority": "2"})
+                            a.th(_t="Chinese name", **{"data-priority": "2"})
+                            a.th(_t="English name", **{"data-priority": "1"})
                             a.th(_t="Height", **{"data-priority": "3"})
                             a.th(_t="Location", **{"data-priority": "4"})
                     with a.tbody():
@@ -169,12 +169,7 @@ with a.html(lang="en"):
                                     )
                                 with a.td(klass="center"):
                                     a(str(x["id"] or "-"))
-                                with a.td(
-                                    klass="link",
-                                    onClick="flyTo({},{})".format(
-                                        x["location"], x["OSM"]
-                                    ),
-                                ):
+                                with a.td():
                                     a.span(
                                         id="chinese_" + str(x["OSM"]), _t=x["chinese"]
                                     )
@@ -195,7 +190,7 @@ with a.html(lang="en"):
                                     a(x["english"])
                                 with a.td():
                                     a("{}m".format(round(float(x["height"]))))
-                                with a.td(id="location"):
+                                with a.td(klass="location"):
                                     if x["location"] != None:
                                         coords = str(x["location"]).split(",")
                                     a.span(
@@ -217,12 +212,12 @@ with a.html(lang="en"):
                 with a.table(klass="display", id="xiaobaiyue", width="100%"):
                     with a.thead():
                         with a.tr():
-                            a.th(_t="✔️", **{"data-priority": "1"}, klass="center")
+                            a.th(_t="✔️", **{"data-priority": "2"}, klass="center")
                             a.th(_t="2017", **{"data-priority": "5"}, klass="center")
                             a.th(_t="2006", klass="center")
                             a.th(_t="2003", klass="center")
-                            a.th(_t="Chinese name", **{"data-priority": "1"})
-                            a.th(_t="English name", **{"data-priority": "2"})
+                            a.th(_t="Chinese name", **{"data-priority": "2"})
+                            a.th(_t="English name", **{"data-priority": "1"})
                             a.th(_t="Height", **{"data-priority": "3"})
                             a.th(_t="Location", **{"data-priority": "4"})
                     with a.tbody():
@@ -245,7 +240,7 @@ with a.html(lang="en"):
                                     a(str(x["id-2006"] or "-"))
                                 with a.td(klass="center"):
                                     a(str(x["id-2003"] or "-"))
-                                with a.td(klass="header"):
+                                with a.td():
                                     a.span(
                                         id="chinese_" + str(x["OSM"]), _t=x["chinese"]
                                     )
@@ -294,22 +289,18 @@ with a.html(lang="en"):
                         )
                 a.h3(_t="How to use this page?")
                 with a.div():
-                    with a.p():
-                        a(
-                            "At the top of the page, you will find a map of Taiwan. Baiyue peaks are marked in blue, Xiaobaiyue in green."
-                        )
-                    with a.p():
-                        a(
-                            "If you click on one of the markers, additional information is displayed. From there, you can jump to Hiking Biji, Google Maps or copy the GPS coordinates (WSG-84) or Chinese name of the peak into the clipboard to use in other apps."
-                        )
-                    with a.p():
-                        a(
-                            "Below the map is a table of all Baiyue and Xiaobaiyue. You can use the corresponding buttons to switch between the two."
-                        )
-                    with a.p():
-                        a(
-                            "Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) will update accordingly. You can jump back to the map where that peak will be highlighted by clicking on the name of a mountain."
-                        )
+                    a.p(
+                        _t="At the top of the page, you will find a map of Taiwan. Baiyue peaks are marked in blue, Xiaobaiyue in green."
+                    )
+                    a.p(
+                        _t="If you click on one of the markers, additional information is displayed. From there, you can jump to Hiking Biji, Google Maps or copy the GPS coordinates (WSG-84) or Chinese name of the peak into the clipboard to use in other apps."
+                    )
+                    a.p(
+                        _t="Below the map is a table of all Baiyue and Xiaobaiyue. You can use the corresponding buttons to switch between the two."
+                    )
+                    a.p(
+                        _t="Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) will update accordingly. You can jump back to the map where that peak will be highlighted by clicking on the name of a mountain."
+                    )
                 a.h3(_t="Where is the progress stored? Is my data secure?")
                 with a.div():
                     with a.p():
@@ -327,71 +318,67 @@ with a.html(lang="en"):
                         )
                 a.h3(_t="What is the history of the Baiyue?")
                 with a.div():
-                    with a.p():
-                        a(
-                            "The 1964 book "100 Famous Japanese Mountains" influenced Taiwanese hiking legend Wen-An Lin to compile a similar list of mountains in Taiwan. Together with other local mountaineers, he selected 100 peaks known at the time to be above 3000 m. The peaks were chosen by criteria like uniqueness, danger, height, beauty and prominence."
-                        )
+                    a.p(
+                        _t='The 1964 book "100 Famous Japanese Mountains" influenced Taiwanese hiking legend Wen-An Lin to compile a similar list of mountains in Taiwan. Together with other local mountaineers, he selected 100 peaks known at the time to be above 3000 m. The peaks were chosen by criteria like uniqueness, danger, height, beauty and prominence.'
+                    )
                     a.p(
                         _t="The Baiyue list was released in 1971 and has since become a bucket list for many Taiwanese hikers."
                     )
                 a.h3(_t="What is the history of the Xiaobaiyue?")
                 with a.div():
-                    with a.p():
-                        a(
-                            "In 1992, the Sports Committee of Taiwan identified 100 entry-level hikes to promote national mountaineering. These peaks are known as the Xiaobaiyue, Taiwan's 100 \"little\" peaks."
-                        )
+                    a.p(
+                        _t='In 1992, the Sports Committee of Taiwan identified 100 entry-level hikes to promote national mountaineering. These peaks are known as the Xiaobaiyue, Taiwan\'s 100 "little" peaks.'
+                    )
                 a.h3(_t="Are all Baiyue over 3000 meters?")
                 with a.div():
-                    with a.p():
-                        a(
-                            "They were supposed to be. However, 鹿山 Lushan has since been re-surveyed to be "only" 2981 meters high. It has been kept on the list, regardless. There has also been some confusion about whether 六順山 Liushunshan is above 3000 meters, but its latest surveying came in at 3009 meters."
-                        )
+                    a.p(
+                        _t='They were supposed to be. However, 鹿山 Lushan has since been re-surveyed to be "only" 2981 meters high. It has been kept on the list, regardless.'
+                    )
+                    a.p(
+                        _t="There has also been some confusion about whether 六順山 Liushunshan is above 3000 meters, but its latest surveying came in at 3009 meters."
+                    )
                 a.h3(_t="Why are there more than 100 Xiaobaiyue?")
                 with a.div():
-                    with a.p():
-                        a(
-                            "In contrast to the Baiyue, the Xiaobaiyue list has been updated several times, and peaks have been replaced for various reasons (for example, difficulty of access). This page displays all versions of the list (at least all that I could find so far)."
-                        )
+                    a.p(
+                        _t="In contrast to the Baiyue, the Xiaobaiyue list has been updated several times, and peaks have been replaced for various reasons (for example, difficulty of access). This page displays all versions of the list (at least all that I could find so far)."
+                    )
                 a.h3(_t="Where does the data come from?")
                 with a.div():
+                    a.p(
+                        _t="The information has been taken from the Chinese Wikipedia pages for the Baiyue and Xiaobaiyue and the primary sources mentioned there. I also consulted Richard Saunders' books on Taiwan and 台灣小百岳．走遍全台１００登山輕旅行."
+                    )
                     with a.p():
-                        a(
-                            "The information has been taken from the Chinese Wikipedia pages for the Baiyue and Xiaobaiyue and the primary sources mentioned there. I also consulted Richard Saunders' books on Taiwan and 台灣小百岳．走遍全台１００登山輕旅行."
+                        a("Elevation data is taken from")
+                        a.a(
+                            href="https://openstreetmap.org",
+                            _t="OpenStreetMap (OSM)",
                         )
-                        with a.p():
-                            a("Elevation data is taken from")
-                            a.a(
-                                href="https://openstreetmap.org",
-                                _t="OpenStreetMap (OSM)",
-                            )
-                            a(".")
+                        a(".")
                 a.h3(_t="How are the English translations of the peaks chosen?")
                 with a.div():
-                    with a.p():
-                        a(
-                            "The naming pattern uses the Hanyu Pinyin transliteration of the Chinese name while keeping 山 shan untranslated, for example,"
-                        )
-                        a.em(_t="Qixingshan")
-                        a(
-                            "instead of Mt. Qixing, Mt. Cising, Mt. Chihsing or Seven Star Mountain."
-                        )
-                    with a.p():
-                        a(
-                            "If there are multiple peaks (North, South, East, West etc.), that distinction is translated into English, such as"
-                        )
-                        a.em(_t="Yushan East Peak")
-                        a(".")
+                    with a.p(
+                        _t="The naming pattern uses the Hanyu Pinyin transliteration of the Chinese name while keeping 山 shan untranslated, for example, 七星山 is translated as"
+                    ):
+                      a.em(_t="Qixingshan")
+                      a(
+                        "instead of Mt. Qixing, Mt. Cising, Mt. Chihsing or Seven Star Mountain."
+                    )
+                    with a.p(
+                        _t="If there are multiple peaks (North, South, East, West etc.), that distinction is translated into English, such as"
+                    ):
+                      a.em(_t="Yushan East Peak")
+                      a(".")
                 a.h3(_t="Are you planning to add route descriptions for each peak?")
                 with a.div():
                     a.p(_t="Maybe.")
-                    with a.p():
-                        a(
-                            "The challenge is that it would be difficult to keep this information accurate and up to date, especially given that there are many different route combinations for most peaks.")
-                    with a.p():
-                        a("A community-maintained platform seems to be a better choice. For this reason, I link to a"
-                        )
-                        a.a(href="https://hiking.biji.co/", _t="Hiking Biji")
-                        a("entry for most peaks.")
+                    a.p(
+                        _t="The challenge is that it would be difficult to keep this information accurate and up to date, especially given that there are many different route combinations for most peaks."
+                    )
+                    with a.p(
+                        _t="A community-maintained platform seems to be a better choice. For this reason, I link to a"
+                    ):
+                      a.a(href="https://hiking.biji.co/", _t="Hiking Biji")
+                      a("entry for most peaks.")
                 a.h3(_t="How can I report an error or a problem?")
                 with a.div():
                     with a.p():
@@ -413,7 +400,7 @@ with a.html(lang="en"):
                         a("This is a hobby project. If you find it useful, you can")
                         a.a(href="https://coindrop.to/xiaobaiyue", _t="give a tip")
                         a(", but there is no obligation.")
-            with a.div(id="btn-box"):
+            with a.div(klass="btn-box"):
                 a.a(
                     klass="btn ui-button ui-widget ui-corner-all",
                     onclick="$(window).scrollTop(0);",
