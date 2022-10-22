@@ -3,7 +3,7 @@ const TOTAL_XIAOBAIYUE = 116;
 const TOTAL_BAIYUE = 100;
 
 // Map settings
-const MAP_LAYERS = [{url: 'https://tile.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png', attribution: ""}, { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '© OpenStreetMap' }]
+const MAP_LAYERS = [{ url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '© OpenStreetMap' }]
 const DEFAULT_COORDINATES = [23.9739881, 120.9097797]
 const DEFAULT_ZOOM = 7
 const MAX_ZOOM = 19
@@ -53,18 +53,21 @@ function updateProgress() {
       xiaobaiyueClimbed++;
     }
   }
-  $("label[for='baiyue-checkbox']").text("Baiyue: " + baiyueClimbed + "/" + TOTAL_BAIYUE);
-  $("label[for='xiaobaiyue-checkbox']").text("Xiaobaiyue: " + xiaobaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
+  $("label[for='baiyue-checkbox']").text("百岳：" + baiyueClimbed + "/" + TOTAL_BAIYUE);
+  $("label[for='xiaobaiyue-checkbox']").text("小百岳：" + xiaobaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
+
+  // Toggle reset button
+  if (baiyueClimbed == 0 && xiaobaiyueClimbed == 0) {
+    $("option#reset-progress").css("display", "none");
+  }
+  else {
+    $("option#reset-progress").css("display", "block");
+  }
 }
 
 $(document).ready(function () {
   $("a#menu").click(function() {
-    Swal.fire({
-      title: 'Taiwan\'s 百岳 Baiyue',
-      html: '<ul><li><a href="#" onClick="swal.close();jumpTo(\'about\');">About</a></li><li><a href="mailto:xiaobaiyue@5164.at">Contact</a></li><li>❤️ <a href="https://coindrop.to/xiaobaiyue">Give a tip</a></li></ul>',
-      showCloseButton: true,
-      showConfirmButton: false
-    })
+    showMenu();
   });
 
   setTimeout(function() {
@@ -90,20 +93,6 @@ $(document).ready(function () {
   // Add copy to clipboard function to buttons.
   new ClipboardJS('.btn');
 
-  // Set the background of the description box.
-  $("#description").vegas({
-    delay: 10000,
-    slides: [
-        { src: "qixingshan.jpg" },
-        { src: "yushan.jpg" },
-    ]
-  });
-  
-  $("#layer-selector").change(function() { 
-    layers.forEach(layer => layer.removeFrom(map));
-    layers[$("#layer-selector").val()].addTo(map);
-  });
-  
   $("#baiyue-checkbox, #xiaobaiyue-checkbox").change(function() { 
     updateMarkers();
   });
@@ -112,16 +101,9 @@ $(document).ready(function () {
     updateMarkers();
     e.stopPropagation();
   });
-  
-  // Set checkboxes based on cached values.
-  for (const [key, value] of Object.entries(baiyueMarkers)) {
-    $("#" + key).prop("checked", value);
-  }
-  for (const [key, value] of Object.entries(xiaobaiyueMarkers)) {
-    $("#" + key).prop("checked", value);
-  }
 
   updateProgress();
+  updateCheckboxes();
 
   // Initialize map.
   map = L.map("map", {
@@ -132,6 +114,21 @@ $(document).ready(function () {
   MAP_LAYERS.forEach((layer, index) => layers[index] = L.tileLayer(layer["url"], { maxZoom: MAX_ZOOM, attribution: layer["attribution"] }));
   layers[$("#layer-selector").val() || 0].addTo(map);
   map.attributionControl.setPrefix("");  
+  map.on("moveend zoomend", function() {
+    // Store the current map center and zoom level in the local storage.
+    localStorage['xiaobiayue.zoom'] = map.getZoom();
+    localStorage['xiaobaiyue.lat'] = map.getCenter().lat;
+    localStorage['xiaobaiyue.lng'] = map.getCenter().lng;
+
+    // Toggle map reset button
+    var threshold = 0.001;
+    if (Math.abs(map.getCenter().lat - DEFAULT_COORDINATES[0]) < threshold && Math.abs(map.getCenter().lng - DEFAULT_COORDINATES[1]) < threshold && map.getZoom() == DEFAULT_ZOOM) {
+      $("option#reset-map").css("display", "none");
+    }
+    else {
+      $("option#reset-map").css("display", "block");
+    }
+  });
   
   $("#baiyue").DataTable({
     paging: false,
@@ -218,15 +215,6 @@ $(document).ready(function () {
   var zoom = localStorage['xiaobiayue.zoom'] || 7;
   map.setView([lat, lng], zoom);
 
-  // Store the current map center and zoom level in the local storage.
-  map.on('zoomend', function (e) {
-    localStorage['xiaobiayue.zoom'] = map.getZoom();
-  });
-  map.on('moveend', function (e) {
-    localStorage['xiaobaiyue.lat'] = map.getCenter().lat;
-    localStorage['xiaobaiyue.lng'] = map.getCenter().lng;
-  });
-
   displayBaiyue();
 });
 
@@ -288,3 +276,53 @@ function addMarker(osm, lon, lat, type, chinese, english, elevation) {
   markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup('<h2><a onClick="' + displayFunction + ';jumpTo(' + osm + ');">' + chinese + ' ' + english + ' ' + elevation +'m' + '</a></h2><ul><li><button class="btn ui-button ui-widget ui-corner-all" data-clipboard-text="' + lon + ', ' + lat +'">Copy location (WGS84)</button></li><li><a class="btn ui-button ui-widget ui-corner-all" href="https://hiking.biji.co/index.php?q=mountain&category='+ hikingBijiCategory + '&page=1&keyword=' + chinese + '" target="_blank">健行筆記</a>&nbsp;<a class="btn ui-button ui-widget ui-corner-all" target="_blank" href="https://www.google.com/maps/place/' + lon+','+lat +'">Google Maps</a></li></ul>').addTo(map);
 }
 
+function resetDropdown() {
+  $("#dropdown-menu").val(0);
+}
+
+function resetProgress() {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "Deleting your progress cannot be undone.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      baiyueMarkers = {};
+      xiaobaiyueMarkers = {};
+      localStorage.removeItem("baiyue.markers");
+      localStorage.removeItem("xiaobaiyue.markers");
+      updateProgress();
+      updateCheckboxes();
+      updateMarkers();
+    }
+  })
+}
+
+function updateCheckboxes() {
+  for (key of BAIYUE) {
+    $("#" + key).prop("checked", baiyueMarkers[key] || false);
+  }
+  for (key of XIAOBAIYUE) {
+    $("#" + key).prop("checked", xiaobaiyueMarkers[key] || false);
+  }
+}
+
+function menuEvent(value) {
+  if (value == 1) {
+    map.setView(DEFAULT_COORDINATES, DEFAULT_ZOOM);
+    resetDropdown();
+  }
+  else if (value == 2) {
+    resetProgress();
+    resetDropdown();
+  }
+  else if (value == 3) {
+    history.pushState(null, null, "#");
+    jumpTo("about");
+    resetDropdown();
+  }
+}

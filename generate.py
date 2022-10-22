@@ -45,10 +45,6 @@ with a.html(lang="en"):
             href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css", rel="stylesheet"
         )
         a.link(
-            href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css",
-            rel="stylesheet",
-        )
-        a.link(
             href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css",
             rel="stylesheet",
         )
@@ -59,7 +55,7 @@ with a.html(lang="en"):
         a.meta(content="320", name="MobileOptimized")
         a.meta(content="width=device-width, initial-scale=1.0", name="viewport")
         a.meta(content="no-referrer", name="referrer")
-        a.meta(content="Martin Schneider", name="author")
+        a.meta(content="M.S.", name="author")
         a.meta(content="Taiwan's 百岳 Baiyue", name="description")
         a.script(src="https://code.jquery.com/jquery-3.6.0.min.js")
         a.script(src="https://code.jquery.com/ui/1.13.1/jquery-ui.js")
@@ -69,7 +65,6 @@ with a.html(lang="en"):
         )
         a.script(src="https://cdn.datatables.net/plug-ins/1.12.1/sorting/natural.js")
         a.script(src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js")
-        a.script(src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js")
         a.script(
             src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"
         )
@@ -94,51 +89,31 @@ with a.html(lang="en"):
             )
     with a.body():
         with a.div(klass="container"):
-            with a.div(id="description"):
-                with a.div(klass="menu"):
-                    a.a(href="#", id="menu", _t="≡")
-                with a.h1():
-                    a("Taiwan's 百岳 Baiyue")
-                with a.p():
-                    a(
-                        """A group of Taiwanese hikers compiled a list known as the <b>百岳 Baiyue</b>, a collection of 100 peaks above 3000 m that has become a bucket list for many Taiwanese hikers."""
-                    )
-                with a.p():
-                    a(
-                        """In an effort to promote national mountaineering, the Sports Committee of Taiwan identified 100 entry-level hikes. These peaks are known as the <b>小百岳 Xiaobaiyue</b>, Taiwan's 100 "little" peaks."""
-                    )
-                a.p(
-                    _t="This page let's you view information about these peaks and track your climbing progress."
-                )
             with a.div(id="map"):
                 with a.div(klass="leaflet-top leaflet-right"):
-                    with a.select(klass="presets", id="layer-selector"):
-                        a.option(value="0", _t="台灣魯地圖")
-                        a.option(value="1", _t="OpenStreetMap", selected=True)
-                    a.input(
-                        klass="presets",
-                        type="button",
-                        value="🇹🇼 台灣 Taiwan",
-                        onclick="map.setView(DEFAULT_COORDINATES, DEFAULT_ZOOM)",
-                    )
+                    with a.select(klass="presets", id="dropdown-menu", onChange="menuEvent(value);"):
+                        a.option(value="0", _t="≡", klass="hidden", selected=True, disabled=True)
+                        a.option(id="reset-map", value="1", _t="Reset map view", klass="hidden"),
+                        a.option(id="reset-progress", value="2",_t="Reset progress"),
+                        a.option(value="3",_t="About")
                 with a.div(klass="leaflet-bottom leaflet-left"):
                     with a.div("checkboxes"):
                         a.input(id="baiyue-checkbox", type="checkbox", checked=True)
-                        a.label(_t="Baiyue", **{"for": "baiyue-checkbox"})
+                        a.label(_t="百岳", **{"for": "baiyue-checkbox"})
                     with a.div("checkboxes"):
                         a.input(id="xiaobaiyue-checkbox", type="checkbox", checked=True)
-                        a.label(_t="Xiaobaiyue", **{"for": "xiaobaiyue-checkbox"})
+                        a.label(_t="小百岳", **{"for": "xiaobaiyue-checkbox"})
 
         with a.div(id="table-container"):
             with a.div(klass="btn-box"):
                 a.a(
-                    _t="Baiyue",
+                    _t="百岳 Baiyue",
                     id="baiyue-btn",
                     klass="ui-button ui-widget ui-corner-all",
                     onClick="displayBaiyue()",
                 )
                 a.a(
-                    _t="Xiaobaiyue",
+                    _t="小百岳 Xiaobaiyue",
                     id="xiaobaiyue-btn",
                     klass="ui-button ui-widget ui-corner-all",
                     onClick="displayXiaobaiyue()",
@@ -285,22 +260,21 @@ with a.html(lang="en"):
                 with a.div():
                     with a.p():
                         a(
-                            "There are many online resources about hiking in Taiwan, but English-language information (especially about the Xiaobaiyue) is limited and often outdated or incomplete. This project aims to create an easy-to-use bucket list that also provides a starting point to plan a trip to each Baiyue and Xiaobaiyue."
+                            "There are many online resources about hiking in Taiwan, but English-language information (especially about the Xiaobaiyue) is limited and often outdated or incomplete. This project aims to create an easy-to-use bucket list that also provides a starting point to plan a trip to each 百岳 Baiyue and 小百岳 Xiaobaiyue."
                         )
                 a.h3(_t="How to use this page?")
                 with a.div():
                     a.p(
-                        _t="At the top of the page, you will find a map of Taiwan. Baiyue peaks are marked in blue, Xiaobaiyue in green."
+                        _t="At the top of the page, you will find a map of Taiwan. 百岳 peaks are marked in blue, 小百岳 in green."
                     )
                     a.p(
                         _t="If you click on one of the markers, additional information is displayed. From there, you can jump to Hiking Biji, Google Maps or copy the GPS coordinates (WSG-84) or Chinese name of the peak into the clipboard to use in other apps."
                     )
                     a.p(
-                        _t="Below the map is a table of all Baiyue and Xiaobaiyue. You can use the corresponding buttons to switch between the two."
+                        _t="Below the map is a table of all 百岳 and 小百岳. You can use the corresponding buttons to switch between the two."
                     )
                     a.p(
-                        _t="Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) will update accordingly. You can jump back to the map where that peak will be highlighted by clicking on the name of a mountain."
-                    )
+                        _t="Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) will update accordingly.")
                 a.h3(_t="Where is the progress stored? Is my data secure?")
                 with a.div():
                     with a.p():
@@ -316,20 +290,20 @@ with a.html(lang="en"):
                         a(
                             "synchronize between multiple devices, for example, your desktop and your phone."
                         )
-                a.h3(_t="What is the history of the Baiyue?")
+                a.h3(_t="What is the history of the 百岳?")
                 with a.div():
                     a.p(
-                        _t='The 1964 book "100 Famous Japanese Mountains" influenced Taiwanese hiking legend Wen-An Lin to compile a similar list of mountains in Taiwan. Together with other local mountaineers, he selected 100 peaks known at the time to be above 3000 m. The peaks were chosen by criteria like uniqueness, danger, height, beauty and prominence.'
+                        _t='The 1964 book “100 Famous Japanese Mountains“ influenced Taiwanese hiking legend Wen-An Lin to compile a similar list of mountains in Taiwan. Together with other local mountaineers, he selected 100 peaks known at the time to be above 3000 m. The peaks were chosen by criteria like uniqueness, danger, height, beauty and prominence.'
                     )
                     a.p(
-                        _t="The Baiyue list was released in 1971 and has since become a bucket list for many Taiwanese hikers."
+                        _t="The 百岳 list was released in 1971 and has since become a bucket list for many Taiwanese hikers."
                     )
-                a.h3(_t="What is the history of the Xiaobaiyue?")
+                a.h3(_t="What is the history of the 小百岳?")
                 with a.div():
                     a.p(
-                        _t='In 1992, the Sports Committee of Taiwan identified 100 entry-level hikes to promote national mountaineering. These peaks are known as the Xiaobaiyue, Taiwan\'s 100 "little" peaks.'
+                        _t='In 1992, the Sports Committee of Taiwan identified 100 entry-level hikes to promote national mountaineering. These peaks are known as the 小百岳, Taiwan\'s 100 "little" peaks.'
                     )
-                a.h3(_t="Are all Baiyue over 3000 meters?")
+                a.h3(_t="Are all 百岳 over 3000 meters?")
                 with a.div():
                     a.p(
                         _t='They were supposed to be. However, 鹿山 Lushan has since been re-surveyed to be "only" 2981 meters high. It has been kept on the list, regardless.'
@@ -337,16 +311,19 @@ with a.html(lang="en"):
                     a.p(
                         _t="There has also been some confusion about whether 六順山 Liushunshan is above 3000 meters, but its latest surveying came in at 3009 meters."
                     )
-                a.h3(_t="Why are there more than 100 Xiaobaiyue?")
+                a.h3(_t="Why are there more than 100 小百岳?")
                 with a.div():
                     a.p(
                         _t="In contrast to the Baiyue, the Xiaobaiyue list has been updated several times, and peaks have been replaced for various reasons (for example, difficulty of access). This page displays all versions of the list (at least all that I could find so far)."
                     )
                 a.h3(_t="Where does the data come from?")
                 with a.div():
-                    a.p(
-                        _t="The information has been taken from the Chinese Wikipedia pages for the Baiyue and Xiaobaiyue and the primary sources mentioned there. I also consulted Richard Saunders' books on Taiwan and 台灣小百岳．走遍全台１００登山輕旅行."
-                    )
+                    with a.p():
+                        a("The information has been taken from the Chinese Wikipedia pages for the")
+                        a.a(href="https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E7%99%BE%E5%B2%B3", _t="百岳")
+                        a("and")
+                        a.a(href="https://zh.wikipedia.org/zh-hant/%E5%8F%B0%E7%81%A3%E5%B0%8F%E7%99%BE%E5%B2%B3%E5%88%97%E8%A1%A8", _t="小百岳")
+                        a("and the primary sources mentioned there. I also consulted Richard Saunders' books on Taiwan and 「台灣小百岳．走遍全台１００登山輕旅行」.")
                     with a.p():
                         a("Elevation data is taken from")
                         a.a(
@@ -390,7 +367,7 @@ with a.html(lang="en"):
                         a(". I’m looking forward to hearing from you.")
                 a.h3(_t="Have you climbed all the peaks?")
                 with a.div():
-                    a.p(_t="Not yet, but I’m enjoying the journey.")
+                    a.p(_t="No, but I’m enjoying the journey.")
                 a.h3(_t="What programming languages did you use?")
                 with a.div():
                     a.p(_t="Some Python and a bit of Javascript.")

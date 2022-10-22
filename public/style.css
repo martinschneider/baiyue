@@ -35,6 +35,10 @@ div.menu a {
   color: white;
 }
 
+#accordion p {
+  font-size: 1.25em;
+}
+
 .ui-accordion .ui-accordion-header {
   font-size: 1.5em;
 }
@@ -57,19 +61,11 @@ div.menu a {
   margin-top: 20px;
 }
 
-#description {
-  height: 500px;
-  width: 50%;
-  border-radius: 20px;
-  padding: 20px;
-  margin: auto
-}
-
 #map {
   height: 500px;
   width: 50%;
   border-radius: 20px;
-  margin-left: 20px;
+  margin: auto;
 }
 
 div#tabs {
@@ -91,10 +87,6 @@ a#xiaobaiyue-btn {
   background: #728224;
   color: white;
   font-size: 1.25em;
-}
-
-.vegas-content-scrollable {
-  display: flex
 }
 
 * {
@@ -236,7 +228,7 @@ input[type='checkbox'] {
   font-size: 1.5em;
   cursor: pointer;
   pointer-events: auto;
-  height: 36px;
+  border: 1px black;
 }
 
 select.presets {
@@ -289,4 +281,13 @@ select.presets {
     left: 90px;
     border-radius: 5px;
   }
+}
+
+select#dropdown-menu {
+  width: 40px;
+  text-align: center;
+}
+
+select > option.hidden {
+    display: none;
 }
