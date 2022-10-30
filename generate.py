@@ -91,7 +91,7 @@ with a.html(lang="en"):
         with a.div(klass="container"):
             with a.div(id="map"):
                 with a.div(klass="leaflet-top leaflet-right"):
-                    with a.select(klass="presets", id="dropdown-menu", onChange="menuEvent(value);"):
+                    with a.select(id="dropdown-menu", onChange="menuEvent(value);"):
                         a.option(value="0", _t="≡", klass="hidden", selected=True, disabled=True)
                         a.option(id="reset-map", value="1", _t="Reset map view", klass="hidden"),
                         a.option(id="reset-progress", value="2",_t="Reset progress"),
@@ -260,7 +260,7 @@ with a.html(lang="en"):
                 with a.div():
                     with a.p():
                         a(
-                            "There are many online resources about hiking in Taiwan, but English-language information (especially about the Xiaobaiyue) is limited and often outdated or incomplete. This project aims to create an easy-to-use bucket list that also provides a starting point to plan a trip to each 百岳 Baiyue and 小百岳 Xiaobaiyue."
+                            "There are many online resources about hiking in Taiwan, but English-language information (especially about the Xiaobaiyue) is still limited and often incomplete. This project aims to create an easy-to-use bucket list that also provides a starting point to plan a trip to each 百岳 Baiyue and 小百岳 Xiaobaiyue."
                         )
                 a.h3(_t="How to use this page?")
                 with a.div():
@@ -301,7 +301,7 @@ with a.html(lang="en"):
                 a.h3(_t="What is the history of the 小百岳?")
                 with a.div():
                     a.p(
-                        _t='In 1992, the Sports Committee of Taiwan identified 100 entry-level hikes to promote national mountaineering. These peaks are known as the 小百岳, Taiwan\'s 100 "little" peaks.'
+                        _t='The Sports Committee of Taiwan identified 100 entry-level hikes to promote national mountaineering. These peaks are known as the 小百岳, Taiwan\'s 100 "little" peaks and a first list was released in 2003.'
                     )
                 a.h3(_t="Are all 百岳 over 3000 meters?")
                 with a.div():

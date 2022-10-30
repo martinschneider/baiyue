@@ -70,6 +70,7 @@ $(document).ready(function () {
     showMenu();
   });
 
+  // Display a hint that there is extra information in landscape mode. Use local storage to ensure it's displayed only once.
   setTimeout(function() {
     if (!localStorage['landscape.ack'] && window.innerHeight > window.innerWidth) {
       Swal.fire({
@@ -83,6 +84,7 @@ $(document).ready(function () {
     }
   }, POPUP_DELAY);
   
+  // Register accordion for FAQ section.
   $("#accordion").accordion({
     heightStyle: "content",
     collapsible: true,
@@ -93,6 +95,8 @@ $(document).ready(function () {
   // Add copy to clipboard function to buttons.
   new ClipboardJS('.btn');
 
+
+  // Checkboxes should update the map markers.
   $("#baiyue-checkbox, #xiaobaiyue-checkbox").change(function() { 
     updateMarkers();
   });
@@ -130,6 +134,7 @@ $(document).ready(function () {
     }
   });
   
+  // Initialize data tables.
   $("#baiyue").DataTable({
     paging: false,
     info: false,
@@ -210,14 +215,15 @@ $(document).ready(function () {
   });
   
   // Initialize the center of the map and the zoom level.
-  var lat = localStorage['xiaobaiyue.lat'] || 23.9739881;
-  var lng = localStorage['xiaobaiyue.lng'] || 120.9097797;
-  var zoom = localStorage['xiaobiayue.zoom'] || 7;
+  var lat = localStorage['xiaobaiyue.lat'] || DEFAULT_COORDINATES[0];
+  var lng = localStorage['xiaobaiyue.lng'] || DEFAULT_COORDINATES[1];
+  var zoom = localStorage['xiaobiayue.zoom'] || DEFAULT_ZOOM;
   map.setView([lat, lng], zoom);
 
   displayBaiyue();
 });
 
+// Update the map markers based on the checkbox values.
 function updateMarkers() {
   var baiyue = $("#baiyue-checkbox").is(":checked");
   var xiaobaiyue = $("#xiaobaiyue-checkbox").is(":checked");
@@ -229,28 +235,43 @@ function updateMarkers() {
   }
 }
 
+// Reset all map markers (to unvisited).
+function resetMarkers() {
+  for (key in baiyueMarkers) {
+    markers[key].setIcon(百岳_ICON);
+  }
+  for (key in xiaobaiyueMarkers) {
+    markers[key].setIcon(小百岳_ICON);
+  }
+}
+
+// Switch to the Baiyue tab.
 function displayBaiyue() {
   $("#tab-baiyue").css("display", "unset");
   $("#tab-xiaobaiyue").css("display", "none");
   $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
 }
 
+// Switch to the Xiaobaiyue tab.
 function displayXiaobaiyue() {
   $("#tab-baiyue").css("display", "none");
   $("#tab-xiaobaiyue").css("display", "unset");
   $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
 }
 
+// Scroll to a Baiyue or Xiaobaiyue in the table.
 function jumpTo(id) {
   $("html,body").animate({scrollTop: $("#"+id).offset().top},"slow");
 }
 
+// Scroll to the map, fly to the location of a peak and open its details pop-up.
 function flyTo(lon, lat, osm) {
   $("#map")[0].scrollIntoView();
   map.flyTo([lon, lat], 15);
   markers[osm].openPopup();
 }
 
+// Toggle the visited flag of a peak.
 function toggleVisited(type, osm) {
   var checkbox = $("#"+osm);
   var checked = $("#"+osm).prop("checked");
@@ -268,6 +289,7 @@ function toggleVisited(type, osm) {
   updateProgress();
 }
 
+// Add a peak marker to the map.
 function addMarker(osm, lon, lat, type, chinese, english, elevation) {
   var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
   var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
@@ -276,10 +298,12 @@ function addMarker(osm, lon, lat, type, chinese, english, elevation) {
   markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup('<h2><a onClick="' + displayFunction + ';jumpTo(' + osm + ');">' + chinese + ' ' + english + ' ' + elevation +'m' + '</a></h2><ul><li><button class="btn ui-button ui-widget ui-corner-all" data-clipboard-text="' + lon + ', ' + lat +'">Copy location (WGS84)</button></li><li><a class="btn ui-button ui-widget ui-corner-all" href="https://hiking.biji.co/index.php?q=mountain&category='+ hikingBijiCategory + '&page=1&keyword=' + chinese + '" target="_blank">健行筆記</a>&nbsp;<a class="btn ui-button ui-widget ui-corner-all" target="_blank" href="https://www.google.com/maps/place/' + lon+','+lat +'">Google Maps</a></li></ul>').addTo(map);
 }
 
+// Reset the value in the menu select element.
 function resetDropdown() {
   $("#dropdown-menu").val(0);
 }
 
+// Reset the progress for both Baiyue and Xiaobaiyue peaks.
 function resetProgress() {
   Swal.fire({
     title: "Are you sure?",
@@ -291,17 +315,18 @@ function resetProgress() {
     confirmButtonText: "Yes"
   }).then((result) => {
     if (result.isConfirmed) {
+      resetMarkers();
       baiyueMarkers = {};
       xiaobaiyueMarkers = {};
       localStorage.removeItem("baiyue.markers");
       localStorage.removeItem("xiaobaiyue.markers");
       updateProgress();
       updateCheckboxes();
-      updateMarkers();
     }
   })
 }
 
+// Update all checkbox values.
 function updateCheckboxes() {
   for (key of BAIYUE) {
     $("#" + key).prop("checked", baiyueMarkers[key] || false);
@@ -311,6 +336,7 @@ function updateCheckboxes() {
   }
 }
 
+// Helper method for dropdown menu actions.
 function menuEvent(value) {
   if (value == 1) {
     map.setView(DEFAULT_COORDINATES, DEFAULT_ZOOM);
