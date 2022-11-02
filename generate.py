@@ -93,9 +93,11 @@ with a.html(lang="en"):
                 with a.div(klass="leaflet-top leaflet-right"):
                     with a.select(id="dropdown-menu", onChange="menuEvent(value);"):
                         a.option(value="0", _t="≡", klass="hidden", selected=True, disabled=True)
-                        a.option(id="reset-map", value="1", _t="Reset map view", klass="hidden"),
-                        a.option(id="reset-progress", value="2",_t="Reset progress"),
-                        a.option(value="3",_t="About")
+                        a.option(id="reset-map", value="1", _t="Center map", klass="hidden"),
+                        a.option(id="backup-progress", value="2",_t="Backup to file"),
+                        a.option(id="restore-progress", value="3",_t="Restore from file"),
+                        a.option(id="reset-progress", value="4",_t="Reset progress"),
+                        a.option(value="5",_t="About")
                 with a.div(klass="leaflet-bottom leaflet-left"):
                     with a.div("checkboxes"):
                         a.input(id="baiyue-checkbox", type="checkbox", checked=True)
@@ -202,11 +204,14 @@ with a.html(lang="en"):
                             with a.tr():
                                 with a.td(klass="center"):
                                     a.a(name="{}".format(str(x["OSM"])))
+                                    type = x["type"];
+                                    if not x["id-2017"]:
+                                        type = type + "_OLD"
                                     a.input(
                                         type="checkbox",
                                         id="{}".format(x["OSM"]),
                                         onClick='toggleVisited("{}",{});'.format(
-                                            x["type"], x["OSM"]
+                                            type, x["OSM"]
                                         ),
                                     )
                                 with a.td(klass="center"):

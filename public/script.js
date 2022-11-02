@@ -1,5 +1,6 @@
 // Number of peaks
-const TOTAL_XIAOBAIYUE = 116;
+const TOTAL_XIAOBAIYUE = 100;
+const TOTAL_OLD_XIAOBAIYUE = 16;
 const TOTAL_BAIYUE = 100;
 
 // Map settings
@@ -38,6 +39,7 @@ const 小百岳_ICON = L.AwesomeMarkers.icon({
 // Load visited peaks from local storage.
 var baiyueMarkers = JSON.parse(localStorage.getItem('baiyue.markers')) || {};
 var xiaobaiyueMarkers = JSON.parse(localStorage.getItem('xiaobaiyue.markers')) || {};
+var oldXiaobaiyueMarkers = JSON.parse(localStorage.getItem('oldXiaobaiyue.markers')) || {};
 
 // Update the progress bar.
 function updateProgress() {
@@ -53,11 +55,17 @@ function updateProgress() {
       xiaobaiyueClimbed++;
     }
   }
+  var oldXiaobaiyueClimbed = 0;
+  for (const [key, value] of Object.entries(oldXiaobaiyueMarkers)) {
+    if (value) {
+      oldXiaobaiyueClimbed++;
+    }
+  }
   $("label[for='baiyue-checkbox']").text("百岳：" + baiyueClimbed + "/" + TOTAL_BAIYUE);
-  $("label[for='xiaobaiyue-checkbox']").text("小百岳：" + xiaobaiyueClimbed + "/" + TOTAL_XIAOBAIYUE);
+  $("label[for='xiaobaiyue-checkbox']").text("小百岳：" + xiaobaiyueClimbed + "/" + TOTAL_XIAOBAIYUE + "、座舊小百岳：" + oldXiaobaiyueClimbed + "/" + TOTAL_OLD_XIAOBAIYUE);
 
   // Toggle reset button
-  if (baiyueClimbed == 0 && xiaobaiyueClimbed == 0) {
+  if (baiyueClimbed == 0 && xiaobaiyueClimbed == 0 && oldXiaobaiyueClimbed == 0) {
     $("option#reset-progress").css("display", "none");
   }
   else {
@@ -243,6 +251,9 @@ function resetMarkers() {
   for (key in xiaobaiyueMarkers) {
     markers[key].setIcon(小百岳_ICON);
   }
+  for (key in oldXiaobaiyueMarkers) {
+    markers[key].setIcon(小百岳_ICON);
+  }
 }
 
 // Switch to the Baiyue tab.
@@ -282,9 +293,13 @@ function toggleVisited(type, osm) {
     baiyueMarkers[osm] = checked ? true : false;
     localStorage.setItem("baiyue.markers", JSON.stringify(baiyueMarkers));
   }
-  else {
+  else if (type == "小百岳") {
     xiaobaiyueMarkers[osm] = checked ? true : false;
     localStorage.setItem("xiaobaiyue.markers", JSON.stringify(xiaobaiyueMarkers));
+  }
+  else {
+    oldXiaobaiyueMarkers[osm] = checked ? true : false;
+    localStorage.setItem("oldXiaobaiyue.markers", JSON.stringify(oldXiaobaiyueMarkers));
   }
   updateProgress();
 }
@@ -318,8 +333,10 @@ function resetProgress() {
       resetMarkers();
       baiyueMarkers = {};
       xiaobaiyueMarkers = {};
+      oldXiaobaiyueMarkers = {};
       localStorage.removeItem("baiyue.markers");
       localStorage.removeItem("xiaobaiyue.markers");
+      localStorage.removeItem("oldXiaobaiyue.markers");
       updateProgress();
       updateCheckboxes();
     }
@@ -343,12 +360,78 @@ function menuEvent(value) {
     resetDropdown();
   }
   else if (value == 2) {
-    resetProgress();
+    backupProgress();
     resetDropdown();
   }
   else if (value == 3) {
+    restoreProgress();
+    resetDropdown();
+  }
+  else if (value == 4) {
+    resetProgress();
+    resetDropdown();
+  }
+  else if (value == 5) {
     history.pushState(null, null, "#");
     jumpTo("about");
     resetDropdown();
   }
+}
+
+function backupProgress() {
+  var a = {};
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    var v = localStorage.getItem(k);
+    a[k] = v;
+  }
+  var textToSave = JSON.stringify(a)
+  var textToSaveAsBlob = new Blob([textToSave], {
+    type: "text/plain"
+  });
+  var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+  var downloadLink = document.createElement("a");
+  downloadLink.download = "baiyue-backup.json";
+  downloadLink.innerHTML = "Download File";
+  downloadLink.href = textToSaveAsURL;
+  downloadLink.onclick = function () {
+    document.body.removeChild(event.target);
+  };
+  downloadLink.style.display = "none";
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+}
+
+function restoreProgress() {
+  var input = document.createElement('input');
+  input.type = 'file';
+  input.onchange = e => { 
+    var file = e.target.files[0]; 
+    var reader = new FileReader();
+    reader.readAsText(file,'UTF-8');
+    reader.onload = readerEvent => {
+      var content = readerEvent.target.result;
+      try {
+        t = JSON.parse(content);
+        Object.keys(t).forEach(r => {
+          localStorage.setItem(r,t[r]);
+        });
+      }
+      catch(a) {
+        Swal.fire({
+          title: "Error",
+          text: "Loading data from the backup failed.",
+          icon: "error",
+          confirmButtonText: "Ok"
+        });
+        return;
+      }
+      baiyueMarkers = JSON.parse(localStorage.getItem('baiyue.markers')) || {};
+      console.log(localStorage.getItem('baiyue.markers'));
+      xiaobaiyueMarkers = JSON.parse(localStorage.getItem('xiaobaiyue.markers')) || {};
+      oldXiaobaiyueMarkers = JSON.parse(localStorage.getItem('oldXiaobaiyue.markers')) || {};
+      updateProgress();
+    }
+  }
+  input.click();
 }
