@@ -11,17 +11,18 @@ with open("data.yml") as f:
     constants = ""
     baiyue = []
     xiaobaiyue = []
+    oldXiaobaiyue = []
     for x in data:
-        baiyue.append(x["OSM"]) if x["type"] == "百岳" else xiaobaiyue.append(x["OSM"])
+        baiyue.append(x["OSM"]) if x["type"] == "百岳" else xiaobaiyue.append(x["OSM"]) if x["id-2017"] else oldXiaobaiyue.append(x["OSM"])
         markers += 'addMarker({}, {}, "{}", "{}", "{}", {});'.format(
             x["OSM"],
             x["location"],
-            x["type"],
+            x["type"] if x["type"] == "百岳" or x["id-2017"] else "小百岳_OLD",
             x["chinese"],
             x["english"],
             round(float(x["height"])),
         )
-    constants += "const BAIYUE={};const XIAOBAIYUE={};".format(baiyue, xiaobaiyue)
+    constants += "const BAIYUE={};const XIAOBAIYUE={};const OLD_XIAOBAIYUE={};".format(baiyue, xiaobaiyue, oldXiaobaiyue)
 a = Airium()
 a("<!DOCTYPE html>")
 with a.html(lang="en"):
@@ -83,7 +84,7 @@ with a.html(lang="en"):
         a.script(src="script.js")
         with a.script():
             a(
-                "{}$(document).ready(function () {{{};updateMarkers();}});".format(
+                "{}$(document).ready(function () {{{}toggleMarkers();}});".format(
                     constants, markers
                 )
             )
@@ -270,7 +271,7 @@ with a.html(lang="en"):
                 a.h3(_t="How to use this page?")
                 with a.div():
                     a.p(
-                        _t="At the top of the page, you will find a map of Taiwan. 百岳 peaks are marked in blue, 小百岳 in green."
+                        _t="At the top of the page, you will find a map of Taiwan. 百岳 peaks are marked in blue, 小百岳 in green. Peaks from previous versions of the 小百岳 list are shown in purple."
                     )
                     a.p(
                         _t="If you click on one of the markers, additional information is displayed. From there, you can jump to Hiking Biji, Google Maps or copy the GPS coordinates (WSG-84) or Chinese name of the peak into the clipboard to use in other apps."

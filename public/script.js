@@ -7,6 +7,7 @@ const TOTAL_BAIYUE = 100;
 const MAP_LAYERS = [{ url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '© OpenStreetMap' }]
 const DEFAULT_COORDINATES = [23.9739881, 120.9097797]
 const DEFAULT_ZOOM = 7
+const FLY_TO_ZOOM = 13
 const MAX_ZOOM = 19
 
 // Delay after which a (one-time) notice is shown that the page looks better in landscape mode
@@ -25,6 +26,11 @@ const 小百岳_VISITED_ICON = L.AwesomeMarkers.icon({
   prefix: 'fa',
   icon: 'mountain'
 });
+const 座舊小百岳_VISITED_ICON = L.AwesomeMarkers.icon({
+  markerColor: 'purple',
+  prefix: 'fa',
+  icon: 'mountain'
+});
 const 百岳_ICON = L.AwesomeMarkers.icon({
   markerColor: 'darkblue',
   prefix: 'fa',
@@ -32,6 +38,11 @@ const 百岳_ICON = L.AwesomeMarkers.icon({
 });
 const 小百岳_ICON = L.AwesomeMarkers.icon({
   markerColor: 'darkgreen',
+  prefix: 'fa',
+  icon: 'mountain'
+});
+const 座舊小百岳_ICON = L.AwesomeMarkers.icon({
+  markerColor: 'darkpurple',
   prefix: 'fa',
   icon: 'mountain'
 });
@@ -106,11 +117,11 @@ $(document).ready(function () {
 
   // Checkboxes should update the map markers.
   $("#baiyue-checkbox, #xiaobaiyue-checkbox").change(function() { 
-    updateMarkers();
+    toggleMarkers();
   });
   
   $("label[for='baiyue-checkbox'],label[for='xiaobaiyue-checkbox']").on("click", function(e) { 
-    updateMarkers();
+    toggleMarkers();
     e.stopPropagation();
   });
 
@@ -227,32 +238,31 @@ $(document).ready(function () {
   var lng = localStorage['xiaobaiyue.lng'] || DEFAULT_COORDINATES[1];
   var zoom = localStorage['xiaobiayue.zoom'] || DEFAULT_ZOOM;
   map.setView([lat, lng], zoom);
-
-  displayBaiyue();
 });
 
-// Update the map markers based on the checkbox values.
-function updateMarkers() {
+// Toggle between Xiaobaiyue and Baiyue map markers.
+function toggleMarkers() {
   var baiyue = $("#baiyue-checkbox").is(":checked");
   var xiaobaiyue = $("#xiaobaiyue-checkbox").is(":checked");
   for (const [key, value] of Object.entries(markers)) {
     markers[key].removeFrom(map);
-    if ((BAIYUE.includes(parseInt(key)) && baiyue) || (XIAOBAIYUE.includes(parseInt(key)) && xiaobaiyue)) {
+    if ((BAIYUE.includes(parseInt(key)) && baiyue) || ((XIAOBAIYUE.includes(parseInt(key)) || OLD_XIAOBAIYUE.includes(parseInt(key))) && xiaobaiyue)) {
       markers[key].addTo(map);
     }
   }
 }
 
-// Reset all map markers (to unvisited).
-function resetMarkers() {
-  for (key in baiyueMarkers) {
-    markers[key].setIcon(百岳_ICON);
+// Update the map markers.
+function updateMarkers() {
+  for (osm of BAIYUE) {
+    console.log(osm);
+    markers[osm].setIcon($("#"+osm).prop("checked") ? 百岳_VISITED_ICON : 百岳_ICON);
   }
-  for (key in xiaobaiyueMarkers) {
-    markers[key].setIcon(小百岳_ICON);
+  for (osm of XIAOBAIYUE) {
+    markers[osm].setIcon($("#"+osm).prop("checked") ? 小百岳_VISITED_ICON : 小百岳_ICON);
   }
-  for (key in oldXiaobaiyueMarkers) {
-    markers[key].setIcon(小百岳_ICON);
+  for (osm of OLD_XIAOBAIYUE) {
+    markers[osm].setIcon($("#"+osm).prop("checked") ? 座舊小百岳_VISITED_ICON : 座舊小百岳_ICON);
   }
 }
 
@@ -278,7 +288,7 @@ function jumpTo(id) {
 // Scroll to the map, fly to the location of a peak and open its details pop-up.
 function flyTo(lon, lat, osm) {
   $("#map")[0].scrollIntoView();
-  map.flyTo([lon, lat], 15);
+  map.flyTo([lon, lat], FLY_TO_ZOOM);
   markers[osm].openPopup();
 }
 
@@ -286,8 +296,8 @@ function flyTo(lon, lat, osm) {
 function toggleVisited(type, osm) {
   var checkbox = $("#"+osm);
   var checked = $("#"+osm).prop("checked");
-  var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
-  var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
+  var notVisitedIcon = type == "百岳" ? 百岳_ICON : (type == "小百岳" ? 小百岳_ICON : 座舊小百岳_ICON);
+  var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : (type == "小百岳" ? 小百岳_VISITED_ICON : 座舊小百岳_VISITED_ICON);
   markers[osm].setIcon(checked ? visitedIcon : notVisitedIcon);
   if (type == "百岳") {
     baiyueMarkers[osm] = checked ? true : false;
@@ -306,8 +316,8 @@ function toggleVisited(type, osm) {
 
 // Add a peak marker to the map.
 function addMarker(osm, lon, lat, type, chinese, english, elevation) {
-  var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
-  var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
+  var notVisitedIcon = type == "百岳" ? 百岳_ICON : (type == "小百岳" ? 小百岳_ICON : 座舊小百岳_ICON);
+  var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : (type == "小百岳" ? 小百岳_VISITED_ICON : 座舊小百岳_VISITED_ICON);
   var displayFunction = type == "百岳" ? "displayBaiyue()" : "displayXiaobaiyue()";
   var hikingBijiCategory = type =="百岳" ? 1 : 2;
   markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup('<h2><a onClick="' + displayFunction + ';jumpTo(' + osm + ');">' + chinese + ' ' + english + ' ' + elevation +'m' + '</a></h2><ul><li><button class="btn ui-button ui-widget ui-corner-all" data-clipboard-text="' + lon + ', ' + lat +'">Copy location (WGS84)</button></li><li><a class="btn ui-button ui-widget ui-corner-all" href="https://hiking.biji.co/index.php?q=mountain&category='+ hikingBijiCategory + '&page=1&keyword=' + chinese + '" target="_blank">健行筆記</a>&nbsp;<a class="btn ui-button ui-widget ui-corner-all" target="_blank" href="https://www.google.com/maps/place/' + lon+','+lat +'">Google Maps</a></li></ul>').addTo(map);
@@ -330,7 +340,6 @@ function resetProgress() {
     confirmButtonText: "Yes"
   }).then((result) => {
     if (result.isConfirmed) {
-      resetMarkers();
       baiyueMarkers = {};
       xiaobaiyueMarkers = {};
       oldXiaobaiyueMarkers = {};
@@ -339,17 +348,21 @@ function resetProgress() {
       localStorage.removeItem("oldXiaobaiyue.markers");
       updateProgress();
       updateCheckboxes();
+      updateMarkers();
     }
   })
 }
 
 // Update all checkbox values.
 function updateCheckboxes() {
-  for (key of BAIYUE) {
-    $("#" + key).prop("checked", baiyueMarkers[key] || false);
+  for (osm of BAIYUE) {
+    $("#" + osm).prop("checked", baiyueMarkers[osm] || false);
   }
-  for (key of XIAOBAIYUE) {
-    $("#" + key).prop("checked", xiaobaiyueMarkers[key] || false);
+  for (osm of XIAOBAIYUE) {
+    $("#" + osm).prop("checked", xiaobaiyueMarkers[osm] || false);
+  }
+  for (osm of OLD_XIAOBAIYUE) {
+    $("#" + osm).prop("checked", oldXiaobaiyueMarkers[osm] || false);
   }
 }
 
@@ -427,10 +440,11 @@ function restoreProgress() {
         return;
       }
       baiyueMarkers = JSON.parse(localStorage.getItem('baiyue.markers')) || {};
-      console.log(localStorage.getItem('baiyue.markers'));
       xiaobaiyueMarkers = JSON.parse(localStorage.getItem('xiaobaiyue.markers')) || {};
       oldXiaobaiyueMarkers = JSON.parse(localStorage.getItem('oldXiaobaiyue.markers')) || {};
       updateProgress();
+      updateCheckboxes();
+      updateMarkers();
     }
   }
   input.click();
