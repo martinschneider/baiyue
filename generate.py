@@ -14,10 +14,11 @@ with open("data.yml") as f:
     oldXiaobaiyue = []
     for x in data:
         baiyue.append(x["OSM"]) if x["type"] == "百岳" else xiaobaiyue.append(x["OSM"]) if x["id-2017"] else oldXiaobaiyue.append(x["OSM"])
-        markers += 'addMarker({}, {}, "{}", "{}", "{}", {});'.format(
+        markers += 'addMarker({}, {}, "{}", "{}", "{}", "{}", {});'.format(
             x["OSM"],
             x["location"],
             x["type"] if x["type"] == "百岳" or x["id-2017"] else "小百岳_OLD",
+            x["id"] if x["type"] == "百岳" else str(x["id-2017"] or ""),
             x["chinese"],
             x["english"],
             round(float(x["height"])),
