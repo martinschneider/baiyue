@@ -48,7 +48,10 @@ const 小百岳_ICON = L.AwesomeMarkers.icon({
 // Load visited peaks from local storage.
 var climbed = JSON.parse(localStorage.getItem(CLIMBED_PEAKS)) || {};
 
+var jsConfetti;
+
 $(document).ready(function () {
+  jsConfetti = new JSConfetti();
   // Initialize menu
   $("a#menu").click(function() {
     showMenu();
@@ -304,6 +307,9 @@ function toggleVisited(type, osm) {
   markers[osm].setIcon(checked ? visitedIcon : notVisitedIcon);
   climbed[osm] = checked ? true : false;
   localStorage.setItem(CLIMBED_PEAKS, JSON.stringify(climbed));
+  if (checked) {
+    jsConfetti.addConfetti();
+  }
   updateProgress();
 }
 

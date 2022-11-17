@@ -82,6 +82,7 @@ with a.html(lang="en"):
             src="https://gc.zgo.at/count.js",
             **{"data-goatcounter": "https://xiaobaiyue.goatcounter.com/count"}
         )
+        a.script(src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js")
         a.script(src="script.js")
         with a.script():
             a(
