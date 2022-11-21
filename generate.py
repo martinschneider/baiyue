@@ -143,7 +143,7 @@ with a.html(lang="en"):
                                     a.input(
                                         type="checkbox",
                                         id="{}".format(x["OSM"]),
-                                        onClick='toggleVisited("{}",{});'.format(
+                                        onClick='toggleVisited("{}",{}, false);'.format(
                                             x["type"], x["OSM"]
                                         ),
                                     )
@@ -213,7 +213,7 @@ with a.html(lang="en"):
                                     a.input(
                                         type="checkbox",
                                         id="{}".format(x["OSM"]),
-                                        onClick='toggleVisited("{}",{});'.format(
+                                        onClick='toggleVisited("{}",{}, false);'.format(
                                             type, x["OSM"]
                                         ),
                                     )
@@ -273,7 +273,7 @@ with a.html(lang="en"):
                 a.h3(_t="How to use this page?")
                 with a.div():
                     a.p(
-                        _t="At the top of the page, you will find a map of Taiwan. 百岳 peaks are marked in blue, 小百岳 in green. Peaks from previous versions of the 小百岳 list are shown in purple."
+                        _t="At the top of the page, you will find a map of Taiwan. 百岳 peaks are marked in blue, 小百岳 in green."
                     )
                     a.p(
                         _t="If you click on one of the markers, additional information is displayed. From there, you can jump to Hiking Biji, Google Maps or copy the GPS coordinates (WSG-84) or Chinese name of the peak into the clipboard to use in other apps."
@@ -282,7 +282,7 @@ with a.html(lang="en"):
                         _t="Below the map is a table of all 百岳 and 小百岳. You can use the corresponding buttons to switch between the two."
                     )
                     a.p(
-                        _t="Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) will update accordingly.")
+                        _t="Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) and the icon for that peak will update accordingly.")
                 a.h3(_t="Where is the progress stored? Is my data secure?")
                 with a.div():
                     with a.p():

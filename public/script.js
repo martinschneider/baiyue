@@ -299,9 +299,12 @@ function flyTo(lon, lat, osm) {
 }
 
 // Toggle the visited flag of a peak.
-function toggleVisited(type, osm) {
-  var checkbox = $("#"+osm);
-  var checked = $("#"+osm).prop("checked");
+function toggleVisited(type, osm, popup) {
+  var suffix = popup == true ? "_popup" : "";
+  var suffix2 = popup == false ? "_popup" : "";
+  var checkbox = $("#" + osm + suffix);
+  var checked = $("#" + osm + suffix).prop("checked");
+  $("#" + osm + suffix2).prop("checked", checked);
   var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
   var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
   markers[osm].setIcon(checked ? visitedIcon : notVisitedIcon);
@@ -324,12 +327,16 @@ function addMarker(osm, lon, lat, type, id, chinese, english, elevation) {
   if (id) {
     idStr = "#" + id + " ";
   }
-  var popup = "<h2><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " " + elevation +"m" + "</a></h2><ul><li><button class=\"btn ui-button ui-widget ui-corner-all\" data-clipboard-text=\"" + lon + ', ' + lat +"\">Copy location (WGS84)</button></li><li>";
+  var checked = $("#" + osm).prop("checked") == true ? "checked" : "";
+  var popup = "<h2><input id=\"" + osm + "_popup\" type=\"checkbox\" " + checked + " onClick=\"toggleVisited('" + type + "', " + osm +", true)\" /><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " " + elevation +"m" + "</a></h2><ul><li><button class=\"btn ui-button ui-widget ui-corner-all\" data-clipboard-text=\"" + lon + ', ' + lat +"\">Copy location (WGS84)</button></li><li>";
   if (hikingBiji) {
     popup += "<a class=\"btn ui-button ui-widget ui-corner-all\" href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記</a>&nbsp;";
   }
   popup += "<a class=\"btn ui-button ui-widget ui-corner-all\" target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon +','+ lat +"\">Google Maps</a></li></ul>";
-  markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup(popup).addTo(map);
+  markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup(popup).on('popupopen', function (popup) {
+        var checked = $("#" + osm).prop("checked") == true ? "checked" : "";
+        $("#" + osm + "_popup").prop("checked", checked);
+    }).addTo(map);
 }
 
 // Reset the value in the menu select element.
