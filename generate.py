@@ -388,7 +388,4 @@ with a.html(lang="en"):
                     onclick="$(window).scrollTop(0);",
                     _t="Back",
                 )
-        with a.span(id="forkongithub"):
-            a.a(href="https://github.com/martinschneider/baiyue", target="_blank", _t="Fork me on GitHub")
-                
 print(str(a))
