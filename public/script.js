@@ -318,12 +318,18 @@ function addMarker(osm, lon, lat, type, id, chinese, english, elevation) {
   var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
   var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
   var displayFunction = type == "百岳" ? "displayBaiyue()" : "displayXiaobaiyue()";
+  var hikingBiji = type != "小百岳_OLD";
   var hikingBijiCategory = type =="百岳" ? 1 : 2;
   var idStr = "";
   if (id) {
     idStr = "#" + id + " ";
   }
-  markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup("<h2><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " " + elevation +"m" + "</a></h2><ul><li><button class=\"btn ui-button ui-widget ui-corner-all\" data-clipboard-text=\"" + lon + ', ' + lat +"\">Copy location (WGS84)</button></li><li><a class=\"btn ui-button ui-widget ui-corner-all\" href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記</a>&nbsp;<a class=\"btn ui-button ui-widget ui-corner-all\" target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon +','+ lat +"\">Google Maps</a></li></ul>").addTo(map);
+  var popup = "<h2><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " " + elevation +"m" + "</a></h2><ul><li><button class=\"btn ui-button ui-widget ui-corner-all\" data-clipboard-text=\"" + lon + ', ' + lat +"\">Copy location (WGS84)</button></li><li>";
+  if (hikingBiji) {
+    popup += "<a class=\"btn ui-button ui-widget ui-corner-all\" href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記</a>&nbsp;";
+  }
+  popup += "<a class=\"btn ui-button ui-widget ui-corner-all\" target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon +','+ lat +"\">Google Maps</a></li></ul>";
+  markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup(popup).addTo(map);
 }
 
 // Reset the value in the menu select element.
