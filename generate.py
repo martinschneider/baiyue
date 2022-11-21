@@ -314,10 +314,7 @@ with a.html(lang="en"):
                 a.h3(_t="Are all 百岳 over 3000 meters?")
                 with a.div():
                     a.p(
-                        _t='They were supposed to be. However, 鹿山 Lushan has since been re-surveyed to be "only" 2981 meters high. It has been kept on the list, regardless.'
-                    )
-                    a.p(
-                        _t="There has also been some confusion about whether 六順山 Liushunshan is above 3000 meters, but its latest surveying came in at 3009 meters."
+                        _t='They were supposed to be. However, 鹿山 Lushan and 六順山 Liushunshan have since been re-surveyed to be "only" 2981 and 2999 meters high, respectively. They have been kept on the list, regardless.'
                     )
                 a.h3(_t="Why are there more than 100 小百岳?")
                 with a.div():
