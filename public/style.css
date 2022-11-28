@@ -27,7 +27,7 @@
 }
 
 body, .ui-widget {
-  font-family: text; !important
+  font-family: text; !important;
 }
 
 h1 {
@@ -74,18 +74,41 @@ div.menu a {
   font-weight: bold;
   background: #3298dc;
   color: white;
+  font-size: 1.25em;
 }
 
 #accordion p {
   font-size: 1.25em;
 }
 
-.ui-accordion .ui-accordion-header {
-  font-size: 1.5em;
-}
-
 .ui-state-active {
   border: 1px solid #c5c5c5;
+}
+
+.buttonset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px;
+}
+
+.buttonset a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui-helper-clearfix::before, .ui-helper-clearfix::after {
+  display:none !important;
+}
+
+.leaflet-container h2 {
+  font-size: 1.2em;
+}
+
+.leaflet-container a.ui-button {
+  color: #454545;
+  font-size: 1em;
+  padding: 2px;
 }
 
 .container {
@@ -103,10 +126,14 @@ div.menu a {
 }
 
 #map {
-  height: 500px;
-  width: 50%;
+  height: 75vh;
+  width: 100%;
   border-radius: 20px;
   margin: auto;
+}
+
+.container {
+  resize: vertical;
 }
 
 div#tabs {
@@ -130,8 +157,6 @@ a#xiaobaiyue-btn {
   font-size: 1.25em;
 }
 
-
-
 .swal2-html-container h1 {
   margin-top: 2em;
 }
@@ -149,7 +174,11 @@ th {
 }
 
 td {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+tr.highlight, tr.highlight > td {
+  background: lightyellow !important;
 }
 
 .header {
@@ -242,6 +271,10 @@ select > option.hidden {
 
 .btn {
   font-size: 1rem;
+}
+
+.leaflet-control-resizer-corner-s {
+  z-index: 999; /* 1000 would break the checkbox selector div in the lower left corner */
 }
 
 @media only screen and (max-width: 1024px) {

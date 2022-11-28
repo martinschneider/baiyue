@@ -14,14 +14,15 @@ with open("data.yml") as f:
     oldXiaobaiyue = []
     for x in data:
         baiyue.append(x["OSM"]) if x["type"] == "百岳" else xiaobaiyue.append(x["OSM"]) if x["id-2017"] else oldXiaobaiyue.append(x["OSM"])
-        markers += 'addMarker({}, {}, "{}", "{}", "{}", "{}", {});'.format(
+        markers += 'addMarker({}, {}, "{}", "{}", "{}", "{}", "{}", "{}");'.format(
             x["OSM"],
             x["location"],
             x["type"] if x["type"] == "百岳" or x["id-2017"] else "小百岳_OLD",
             x["id"] if x["type"] == "百岳" else str(x["id-2017"] or ""),
             x["chinese"],
             x["english"],
-            round(float(x["height"])),
+            round(x["height"]),
+            x["region"]
         )
     constants += "const BAIYUE={};const XIAOBAIYUE={};const OLD_XIAOBAIYUE={};".format(baiyue, xiaobaiyue, oldXiaobaiyue)
 a = Airium()
@@ -50,6 +51,8 @@ with a.html(lang="en"):
             href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css",
             rel="stylesheet",
         )
+        a.link(href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css", rel="stylesheet")
+        a.link(href="https://jjimenezshaw.github.io/Leaflet.Control.Resizer/L.Control.Resizer.css", rel="stylesheet")
         a.link(href="style.css", rel="stylesheet")
         a.link(href="favicon.png", rel="icon")
         a.meta(content="chrome=1", **{"http-equiv": "X-UA-Compatible"})
@@ -82,7 +85,8 @@ with a.html(lang="en"):
             src="https://gc.zgo.at/count.js",
             **{"data-goatcounter": "https://xiaobaiyue.goatcounter.com/count"}
         )
-        a.script(src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js")
+        a.script(src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js")
+        a.script(src="https://jjimenezshaw.github.io/Leaflet.Control.Resizer/L.Control.Resizer.js")
         a.script(src="script.js")
         with a.script():
             a(
@@ -95,12 +99,18 @@ with a.html(lang="en"):
             with a.div(id="map"):
                 with a.div(klass="leaflet-top leaflet-right"):
                     with a.select(id="dropdown-menu", onChange="menuEvent(value);"):
-                        a.option(value="0", _t="≡", klass="hidden", selected=True, disabled=True)
-                        a.option(id="reset-map", value="1", _t="Center map", klass="hidden"),
-                        a.option(id="backup-progress", value="2",_t="Backup to file"),
-                        a.option(id="restore-progress", value="3",_t="Restore from file"),
-                        a.option(id="reset-progress", value="4",_t="Reset progress"),
-                        a.option(value="5",_t="About")
+                        a.option(_t="≡", value="0", klass="hidden", selected=True, disabled=True)
+                        a.option(id="reset-map", value="1", _t="TAIWAN"),
+                        a.option(id="focus-north", value="2", _t="Northern Taiwan"),
+                        a.option(id="focus-central", value="3", _t="Central Taiwan"),
+                        a.option(id="focus-south", value="4", _t="Southern Taiwan"),
+                        a.option(id="focus-east", value="5", _t="Eastern Taiwan"),
+                        a.option(id="focus-islands", value="6", _t="Outlying Islands"),
+                        a.option(_t="──────────", disabled=True),
+                        a.option(id="backup-progress", value="7",_t="Backup to file"),
+                        a.option(id="restore-progress", value="8",_t="Restore from file"),
+                        a.option(id="reset-progress", value="9",_t="Reset progress"),
+                        a.option(value="10",_t="About")
                 with a.div(klass="leaflet-bottom leaflet-left"):
                     with a.div("checkboxes"):
                         a.input(id="baiyue-checkbox", type="checkbox", checked=True)
@@ -128,11 +138,11 @@ with a.html(lang="en"):
                     with a.thead():
                         with a.tr():
                             a.th(_t="✔️", **{"data-priority": "2"}, klass="center")
-                            a.th(_t="#", **{"data-priority": "5"}, klass="center")
+                            a.th(_t="#", **{"data-priority": "3"}, klass="center")
                             a.th(_t="Chinese name", **{"data-priority": "2"})
                             a.th(_t="English name", **{"data-priority": "1"})
-                            a.th(_t="Height", **{"data-priority": "3"})
-                            a.th(_t="Location", **{"data-priority": "4"})
+                            a.th(_t="Height", **{"data-priority": "4"})
+                            a.th(_t="Location", **{"data-priority": "5"})
                     with a.tbody():
                         for x in data:
                             if not x["type"] == "百岳":
@@ -193,13 +203,13 @@ with a.html(lang="en"):
                     with a.thead():
                         with a.tr():
                             a.th(_t="✔️", **{"data-priority": "2"}, klass="center")
-                            a.th(_t="2017", **{"data-priority": "5"}, klass="center")
+                            a.th(_t="2017", **{"data-priority": "3"}, klass="center")
                             a.th(_t="2006", klass="center")
                             a.th(_t="2003", klass="center")
                             a.th(_t="Chinese name", **{"data-priority": "2"})
                             a.th(_t="English name", **{"data-priority": "1"})
-                            a.th(_t="Height", **{"data-priority": "3"})
-                            a.th(_t="Location", **{"data-priority": "4"})
+                            a.th(_t="Height", **{"data-priority": "4"})
+                            a.th(_t="Location", **{"data-priority": "5"})
                     with a.tbody():
                         for x in data:
                             if not x["type"] == "小百岳":
@@ -339,7 +349,7 @@ with a.html(lang="en"):
                 a.h3(_t="How are the English translations of the peaks chosen?")
                 with a.div():
                     with a.p(
-                        _t="The naming pattern uses the Hanyu Pinyin transliteration of the Chinese name while keeping 山 shan untranslated, for example, 七星山 is translated as"
+                        _t="The naming pattern uses the Hanyu Pinyin transliteration of the Chinese name while keeping 山 shan untranslated, for example, 七星山 is written as"
                     ):
                       a.em(_t="Qixingshan")
                       a(
@@ -386,6 +396,6 @@ with a.html(lang="en"):
                 a.a(
                     klass="btn ui-button ui-widget ui-corner-all",
                     onclick="$(window).scrollTop(0);",
-                    _t="Back",
+                    _t="Top",
                 )
 print(str(a))

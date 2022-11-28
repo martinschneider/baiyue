@@ -10,19 +10,28 @@ const DEFAULT_ZOOM = 7;
 const FLY_TO_ZOOM = 13;
 const MAX_ZOOM = 19;
 
+// Menu entries
+const MENU_TAIWAN = 1;
+const MENU_NORTH = 2;
+const MENU_CENTRAL = 3;
+const MENU_SOUTH = 4;
+const MENU_EAST = 5;
+const MENU_ISLANDS = 6;
+const MENU_BACKUP = 7;
+const MENU_RESTORE = 8;
+const MENU_RESET = 9;
+const MENU_ABOUT = 10;
+
 // Local storage keys
-const LANDSCAPE_ACK = "landscapeAck";
 const ACTIVE_TAB = "activeTab";
 const MAP_LAT = "mapLat";
 const MAP_LNG = "mapLng";
 const MAP_ZOOM = "mapZoom";
 const CLIMBED_PEAKS = "climbed";
 
-// Delay after which a (one-time) notice is shown that the page looks better in landscape mode
-const POPUP_DELAY = 30000;
-
 // Map markers
 var markers = {};
+var markerGroups = { "all" : L.featureGroup(), "north" : L.featureGroup(), "central" : L.featureGroup(), "south" : L.featureGroup(), "east" : L.featureGroup(), "islands" : L.featureGroup() };
 var layers = [];
 const 百岳_VISITED_ICON = L.AwesomeMarkers.icon({
   markerColor: 'blue',
@@ -51,25 +60,10 @@ var climbed = JSON.parse(localStorage.getItem(CLIMBED_PEAKS)) || {};
 var jsConfetti;
 
 $(document).ready(function () {
-  jsConfetti = new JSConfetti();
   // Initialize menu
   $("a#menu").click(function() {
     showMenu();
   });
-  
-  // Display a hint that there is extra information in landscape mode. Use local storage to ensure it's displayed only once.
-  setTimeout(function() {
-    if (!localStorage[LANDSCAPE_ACK] && window.innerHeight > window.innerWidth) {
-      Swal.fire({
-        icon: "info",
-        html: "<p class=\"center\">This page displays more details in landscape mode.</p>",
-        showCloseButton: true,
-        showConfirmButton: false
-      }).then((result) => {
-        localStorage.setItem(LANDSCAPE_ACK, true);
-      })
-    }
-  }, POPUP_DELAY);
   
   // Register accordion for FAQ section.
   $("#accordion").accordion({
@@ -94,30 +88,25 @@ $(document).ready(function () {
 
   updateProgress();
   updateCheckboxes();
-
+  
   // Initialize map.
   map = L.map("map", {
     attributionControl: true,
     scrollWheelZoom: false,
+    fullscreenControl: true,
+    zoomDelta: 0.5,
+    zoomSnap: 0,
     dragging: !L.Browser.mobile
-  }).setView(DEFAULT_COORDINATES, DEFAULT_ZOOM);
+  });
   MAP_LAYERS.forEach((layer, index) => layers[index] = L.tileLayer(layer["url"], { maxZoom: MAX_ZOOM, attribution: layer["attribution"] }));
   layers[$("#layer-selector").val() || 0].addTo(map);
   map.attributionControl.setPrefix("");  
+  L.control.resizer({ direction: "s", pan: "true" }).addTo(map);
   map.on("moveend zoomend", function() {
     // Store the current map center and zoom level in the local storage.
     localStorage[MAP_ZOOM] = map.getZoom();
     localStorage[MAP_LAT] = map.getCenter().lat;
     localStorage[MAP_LNG] = map.getCenter().lng;
-
-    // Toggle map reset button
-    var threshold = 0.001;
-    if (Math.abs(map.getCenter().lat - DEFAULT_COORDINATES[0]) < threshold && Math.abs(map.getCenter().lng - DEFAULT_COORDINATES[1]) < threshold && map.getZoom() == DEFAULT_ZOOM) {
-      $("option#reset-map").css("display", "none");
-    }
-    else {
-      $("option#reset-map").css("display", "block");
-    }
   });
   
   // Initialize data tables.
@@ -288,7 +277,13 @@ function displayXiaobaiyue() {
 
 // Scroll to a Baiyue or Xiaobaiyue in the table.
 function jumpTo(id) {
-  $("html,body").animate({scrollTop: $("#"+id).offset().top},"slow");
+  if (map.isFullscreen()) {
+    map.toggleFullscreen();
+  }
+  $("html,body").animate({scrollTop: $("#"+id).offset().top - 50},"slow");
+  $("#"+id).closest("tr").addClass("highlight").delay(3000).queue(function(){
+    $(this).removeClass("highlight").dequeue();
+  });
 }
 
 // Scroll to the map, fly to the location of a peak and open its details pop-up.
@@ -296,28 +291,26 @@ function flyTo(lon, lat, osm) {
   $("#map")[0].scrollIntoView();
   map.flyTo([lon, lat], FLY_TO_ZOOM);
   markers[osm].openPopup();
+  $(".buttonset").buttonset();
 }
 
 // Toggle the visited flag of a peak.
-function toggleVisited(type, osm, popup) {
-  var suffix = popup == true ? "_popup" : "";
-  var suffix2 = popup == false ? "_popup" : "";
-  var checkbox = $("#" + osm + suffix);
-  var checked = $("#" + osm + suffix).prop("checked");
-  $("#" + osm + suffix2).prop("checked", checked);
+function toggleVisited(type, osm, invert) {
+  var checkbox = $("#" + osm);
+  var checked = $("#" + osm).prop("checked");
+  if (invert) {
+    checked = !checked;
+  }
   var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
   var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
   markers[osm].setIcon(checked ? visitedIcon : notVisitedIcon);
   climbed[osm] = checked ? true : false;
   localStorage.setItem(CLIMBED_PEAKS, JSON.stringify(climbed));
-  if (checked) {
-    jsConfetti.addConfetti();
-  }
   updateProgress();
 }
 
 // Add a peak marker to the map.
-function addMarker(osm, lon, lat, type, id, chinese, english, elevation) {
+function addMarker(osm, lon, lat, type, id, chinese, english, height, region) {
   var notVisitedIcon = type == "百岳" ? 百岳_ICON : 小百岳_ICON;
   var visitedIcon = type == "百岳" ? 百岳_VISITED_ICON : 小百岳_VISITED_ICON;
   var displayFunction = type == "百岳" ? "displayBaiyue()" : "displayXiaobaiyue()";
@@ -328,15 +321,35 @@ function addMarker(osm, lon, lat, type, id, chinese, english, elevation) {
     idStr = "#" + id + " ";
   }
   var checked = $("#" + osm).prop("checked") == true ? "checked" : "";
-  var popup = "<h2><input id=\"" + osm + "_popup\" type=\"checkbox\" " + checked + " onClick=\"toggleVisited('" + type + "', " + osm +", true)\" /><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " " + elevation +"m" + "</a></h2><ul><li><button class=\"btn ui-button ui-widget ui-corner-all\" data-clipboard-text=\"" + lon + ', ' + lat +"\">Copy location (WGS84)</button></li><li>";
+  var toggleLabel = checked ? "unvisited" : "visited";
+  var popup = "<h2><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " (" + height +" m)</a></h2>"
+
+  // Buttonset
+  popup += "<div class=\"buttonset\">"
+
+  // Toggle climbing status
+  popup += "<a id=\"toggleButton\" onClick=\"toggleVisited('" + type + "', " + osm + ", true);updateCheckbox(" + osm + ");adjustToggleLabel(" + osm + ")\">Mark as " + toggleLabel + "</a>"
+  
+  // Copy GPS coordinates
+  popup += "<a class=\"btn\" data-clipboard-text=\"" + lon + ', ' + lat +"\">Copy location (WGS84)</a>";
+
+  // Hiking Biji link
   if (hikingBiji) {
-    popup += "<a class=\"btn ui-button ui-widget ui-corner-all\" href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記</a>&nbsp;";
+    popup += "<a href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記 Hiking Biji</a>";
   }
-  popup += "<a class=\"btn ui-button ui-widget ui-corner-all\" target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon +','+ lat +"\">Google Maps</a></li></ul>";
-  markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup(popup).on('popupopen', function (popup) {
-        var checked = $("#" + osm).prop("checked") == true ? "checked" : "";
-        $("#" + osm + "_popup").prop("checked", checked);
-    }).addTo(map);
+  
+  // Google Maps link
+  popup += "<a target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon +','+ lat +"\">Google Maps</a>";
+
+  popup += "</div>";
+
+  markers[osm] = L.marker([lon, lat], {icon: $("#"+osm).prop("checked") ? visitedIcon : notVisitedIcon}).bindPopup(popup).on('popupopen', function (popup) {$(".buttonset").buttonset();adjustToggleLabel(osm)}).addTo(map).addTo(markerGroups["all"]).addTo(markerGroups[region]);
+}
+
+function adjustToggleLabel(osm) {
+  var checked = $("#" + osm).prop("checked") == true ? "checked" : "";
+  var toggleLabel = checked ? "unvisited" : "visited";
+  $("#toggleButton").text("Mark as " + toggleLabel);
 }
 
 // Reset the value in the menu select element.
@@ -363,6 +376,11 @@ function resetProgress() {
       updateMarkers();
     }
   })
+}
+
+// Update specific checkbox value.
+function updateCheckbox(osm) {
+  $("#" + osm).prop("checked", climbed[osm] || false);
 }
 
 // Update all checkbox values.
@@ -439,25 +457,36 @@ function restoreProgress() {
 
 // Helper method for dropdown menu actions.
 function menuEvent(value) {
-  if (value == 1) {
-    map.setView(DEFAULT_COORDINATES, DEFAULT_ZOOM);
-    resetDropdown();
+  if (value == MENU_TAIWAN) {
+    map.fitBounds(markerGroups["all"].getBounds(), { padding: [50, 50] });
   }
-  else if (value == 2) {
+  else if (value == MENU_BACKUP) {
     backupProgress();
-    resetDropdown();
   }
-  else if (value == 3) {
+  else if (value == MENU_RESTORE) {
     restoreProgress();
-    resetDropdown();
   }
-  else if (value == 4) {
+  else if (value == MENU_RESET) {
     resetProgress();
-    resetDropdown();
   }
-  else if (value == 5) {
+  else if (value == MENU_ABOUT) {
     history.pushState(null, null, "#");
     jumpTo("about");
-    resetDropdown();
   }
+  else if (value == MENU_NORTH) {
+    map.fitBounds(markerGroups["north"].getBounds(), { padding: [50, 50] });
+  }
+  else if (value == MENU_CENTRAL) {
+    map.fitBounds(markerGroups["central"].getBounds(), { padding: [50, 50] });
+  }
+  else if (value == MENU_SOUTH) {
+    map.fitBounds(markerGroups["south"].getBounds(), { padding: [50, 50] });
+  }
+  else if (value == MENU_EAST) {
+    map.fitBounds(markerGroups["east"].getBounds(), { padding: [50, 50] });
+  }
+  else if (value == MENU_ISLANDS) {
+    map.fitBounds(markerGroups["islands"].getBounds(), { padding: [50, 50] });
+  }
+  resetDropdown();
 }
