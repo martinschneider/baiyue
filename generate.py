@@ -53,6 +53,7 @@ with a.html(lang="en"):
         )
         a.link(href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css", rel="stylesheet")
         a.link(href="https://jjimenezshaw.github.io/Leaflet.Control.Resizer/L.Control.Resizer.css", rel="stylesheet")
+        a.link(href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css", rel="stylesheet")
         a.link(href="style.css", rel="stylesheet")
         a.link(href="favicon.png", rel="icon")
         a.meta(content="chrome=1", **{"http-equiv": "X-UA-Compatible"})
@@ -87,10 +88,13 @@ with a.html(lang="en"):
         )
         a.script(src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js")
         a.script(src="https://jjimenezshaw.github.io/Leaflet.Control.Resizer/L.Control.Resizer.js")
+        a.script(src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js")
+        a.script(src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js")
         a.script(src="script.js")
         with a.script():
+
             a(
-                "{}$(document).ready(function () {{{}toggleMarkers();}});".format(
+                "{}function initMarkers(){{{}}};".format(
                     constants, markers
                 )
             )
@@ -109,7 +113,7 @@ with a.html(lang="en"):
                         a.option(_t="──────────", disabled=True),
                         a.option(id="backup-progress", value="7",_t="Backup to file"),
                         a.option(id="restore-progress", value="8",_t="Restore from file"),
-                        a.option(id="reset-progress", value="9",_t="Reset progress"),
+                        a.option(id="reset-progress", value="9",_t="Delete my data"),
                         a.option(value="10",_t="About")
                 with a.div(klass="leaflet-bottom leaflet-left"):
                     with a.div("checkboxes"):
@@ -153,7 +157,7 @@ with a.html(lang="en"):
                                     a.input(
                                         type="checkbox",
                                         id="{}".format(x["OSM"]),
-                                        onClick='toggleVisited("{}",{}, false);'.format(
+                                        onClick='toggle("{}",{});'.format(
                                             x["type"], x["OSM"]
                                         ),
                                     )
@@ -223,7 +227,7 @@ with a.html(lang="en"):
                                     a.input(
                                         type="checkbox",
                                         id="{}".format(x["OSM"]),
-                                        onClick='toggleVisited("{}",{}, false);'.format(
+                                        onClick='toggle("{}",{});'.format(
                                             type, x["OSM"]
                                         ),
                                     )
@@ -296,17 +300,9 @@ with a.html(lang="en"):
                 a.h3(_t="Where is the progress stored? Is my data secure?")
                 with a.div():
                     with a.p():
-                        a("All information is stored client-side, which means")
-                        a.a(
-                            href="https://en.wikipedia.org/wiki/Web_storage",
-                            _t="locally in your browser",
-                        )
-                        a(". Hiking progress is never uploaded to any server.")
+                        a("All information is stored client-side, which means locally in your browser. Hiking progress and photos are never uploaded to any server.")
                     with a.p():
-                        a("Please note that this also means that your information will")
-                        a.em(_t="NOT")
-                        a(
-                            "synchronize between multiple devices, for example, your desktop and your phone."
+                        a("Please note that this also means that your information will not synchronize between multiple devices, for example, your desktop and your phone. You can, however, use the backup & restore functions to copy your data between devices."
                         )
                 a.h3(_t="What is the history of the 百岳?")
                 with a.div():
@@ -324,7 +320,7 @@ with a.html(lang="en"):
                 a.h3(_t="Are all 百岳 over 3000 meters?")
                 with a.div():
                     a.p(
-                        _t='They were supposed to be. However, 鹿山 Lushan and 六順山 Liushunshan have since been re-surveyed to be "only" 2981 and 2999 meters high, respectively. They have been kept on the list, regardless.'
+                        _t='They were supposed to be. However, 鹿山 Lushan has since been re-surveyed to be "only" 2981 meters high. It has been kept on the list, regardless.'
                     )
                 a.h3(_t="Why are there more than 100 小百岳?")
                 with a.div():
