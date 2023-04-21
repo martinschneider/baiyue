@@ -333,25 +333,28 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region) {
   var popup = "<h2><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " (" + height + " m)</a></h2>"
 
   // Buttonset
-  var rows = hikingBiji ? "three-rows" : "two-rows";
-  popup += "<div class=\"buttonset " + rows +"\">"
+  popup += "<div class=\"buttonset\">"
 
   // Toggle climbing status
-  popup += "<a id=\"toggleButton\" onClick=\"toggle(" + "'" + type + "', " + osm + ");\">Mark as " + toggleLabel + "</a>"
+  popup += "<a class=\"btn\" id=\"toggleButton\" onClick=\"toggle(" + "'" + type + "', " + osm + ");\">Mark as " + toggleLabel + "</a>"
 
   // Copy GPS coordinates
   popup += "<a class=\"btn\" data-clipboard-text=\"" + lon + ', ' + lat + "\">Copy location (WGS84)</a>";
 
   // Hiking Biji link
   if (hikingBiji) {
-    popup += "<a href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記 Hiking Biji</a>";
+    popup += "<a class=\"btn\" href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記 Hiking Biji</a>";
+  }
+  else
+  {
+    popup += "<a class=\"btn btn-disabled\" href=\"#\">健行筆記 Hiking Biji</a>"
   }
 
   // Google Maps link
-  popup += "<a target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon + ',' + lat + "\">Google Maps</a>";
+  popup += "<a class=\"btn\" target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon + ',' + lat + "\">Google Maps</a>";
 
   // Photo
-  popup += "<a onClick=\"uploadPhoto(" + "'" + type + "', " + osm + ")\">Photo</a>";
+  popup += "<a class=\"btn\" onClick=\"uploadPhoto(" + "'" + type + "', " + osm + ")\">Photo</a>";
 
   popup += "</div>";
 

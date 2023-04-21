@@ -88,14 +88,8 @@ div.menu a {
 .buttonset {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.two-rows {
-  grid-template-rows: 50px 50px;
-}
-
-.three-rows {
   grid-template-rows: 50px 50px 50px;
+  gap: 10px;
 }
 
 .buttonset a {
@@ -278,6 +272,12 @@ select > option.hidden {
 
 .btn {
   font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn-disabled {
+  color: grey !important;
+  cursor: default;
 }
 
 .leaflet-control-resizer-corner-s {
