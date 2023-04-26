@@ -20,10 +20,11 @@ const MENU_CENTRAL = 3;
 const MENU_SOUTH = 4;
 const MENU_EAST = 5;
 const MENU_ISLANDS = 6;
-const MENU_BACKUP = 7;
-const MENU_RESTORE = 8;
-const MENU_RESET = 9;
-const MENU_ABOUT = 10;
+const MENU_LOCATION = 7;
+const MENU_BACKUP = 8;
+const MENU_RESTORE = 9;
+const MENU_RESET = 10;
+const MENU_ABOUT = 11;
 
 // Local storage keys
 const ACTIVE_TAB = "activeTab";
@@ -66,8 +67,17 @@ const 小百岳_ICON = L.AwesomeMarkers.icon({
   icon: 'mountain'
 });
 
+const POSITION_ICON = L.AwesomeMarkers.icon({
+  markerColor: 'red',
+  prefix: 'fa',
+  icon: 'person-hiking'
+});
+
 // Load visited peaks from local storage.
 var climbed;
+
+var currPosMarker;
+var currPos;
 
 $(document).ready(function() {
   localforage.config({
@@ -143,6 +153,7 @@ $(document).ready(function() {
     localStorage[MAP_LAT] = map.getCenter().lat;
     localStorage[MAP_LNG] = map.getCenter().lng;
   });
+  navigator.geolocation.watchPosition(showPos);
 
   // Initialize data tables.
   $("#baiyue").DataTable({
@@ -236,6 +247,16 @@ $(document).ready(function() {
   var zoom = localStorage[MAP_ZOOM] || DEFAULT_ZOOM;
   map.setView([lat, lng], zoom);
 });
+
+function showPos(position) {
+  currPos = position;
+  if (!currPosMarker) {
+    currPosMarker = L.marker([position.coords.latitude, position.coords.longitude], {icon: POSITION_ICON});
+    currPosMarker.bindTooltip("Your current location").openTooltip();
+    currPosMarker.addTo(map);
+  }
+  currPosMarker.setLatLng(new L.LatLng(position.coords.latitude, position.coords.longitude));
+}
 
 // Toggle between Xiaobaiyue and Baiyue map markers.
 function toggleMarkers() {
@@ -332,30 +353,32 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region) {
   var toggleLabel = checked ? "unvisited" : "visited";
   var popup = "<h2><a onClick=\"" + displayFunction + ";jumpTo(" + osm + ");\">" + idStr + chinese + " " + english + " (" + height + " m)</a></h2>"
 
-  // Buttonset
-  popup += "<div class=\"buttonset\">"
+  // Actions
+  popup += "<div class=\"buttonset actionset\">"
 
   // Toggle climbing status
   popup += "<a class=\"btn\" id=\"toggleButton\" onClick=\"toggle(" + "'" + type + "', " + osm + ");\">Mark as " + toggleLabel + "</a>"
-
-  // Copy GPS coordinates
-  popup += "<a class=\"btn\" data-clipboard-text=\"" + lon + ', ' + lat + "\">Copy location (WGS84)</a>";
-
-  // Hiking Biji link
-  if (hikingBiji) {
-    popup += "<a class=\"btn\" href=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" target=\"_blank\">健行筆記 Hiking Biji</a>";
-  }
-  else
-  {
-    popup += "<a class=\"btn btn-disabled\" href=\"#\">健行筆記 Hiking Biji</a>"
-  }
-
-  // Google Maps link
-  popup += "<a class=\"btn\" target=\"_blank\" href=\"https://www.google.com/maps/place/" + lon + ',' + lat + "\">Google Maps</a>";
-
+  
   // Photo
   popup += "<a class=\"btn\" onClick=\"uploadPhoto(" + "'" + type + "', " + osm + ")\">Photo</a>";
+  popup += "</div>";
 
+  // Navigation
+  popup += "<div class=\"actionset\"><select class=\"btn ui-button\" onChange=\"actionEvent(this, this.value);\"><option value=\"0\" class=\"hidden\" selected=\"true\" disabled=\"true\">Navigation</option>";
+  // Google Maps
+  popup += "<option value=\"https://www.google.com/maps/place/" + lon +','+ lat +"\" title=\"Google Maps\">Google Maps</option>";
+  // Organic Maps
+  popup += "<option value=\"om://map?v=1&ll=" + lon + ", " + lat + "\" title=\"Organic Maps\">Organic Maps</option>";
+  // Copy location
+  popup += "<option value=\"" + lon + ", " + lat +"\">Copy location (WGS84)</option></select>";
+
+  
+  // Route description
+  if (hikingBiji) {
+    popup += "<select class=\"btn ui-button\" onChange=\"actionEvent(this, this.value);\">";
+    popup += "<option value=\"0\" class=\"hidden\" selected=\"true\" disabled=\"true\">Route description</option>";
+    popup += "<option value=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" title=\"健行筆記 Hiking Biji\">健行筆記 Hiking Biji</option></select>";
+  }
   popup += "</div>";
 
   var icon = L.AwesomeMarkers.icon({
@@ -366,12 +389,17 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region) {
     icon.options.markerColor = type == "百岳" ? checked ? "blue" : "darkblue" : checked ? "green" : "darkgreen";
     icon.options.icon = checked ? value != null ? "photo" : "check" : "mountain";
   
-    markers[osm] = L.marker([lon, lat], {
-      icon: icon
-    }).bindPopup(popup).on('popupopen', function(popup) {
-      $(".buttonset").buttonset();
-      adjustToggleLabel(osm)
-    }).addTo(map).addTo(markerGroups["all"]).addTo(markerGroups[region]);	
+    if (!markers[osm]) {
+      markers[osm] = L.marker([lon, lat], {
+        icon: icon
+      }).bindPopup(popup).on('popupopen', function(popup) {
+        $(".buttonset").buttonset();
+        adjustToggleLabel(osm)
+      }).addTo(map).addTo(markerGroups["all"]).addTo(markerGroups[region]);	
+    }
+    else {
+      markers[osm].setIcon(icon);
+    }
   });
 }
 
@@ -549,21 +577,50 @@ function uploadPhoto(type, osm) {
 function photoDialog(type, osm, value, input) {
   Swal.fire({
     imageUrl: value,
+    focusConfirm: false,
     showDenyButton: true,
+    denyButtonText: "Delete",
+    confirmButtonText: "Update",
+    cancelButtonText: "Close",
     showCancelButton: true,
-    denyButtonText: "Remove photo",
-    cancelButtonText: "Update photo"
+    showCloseButton: true
   }).then((result) => {
     if (result.isDenied) {
-      localforage.removeItem("photo_" + osm);
-      hasPhoto.delete(osm);
-      updateUi(type, osm);
-      localforage.setItem(HAS_PHOTO, hasPhoto);
+      Swal.fire({
+        title: "Are you sure?",
+        text: "Deleting a photo cannot be undone.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localforage.removeItem("photo_" + osm);
+          hasPhoto.delete(osm);
+          updateUi(type, osm);
+          localforage.setItem(HAS_PHOTO, hasPhoto);
+        }
+        else {
+          photoDialog(type, osm, value, input);
+        }
+      });
     }
-    if (result.isDismissed) {
+    if (result.isConfirmed) {
       input.click();
     }
   })
+}
+
+function actionEvent(dropdown, value) {
+  if (value.startsWith("http://") || value.startsWith("om://")) {
+    window.open(value);
+  }
+  else {
+    navigator.clipboard.writeText(value);
+  }
+  // reset dropdown value
+  dropdown.value = 0;
 }
 
 // Helper method for dropdown menu actions.
@@ -601,6 +658,16 @@ function menuEvent(value) {
     map.fitBounds(markerGroups["islands"].getBounds(), {
       padding: [50, 50]
     });
+  } else if (value == MENU_LOCATION) {
+    if (!currPos) {
+      Swal.fire({
+        text: "Your current positon is unknown.",
+        icon: "warning"
+      })
+    }
+    else {
+      map.flyTo([currPos.coords.latitude, currPos.coords.longitude], FLY_TO_ZOOM);
+    }
   }
   resetDropdown();
 }

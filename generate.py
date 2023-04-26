@@ -110,11 +110,12 @@ with a.html(lang="en"):
                         a.option(id="focus-south", value="4", _t="Southern Taiwan"),
                         a.option(id="focus-east", value="5", _t="Eastern Taiwan"),
                         a.option(id="focus-islands", value="6", _t="Outlying Islands"),
+                        a.option(id="focus-location", value="7", _t="Current location"),                        
                         a.option(_t="──────────", disabled=True),
-                        a.option(id="backup-progress", value="7",_t="Backup to file"),
-                        a.option(id="restore-progress", value="8",_t="Restore from file"),
-                        a.option(id="reset-progress", value="9",_t="Delete my data"),
-                        a.option(value="10",_t="About")
+                        a.option(id="backup-progress", value="8",_t="Backup to file"),
+                        a.option(id="restore-progress", value="9",_t="Restore from file"),
+                        a.option(id="reset-progress", value="10",_t="Delete my data"),
+                        a.option(value="11",_t="About")
                 with a.div(klass="leaflet-bottom leaflet-left"):
                     with a.div("checkboxes"):
                         a.input(id="baiyue-checkbox", type="checkbox", checked=True)

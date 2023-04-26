@@ -85,17 +85,26 @@ div.menu a {
   border: 1px solid #c5c5c5;
 }
 
-.buttonset {
+.actionset {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 50px 50px;
+  grid-template-rows: 50px;
   gap: 10px;
+  padding-bottom: 10px;
 }
 
-.buttonset a {
+.actionset a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.actionset select {
+  width: 100%;
+  color: #454545;
+  font-size: 1em;
+  padding: 2px;
+  font-family: text;
 }
 
 .ui-helper-clearfix::before, .ui-helper-clearfix::after {
@@ -282,6 +291,10 @@ select > option.hidden {
 
 .leaflet-control-resizer-corner-s {
   z-index: 999; /* 1000 would break the checkbox selector div in the lower left corner */
+}
+
+img.swal2-image {
+  margin: 0
 }
 
 @media only screen and (max-width: 1024px) {
