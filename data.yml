@@ -5,7 +5,7 @@
    chinese: 玉山
    english: Yushan
    location: 23.4700025,120.9572707
-   height: 3952
+   elevation: 3952
    region: central
 -
    type: 百岳
@@ -14,7 +14,7 @@
    chinese: 雪山主峰
    english: Xueshan
    location: 24.3834112,121.2317647
-   height: 3886
+   elevation: 3886
    region: central
 -
    type: 百岳
@@ -23,7 +23,7 @@
    chinese: 玉山東峰
    english: Yushan East Peak
    location: 23.4707259,120.9651888
-   height: 3869
+   elevation: 3869
    region: central
 -
    type: 百岳
@@ -32,7 +32,7 @@
    chinese: 玉山北峰
    english: Yushan North Peak
    location: 23.4875306,120.9594719
-   height: 3858
+   elevation: 3858
    region: central
 -
    type: 百岳
@@ -41,7 +41,7 @@
    chinese: 玉山南峰
    english: Yushan South Peak
    location: 23.4466000,120.9588000
-   height: 3844
+   elevation: 3844
    region: central
 -
    type: 百岳
@@ -50,7 +50,7 @@
    chinese: 秀姑巒山
    english: Xiuguluanshan
    location: 23.4967827,121.0575437
-   height: 3860.00
+   elevation: 3860.00
    region: central
 -
    type: 百岳
@@ -59,7 +59,7 @@
    chinese: 馬博拉斯山
    english: Mabolasishan
    location: 23.5203357,121.0672331
-   height: 3805.00
+   elevation: 3805.00
    region: central
 -
    type: 百岳
@@ -68,7 +68,7 @@
    chinese: 南湖大山
    english: Nanhudashan
    location: 24.3618110,121.4393689
-   height: 3742
+   elevation: 3742
    region: central
 -
    type: 百岳
@@ -77,7 +77,7 @@
    chinese: 東小南山
    english: Dongxiaonanshan
    location: 23.4390257,120.9634024
-   height: 3711.19
+   elevation: 3711.19
    region: central
 -
    type: 百岳
@@ -86,7 +86,7 @@
    chinese: 中央尖山
    english: Zhongyangjianshan
    location: 24.3102143,121.4162213
-   height: 3705
+   elevation: 3705
    region: central
 -
    type: 百岳
@@ -95,7 +95,7 @@
    chinese: 雪山北峰
    english: Xueshan North Peak
    location: 24.4147359,121.2404652
-   height: 3703
+   elevation: 3703
    region: central
 -
    type: 百岳
@@ -104,7 +104,7 @@
    chinese: 關山
    english: Guanshan
    location: 23.2280702,120.9117115
-   height: 3668
+   elevation: 3668
    region: east
 -
    type: 百岳
@@ -113,7 +113,7 @@
    chinese: 大水窟山
    english: Dashuikushan
    location: 23.4738428,121.0384127
-   height: 3642
+   elevation: 3642
    region: central
 -
    type: 百岳
@@ -122,7 +122,7 @@
    chinese: 南湖大山東峰
    english: Nanhudashan East Peak
    location: 24.3655967,121.4508509
-   height: 3632
+   elevation: 3632
    region: central
 -
    type: 百岳
@@ -131,7 +131,7 @@
    chinese: 東郡大山
    english: Dongjudashan
    location: 23.6268149,121.0918738
-   height: 3619.42
+   elevation: 3619.42
    region: central
 -
    type: 百岳
@@ -140,7 +140,7 @@
    chinese: 奇萊北峰
    english: Qilaishan North Peak
    location: 24.1183430,121.3345488
-   height: 3607
+   elevation: 3607
    region: central
 -
    type: 百岳
@@ -149,7 +149,7 @@
    chinese: 向陽山
    english: Xiangyangshan
    location: 23.2843613,120.9924466
-   height: 3602
+   elevation: 3602
    region: central
 -
    type: 百岳
@@ -158,7 +158,7 @@
    chinese: 大劍山
    english: Dajianshan
    location: 24.3409492,121.2004634
-   height: 3594
+   elevation: 3594
    region: central
 -
    type: 百岳
@@ -167,7 +167,7 @@
    chinese: 雲峰
    english: Yunfeng
    location: 23.3537487,120.9757537
-   height: 3563.76
+   elevation: 3563.76
    region: central
 -
    type: 百岳
@@ -176,7 +176,7 @@
    chinese: 奇萊主山
    english: Qilaishan
    location: 24.0859950,121.3232395
-   height: 3560
+   elevation: 3560
    region: central
 -
    type: 百岳
@@ -185,7 +185,7 @@
    chinese: 馬利加南山
    english: Malijiananshan
    location: 23.5215553,121.1172129
-   height: 3577.00
+   elevation: 3577.00
    region: central
 -
    type: 百岳
@@ -194,7 +194,7 @@
    chinese: 南湖北山
    english: Nanhubeishan
    location: 24.3836773,121.4371875
-   height: 3536.00
+   elevation: 3536.00
    region: central
 -
    type: 百岳
@@ -203,7 +203,7 @@
    chinese: 大雪山
    english: Daxueshan
    location: 24.3307510,121.1211969
-   height: 3530
+   elevation: 3530
    region: central
 -
    type: 百岳
@@ -212,7 +212,7 @@
    chinese: 品田山
    english: Pintianshan
    location: 24.4282864,121.2667684
-   height: 3524
+   elevation: 3524
    region: central
 -
    type: 百岳
@@ -221,7 +221,7 @@
    chinese: 玉山西峰
    english: Yushan West Peak
    location: 23.4718712,120.9337289
-   height: 3518
+   elevation: 3518
    region: central
 -
    type: 百岳
@@ -230,7 +230,7 @@
    chinese: 頭鷹山
    english: Touyingshan
    location: 24.3596007,121.1407355
-   height: 3510
+   elevation: 3510
    region: central
 -
    type: 百岳
@@ -239,7 +239,7 @@
    chinese: 三叉山
    english: Sanchashan
    location: 23.2971666,121.0286090
-   height: 3496
+   elevation: 3496
    region: central
 -
    type: 百岳
@@ -248,7 +248,7 @@
    chinese: 大霸尖山
    english: Dabajianshan
    location: 24.4577542,121.2579627
-   height: 3492
+   elevation: 3492
    region: central
 -
    type: 百岳
@@ -257,7 +257,7 @@
    chinese: 南湖大山南峰
    english: Nanhudashan South Peak
    location: 24.3477060,121.4347568
-   height: 3505
+   elevation: 3505
    region: central
 -
    type: 百岳
@@ -266,7 +266,7 @@
    chinese: 東巒大山
    english: Dongluandashan
    location: 23.6486537,121.0815638
-   height: 3468
+   elevation: 3468
    region: central
 -
    type: 百岳
@@ -275,7 +275,7 @@
    chinese: 無明山
    english: Wumingshan
    location: 24.2553239,121.3846794
-   height: 3451
+   elevation: 3451
    region: central
 -
    type: 百岳
@@ -284,7 +284,7 @@
    chinese: 巴巴山
    english: Babashan
    location: 24.3424151,121.4378351
-   height: 3449.43
+   elevation: 3449.43
    region: central
 -
    type: 百岳
@@ -293,7 +293,7 @@
    chinese: 馬西山
    english: Maxishan
    location: 23.4837438,121.1739729
-   height: 3443.14
+   elevation: 3443.14
    region: central
 -
    type: 百岳
@@ -302,7 +302,7 @@
    chinese: 合歡山北峰
    english: Hehuanshan North Peak
    location: 24.1815156,121.2815976
-   height: 3422
+   elevation: 3422
    region: central
 -
    type: 百岳
@@ -311,7 +311,7 @@
    chinese: 合歡山東峰
    english: Hehuanshan East Peak
    location: 24.1356858,121.2810876
-   height: 3421
+   elevation: 3421
    region: central
 -
    type: 百岳
@@ -320,7 +320,7 @@
    chinese: 小霸尖山
    english: Xiaobajianshan
    location: 24.4556373,121.2520994
-   height: 3418
+   elevation: 3418
    region: central
 -
    type: 百岳
@@ -329,7 +329,7 @@
    chinese: 合歡山
    english: Hehuanshan
    location: 24.1426410,121.2711795
-   height: 3417.40
+   elevation: 3417.40
    region: central
 -
    type: 百岳
@@ -338,7 +338,7 @@
    chinese: 南玉山
    english: Nanyushan
    location: 23.4292648,120.9249002
-   height: 3382.80
+   elevation: 3382.80
    region: central
 -
    type: 百岳
@@ -347,7 +347,7 @@
    chinese: 畢祿山
    english: Bilushan
    location: 24.2136036,121.3471507
-   height: 3371
+   elevation: 3371
    region: central
 -
    type: 百岳
@@ -356,7 +356,7 @@
    chinese: 卓社大山
    english: Zhuoshedashan
    location: 23.8345614,121.1158321
-   height: 3368.81
+   elevation: 3368.81
    region: central
 -
    type: 百岳
@@ -365,7 +365,7 @@
    chinese: 奇萊南峰
    english: Qilaishan South Peak
    location: 24.0613000,121.2799772
-   height: 3358
+   elevation: 3358
    region: central
 -
    type: 百岳
@@ -374,7 +374,7 @@
    chinese: 南雙頭山
    english: Nanshuangtoushan
    location: 23.3458858,121.0105795
-   height: 3356
+   elevation: 3356
    region: east
 -
    type: 百岳
@@ -383,7 +383,7 @@
    chinese: 能高山南峰
    english: Nenggaoshan South Peak
    location: 23.9655313,121.2781593
-   height: 3349
+   elevation: 3349
    region: central
 -
    type: 百岳
@@ -392,7 +392,7 @@
    chinese: 志佳陽大山
    english: Zhijiayangdashan
    location: 24.3599682,121.2481433
-   height: 3345
+   elevation: 3345
    region: central
 -
    type: 百岳
@@ -401,7 +401,7 @@
    chinese: 白姑大山
    english: Baigudashan
    location: 24.2027126,121.1089078
-   height: 3342
+   elevation: 3342
    region: central
 -
    type: 百岳
@@ -410,7 +410,7 @@
    chinese: 八通關山
    english: Batongguanshan
    location: 23.4902117,121.0096345
-   height: 3334.92
+   elevation: 3334.92
    region: central
 -
    type: 百岳
@@ -419,7 +419,7 @@
    chinese: 新康山
    english: Xinkangshan
    location: 23.3165854,121.1276177
-   height: 3331
+   elevation: 3331
    region: central
 -
    type: 百岳
@@ -428,7 +428,7 @@
    chinese: 丹大山
    english: Dandashan
    location: 23.6004081,121.2135381
-   height: 3325.00
+   elevation: 3325.00
    region: central
 -
    type: 百岳
@@ -437,7 +437,7 @@
    chinese: 桃山
    english: Taoshan
    location: 24.4326327,121.3049212
-   height: 3325
+   elevation: 3325
    region: central
 -
    type: 百岳
@@ -446,7 +446,7 @@
    chinese: 佳陽山
    english: Jiayangshan
    location: 24.3066338,121.1880062
-   height: 3314
+   elevation: 3314
    region: central
 -
    type: 百岳
@@ -455,7 +455,7 @@
    chinese: 火石山
    english: Huoshishan
    location: 24.3819312,121.1750686
-   height: 3309.56
+   elevation: 3309.56
    region: central
 -
    type: 百岳
@@ -464,7 +464,7 @@
    chinese: 池有山
    english: Chryou Shan
    location: 24.4313152,121.2881716
-   height: 3303
+   elevation: 3303
    region: central
 -
    type: 百岳
@@ -473,7 +473,7 @@
    chinese: 伊澤山
    english: Yizeshan
    location: 24.4700063,121.2436608
-   height: 3297
+   elevation: 3297
    region: central
 -
    type: 百岳
@@ -482,7 +482,7 @@
    chinese: 卑南主山
    english: Beinanzhushan
    location: 23.0511607,120.8741804
-   height: 3295
+   elevation: 3295
    region: east
 -
    type: 百岳
@@ -491,7 +491,7 @@
    chinese: 干卓萬山
    english: Ganzhuowanshan
    location: 23.8760482,121.1389584
-   height: 3283.77
+   elevation: 3283.77
    region: central
 -
    type: 百岳
@@ -500,7 +500,7 @@
    chinese: 太魯閣大山
    english: Tailugedashan
    location: 24.0790759,121.4209829
-   height: 3282.91
+   elevation: 3282.91
    region: east
 -
    type: 百岳
@@ -509,7 +509,7 @@
    chinese: 轆轆山
    english: Lulushan
    location: 23.3913576,120.9980804
-   height: 3279.46
+   elevation: 3279.46
    region: central
 -
    type: 百岳
@@ -518,7 +518,7 @@
    chinese: 郡大山
    english: Jundashan
    location: 23.5773680,120.9626034
-   height: 3292
+   elevation: 3292
    region: central
 -
    type: 百岳
@@ -527,7 +527,7 @@
    chinese: 喀西帕南山
    english: Kaxipananshan
    location: 23.4632113,121.1926092
-   height: 3276
+   elevation: 3276
    region: east
 -
    type: 百岳
@@ -536,7 +536,7 @@
    chinese: 內嶺爾山
    english: Neilingershan
    location: 23.5792698,121.1960500
-   height: 3275
+   elevation: 3275
    region: east
 -
    type: 百岳
@@ -545,7 +545,7 @@
    chinese: 鈴鳴山
    english: Lingmingshan
    location: 24.2443803,121.3516603
-   height: 3272.34
+   elevation: 3272.34
    region: central
 -
    type: 百岳
@@ -554,7 +554,7 @@
    chinese: 能高山
    english: Nenggaoshan
    location: 23.9924783,121.2602485
-   height: 3262
+   elevation: 3262
    region: central
 -
    type: 百岳
@@ -563,7 +563,7 @@
    chinese: 火山
    english: Huoshan
    location: 23.8518831,121.1855054
-   height: 3257.99
+   elevation: 3257.99
    region: central
 -
    type: 百岳
@@ -572,7 +572,7 @@
    chinese: 劍山
    english: Jianshan
    location: 24.2955127,121.1699681
-   height: 3253
+   elevation: 3253
    region: central
 -
    type: 百岳
@@ -581,7 +581,7 @@
    chinese: 屏風山
    english: Pingfengshan
    location: 24.1492933,121.3429479
-   height: 3250
+   elevation: 3250
    region: east
 -
    type: 百岳
@@ -590,7 +590,7 @@
    chinese: 小關山
    english: Xiaoguanshan
    location: 23.1516376,120.8761054
-   height: 3248.74
+   elevation: 3248.74
    region: central
 -
    type: 百岳
@@ -599,7 +599,7 @@
    chinese: 義西請馬至山
    english: Yixiqingmazhishan
    location: 23.5868345,121.1531646
-   height: 3245
+   elevation: 3245
    region: central
 -
    type: 百岳
@@ -608,7 +608,7 @@
    chinese: 牧山
    english: Mushan
    location: 23.8629036,121.1602079
-   height: 3240.91
+   elevation: 3240.91
    region: central
 -
    type: 百岳
@@ -617,7 +617,7 @@
    chinese: 玉山前峰
    english: Yushan Front Peak
    location: 23.4756000,120.9176500
-   height: 3239
+   elevation: 3239
    region: central
 -
    type: 百岳
@@ -626,7 +626,7 @@
    chinese: 石門山
    english: Shimenshan
    location: 24.1523855,121.2845890
-   height: 3237
+   elevation: 3237
    region: central
 -
    type: 百岳
@@ -635,7 +635,7 @@
    chinese: 無雙山
    english: Wushuangshan
    location: 23.5909368,121.0573083
-   height: 3231.00
+   elevation: 3231.00
    region: central
 -
    type: 百岳
@@ -644,7 +644,7 @@
    chinese: 塔關山
    english: Taguanshan
    location: 23.2519395,120.9412445
-   height: 3222
+   elevation: 3222
    region: central
 -
    type: 百岳
@@ -653,7 +653,7 @@
    chinese: 馬比杉山
    english: Mabishanshan
    location: 24.3483309,121.4856510
-   height: 3210.98
+   elevation: 3210.98
    region: central
 -
    type: 百岳
@@ -662,7 +662,7 @@
    chinese: 達芬尖山
    english: Dafenjianshan
    location: 23.4327284,121.0132027
-   height: 3208
+   elevation: 3208
    region: central
 -
    type: 百岳
@@ -671,7 +671,7 @@
    chinese: 雪山東峰
    english: Xueshan East Peak
    location: 24.3887653,121.2720305
-   height: 3201
+   elevation: 3201
    region: central
 -
    type: 百岳
@@ -680,7 +680,7 @@
    chinese: 南華山
    english: Nanhuashan
    location: 24.0393438,121.2859306
-   height: 3184
+   elevation: 3184
    region: central
 -
    type: 百岳
@@ -689,7 +689,7 @@
    chinese: 關山嶺山
    english: Guanshanlingshan
    location: 23.2709936,120.9594825
-   height: 3176
+   elevation: 3176
    region: east
 -
    type: 百岳
@@ -698,7 +698,7 @@
    chinese: 海諾南山
    english: Hainuonanshan
    location: 23.1855833,120.9113156
-   height: 3174.56
+   elevation: 3174.56
    region: east
 -
    type: 百岳
@@ -707,7 +707,7 @@
    chinese: 中雪山
    english: Zhongxueshan
    location: 24.3364724,121.0780097
-   height: 3173
+   elevation: 3173
    region: central
 -
    type: 百岳
@@ -716,7 +716,7 @@
    chinese: 閂山
    english: Shuanshan
    location: 24.2587295,121.3099247
-   height: 3168
+   elevation: 3168
    region: central
 -
    type: 百岳
@@ -725,7 +725,7 @@
    chinese: 甘薯峰
    english: Ganshufeng
    location: 24.2903940,121.3898330
-   height: 3157.76
+   elevation: 3157.76
    region: central
 -
    type: 百岳
@@ -734,7 +734,7 @@
    chinese: 合歡山西峰
    english: Hehuanshan West Peak
    location: 24.1776587,121.2445342
-   height: 3145
+   elevation: 3145
    region: central
 -
    type: 百岳
@@ -743,7 +743,7 @@
    chinese: 審馬陣山
    english: Shenmazhenshan
    location: 24.3802144,121.4174621
-   height: 3141.29
+   elevation: 3141.29
    region: central
 -
    type: 百岳
@@ -752,7 +752,7 @@
    chinese: 喀拉業山
    english: Kalayeshan
    location: 24.4500222,121.3212902
-   height: 3133
+   elevation: 3133
    region: north
 -
    type: 百岳
@@ -761,7 +761,7 @@
    chinese: 庫哈諾辛山
    english: Kuhanuoxinshan
    location: 23.2627450,120.9000307
-   height: 3114.832
+   elevation: 3114.832
    region: central
 -
    type: 百岳
@@ -770,7 +770,7 @@
    chinese: 加利山
    english: Jialishan
    location: 24.4595175,121.2162189
-   height: 3112
+   elevation: 3112
    region: central
 -
    type: 百岳
@@ -779,7 +779,7 @@
    chinese: 白石山
    english: Baishishan
    location: 23.9075330,121.2747975
-   height: 3109.66
+   elevation: 3109.66
    region: central
 -
    type: 百岳
@@ -788,7 +788,7 @@
    chinese: 磐石山
    english: Panshishan
    location: 24.1047263,121.3883058
-   height: 3105.69
+   elevation: 3105.69
    region: east
 -
    type: 百岳
@@ -797,7 +797,7 @@
    chinese: 帕托魯山
    english: Patuolushan
    location: 24.0994429,121.4666076
-   height: 3101.28
+   elevation: 3101.28
    region: east
 -
    type: 百岳
@@ -806,7 +806,7 @@
    chinese: 北大武山
    english: Beidawushan
    location: 22.6270490,120.7613947
-   height: 3092
+   elevation: 3092
    region: south
 -
    type: 百岳
@@ -815,7 +815,7 @@
    chinese: 西巒大山
    english: Xiluandashan
    location: 23.6940034,120.9473179
-   height: 3081
+   elevation: 3081
    region: central
 -
    type: 百岳
@@ -824,7 +824,7 @@
    chinese: 達芬山
    english: Dafenshan
    location: 23.4060261,121.0267840
-   height: 3069.88
+   elevation: 3069.88
    region: central
 -
    type: 百岳
@@ -833,7 +833,7 @@
    chinese: 立霧主山
    english: Liwuzhushan
    location: 24.1249150,121.4457109
-   height: 3069.54
+   elevation: 3069.54
    region: east
 -
    type: 百岳
@@ -842,7 +842,7 @@
    chinese: 光頭山
    english: Guangtoushan
    location: 23.9380107,121.2719594
-   height: 3060
+   elevation: 3060
    region: central
 -
    type: 百岳
@@ -851,7 +851,7 @@
    chinese: 安東軍山
    english: Andongjunshan
    location: 23.8727015,121.2661296
-   height: 3068.04
+   elevation: 3068.04
    region: central
 -
    type: 百岳
@@ -860,7 +860,7 @@
    chinese: 羊頭山
    english: Yangtoushan
    location: 24.2082521,121.3797945
-   height: 3035
+   elevation: 3035
    region: east
 -
    type: 百岳
@@ -869,7 +869,7 @@
    chinese: 布拉克桑山
    english: Bulakesangshan
    location: 23.2331222,121.0787129
-   height: 3036.00
+   elevation: 3036.00
    region: east
 -
    type: 百岳
@@ -878,7 +878,7 @@
    chinese: 盆駒山
    english: Penjushan
    location: 23.5483852,121.0325002
-   height: 3022.00
+   elevation: 3022.00
    region: central
 -
    type: 百岳
@@ -887,7 +887,7 @@
    chinese: 六順山
    english: Liushunshan
    location: 23.7245250,121.2395383
-   height: 2999
+   elevation: 2999
    region: central
 -
    type: 百岳
@@ -896,7 +896,7 @@
    chinese: 鹿山
    english: Lushan
    location: 23.4506319,120.9886093
-   height: 2980.76
+   elevation: 2980.76
    region: central
 -
    type: 小百岳
@@ -907,8 +907,9 @@
    chinese: 大屯山
    english: Datunshan
    location: 25.1767227,121.5219544
-   height: 1092
+   elevation: 1092
    region: north
+   descriptions: "Atunas: https://www.atunas.com.tw/tw/outdoor/mountains/%E5%A4%A7%E5%B1%AF%E5%B1%B1,Foreigners in Taiwan: https://www.foreignersintaiwan.com/blog-370963385326684/datunshan,Taiwan Hikes: https://www.taiwanhikes.com/blog-posts/datunshan-yangmingshan.html,Taiwan Outdoors: https://taiwanoutdoors.com/datunshan,Trails and Tales: https://taiwantrailsandtales.com/2019/02/14/mount-datun-multi-peak-trail,輝哥的天空: http://輝哥的天空.tw/mountain/nopaiA/taipeiAA001.htm,健行筆記 Hiking Biji: https://hiking.biji.co/index.php?q=mountain&act=detail&id=100"
 -
    type: 小百岳
    id-2003: 2
@@ -918,8 +919,9 @@
    chinese: 七星山主峰
    english: Qixingshan
    location: 25.1707017,121.5534414
-   height: 1118.21
+   elevation: 1118.21
    region: north
+   descriptions: "5164.at: https://blog.5164.at/posts/2020-12-28-qixingshan/,Atunas: https://www.atunas.com.tw/tw/outdoor/mountains/%E4%B8%83%E6%98%9F%E5%B1%B1,Foreigners in Taiwan: https://www.foreignersintaiwan.com/blog-370963385326684/qixing-mountain,Taiwan Hikes: https://www.taiwanhikes.com/blog-posts/qixingshan-yangmingshan.html,Taiwan Outdoors: https://taiwanoutdoors.com/002-qixingshan,Trails and Tales: https://taiwantrailsandtales.com/2016/12/12/qixing-mountain-%E4%B8%83%E6%98%9F%E5%B1%B1,輝哥的天空: http://輝哥的天空.tw/mountain/nopaiA/taipeiAA001.htm,健行筆記 Hiking Biji: https://hiking.biji.co/index.php?q=mountain&act=detail&id=101"
 -
    type: 小百岳
    id-2003: 3
@@ -929,8 +931,9 @@
    chinese: 大武崙山
    english: Dawulunshan
    location: 25.1584974,121.7097258
-   height: 225
+   elevation: 225
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 4
@@ -940,8 +943,9 @@
    chinese: 槓子寮山
    english: Gangziliaoshan
    location: 25.1431395,121.7756680
-   height: 172
+   elevation: 172
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 5
@@ -951,8 +955,9 @@
    chinese: 觀音山
    english: Guanyinshan
    location: 25.1358617,121.4267076
-   height: 616
+   elevation: 616
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 7
@@ -962,8 +967,9 @@
    chinese: 基隆山
    english: Jilongshan
    location: 25.1187609,121.8491004
-   height: 587
+   elevation: 587
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 8
@@ -973,8 +979,9 @@
    chinese: 紅淡山
    english: Hongdanshan
    location: 25.1189109,121.7519166
-   height: 217
+   elevation: 217
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 9
@@ -984,8 +991,9 @@
    chinese: 大崙頭山
    english: Daluntoushan
    location: 25.1088652,121.5854078
-   height: 476
+   elevation: 476
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 10
@@ -995,8 +1003,9 @@
    chinese: 劍潭山
    english: Jiantanshan
    location: 25.0842327,121.5292654
-   height: 152.74
+   elevation: 152.74
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 12
@@ -1006,8 +1015,9 @@
    chinese: 五分山
    english: Wufenshan
    location: 25.0709506,121.7806457
-   height: 757
+   elevation: 757
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1017,8 +1027,9 @@
    chinese: 姜子寮山
    english: Jiangziliaoshan
    location: 25.0532879,121.7301015
-   height: 724
+   elevation: 724
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 13
@@ -1028,8 +1039,9 @@
    chinese: 汐止大尖山
    english: Xizhidajianshan
    location: 25.0512101,121.6681234
-   height: 460.35
+   elevation: 460.35
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 15
@@ -1039,8 +1051,9 @@
    chinese: 南港山
    english: Nangangshan
    location: 25.0255982,121.5862345
-   height: 373.93
+   elevation: 373.93
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 14
@@ -1050,8 +1063,9 @@
    chinese: 土庫岳
    english: Tukuyue
    location: 25.0231477,121.6356253
-   height: 388.21
+   elevation: 388.21
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 16
@@ -1061,8 +1075,9 @@
    chinese: 大棟山
    english: Dadongshan
    location: 24.9958468,121.3841495
-   height: 405
+   elevation: 405
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 18
@@ -1072,8 +1087,9 @@
    chinese: 南勢角山
    english: Nanshijiaoshan
    location: 24.9692574,121.4957287
-   height: 302
+   elevation: 302
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 17
@@ -1083,8 +1099,9 @@
    chinese: 二格山
    english: Ergeshan
    location: 24.9672238,121.6196410
-   height: 677.65
+   elevation: 677.65
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 19
@@ -1093,9 +1110,10 @@
    OSM: 5585899083
    chinese: 天上山
    english: Tianshangshan
-   location: 24.9462940,121.4560852
-   height: 430
+   location: 24.9462975,121.4560850
+   elevation: 430
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 22
@@ -1104,9 +1122,10 @@
    OSM: 2300441179
    chinese: 鳶山
    english: Yuanshan
-   location: 24.9264969,121.3450351
-   height: 321
+   location: 24.9265991,121.3450961
+   elevation: 321
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 20
@@ -1116,8 +1135,9 @@
    chinese: 獅仔頭山
    english: Shizaitoushan
    location: 24.9047048,121.4911511
-   height: 857
+   elevation: 857
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 23
@@ -1127,8 +1147,9 @@
    chinese: 金面山
    english: Jinmianshan
    location: 24.8664885,121.3354411
-   height: 667
+   elevation: 667
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 26
@@ -1138,8 +1159,9 @@
    chinese: 東眼山
    english: Dongyanshan
    location: 24.8251470,121.4174686
-   height: 1213
+   elevation: 1213
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 25
@@ -1149,8 +1171,9 @@
    chinese: 溪洲山
    english: Xizhoushan
    location: 24.8244462,121.2771977
-   height: 577
+   elevation: 577
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 24
@@ -1160,8 +1183,9 @@
    chinese: 石門山
    english: Shimenshan
    location: 24.8098864,121.2294326
-   height: 551
+   elevation: 551
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 27
@@ -1171,8 +1195,9 @@
    chinese: 石牛山
    english: Shihnioushan
    location: 24.7935350,121.2533030
-   height: 671
-   region: north
+   elevation: 671
+   region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 28
@@ -1182,8 +1207,9 @@
    chinese: 十八尖山
    english: Shibajianshan
    location: 24.7925195,120.9846216
-   height: 132
-   region: north
+   elevation: 132
+   region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 29
@@ -1193,8 +1219,9 @@
    chinese: 飛鳳山
    english: Feifengshan
    location: 24.7659005,121.1121273
-   height: 423
-   region: north
+   elevation: 423
+   region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 30
@@ -1204,8 +1231,9 @@
    chinese: 李棟山
    english: Lidongshan
    location: 24.6926566,121.3036404
-   height: 1914
-   region: north
+   elevation: 1914
+   region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 32
@@ -1215,8 +1243,9 @@
    chinese: 獅頭山
    english: Shitoushan
    location: 24.6442167,121.0064833
-   height: 491
+   elevation: 491
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 31
@@ -1226,8 +1255,9 @@
    chinese: 五指山
    english: Wuzhishan
    location: 24.6413518,121.0961671
-   height: 1061
-   region: north
+   elevation: 1061
+   region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 33
@@ -1237,8 +1267,9 @@
    chinese: 鵝公髻山
    english: Egongjishan
    location: 24.6101015,121.0755680
-   height: 1579
+   elevation: 1579
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 34
@@ -1248,8 +1279,9 @@
    chinese: 向天湖山
    english: Xiangtianhushan
    location: 24.5670569,121.0270221
-   height: 1220.00
+   elevation: 1220.00
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 35
@@ -1259,8 +1291,9 @@
    chinese: 仙山
    english: Shienshan
    location: 24.5425357,120.9529525
-   height: 967
+   elevation: 967
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 36
@@ -1270,8 +1303,9 @@
    chinese: 加里山
    english: Jialishan
    location: 24.5107478,121.0123597
-   height: 2220
+   elevation: 2220
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 38
@@ -1281,8 +1315,9 @@
    chinese: 火炎山
    english: Huoyanshan
    location: 24.3773308,120.7301888
-   height: 596
+   elevation: 596
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 40
@@ -1292,8 +1327,9 @@
    chinese: 關刀山
    english: Guandaoshan
    location: 24.3753655,120.8108004
-   height: 889
+   elevation: 889
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 37
@@ -1303,8 +1339,9 @@
    chinese: 馬那邦山
    english: Manabangshan
    location: 24.3672600,120.9138067
-   height: 1407.45
+   elevation: 1407.45
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 39
@@ -1314,8 +1351,9 @@
    chinese: 鐵砧山
    english: Tiezhenshan
    location: 24.3563532,120.6552483
-   height: 235.74
+   elevation: 235.74
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 41
@@ -1324,9 +1362,10 @@
    OSM: 5582288271
    chinese: 稍來山
    english: Shaolaishan
-   location: 24.2375254,120.9714406
-   height: 2307
+   location: 24.2375468,120.9715660
+   elevation: 2307
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 42
@@ -1335,9 +1374,10 @@
    OSM: 2376713010
    chinese: 聚興山
    english: Juxingshan
-   location: 24.2202509,120.7427271
-   height: 500
+   location: 24.2202215,120.7427184
+   elevation: 500
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 43
@@ -1347,8 +1387,9 @@
    chinese: 頭嵙山
    english: Toukeshan
    location: 24.1792715,120.8001908
-   height: 859
+   elevation: 859
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 44
@@ -1358,8 +1399,9 @@
    chinese: 南觀音山
    english: Nanguanyinshan
    location: 24.1730478,120.7409747
-   height: 318
+   elevation: 318
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 47
@@ -1368,9 +1410,10 @@
    OSM: 2112345723
    chinese: 三汀山
    english: Santingshan
-   location: 24.1391600,120.7525400
-   height: 480
+   location: 24.1391361,120.7526097
+   elevation: 480
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 46
@@ -1380,8 +1423,9 @@
    chinese: 暗影山
    english: Anyingshan
    location: 24.1379818,120.8178445
-   height: 997.22
+   elevation: 997.22
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 48
@@ -1391,8 +1435,9 @@
    chinese: 大橫屏山
    english: Dahengpingshan
    location: 24.0749512,120.8289184
-   height: 1205.56
+   elevation: 1205.56
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1402,8 +1447,9 @@
    chinese: 阿罩霧山
    english: Azhaowushan
    location: 24.0612990,120.7135456
-   height: 249
+   elevation: 249
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 51
@@ -1413,8 +1459,9 @@
    chinese: 九份二山
    english: Jiufenershan
    location: 23.9345690,120.8416479
-   height: 1173.63
+   elevation: 1173.63
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 49
@@ -1424,8 +1471,9 @@
    chinese: 橫山
    english: Hengshan
    location: 23.8891056,120.6316074
-   height: 443
+   elevation: 443
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1435,8 +1483,9 @@
    chinese: 貓囒山
    english: Maolanshan
    location: 23.8813900,120.9077799
-   height: 1020
+   elevation: 1020
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 52
@@ -1445,9 +1494,10 @@
    OSM: 2349661219
    chinese: 集集大山
    english: Jijidashan
-   location: 23.8548948,120.8380651
-   height: 1391
+   location: 23.8548464,120.8381496
+   elevation: 1391
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 50
@@ -1457,8 +1507,9 @@
    chinese: 松柏坑山
    english: Songbaikengshan
    location: 23.8209986,120.6419753
-   height: 430
+   elevation: 430
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 54
@@ -1468,8 +1519,9 @@
    chinese: 後尖山
    english: Houjianshan
    location: 23.8140578,120.8981715
-   height: 1008
+   elevation: 1008
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 55
@@ -1479,8 +1531,9 @@
    chinese: 鳳凰山
    english: Fenghuangshan
    location: 23.6916888,120.8061668
-   height: 1698.17
+   elevation: 1698.17
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1490,8 +1543,9 @@
    chinese: 金柑樹山
    english: Jinganshushan
    location: 23.6412022,120.8138856
-   height: 2090.63
+   elevation: 2090.63
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 57
@@ -1501,8 +1555,9 @@
    chinese: 石壁山
    english: Shibishan
    location: 23.6037050,120.7245309
-   height: 1751.46
+   elevation: 1751.46
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 56
@@ -1512,8 +1567,9 @@
    chinese: 大尖山
    english: Dajianshan
    location: 23.5900664,120.6232200
-   height: 1305
-   region: central
+   elevation: 1305
+   region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 58
@@ -1523,8 +1579,9 @@
    chinese: 梨子腳山
    english: Lizijiaoshan
    location: 23.5672131,120.6082229
-   height: 1176
+   elevation: 1176
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 59
@@ -1534,8 +1591,9 @@
    chinese: 獨立山
    english: Dulishan
    location: 23.5370074,120.6076787
-   height: 840
+   elevation: 840
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 60
@@ -1545,8 +1603,9 @@
    chinese: 大塔山
    english: Datashan
    location: 23.5357016,120.8084860
-   height: 2663
+   elevation: 2663
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 62
@@ -1556,8 +1615,9 @@
    chinese: 大凍山
    english: Dadongshan
    location: 23.4977793,120.7193826
-   height: 1976
+   elevation: 1976
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 64
@@ -1567,8 +1627,9 @@
    chinese: 大湖尖山
    english: Dahujianshan
    location: 23.4873398,120.6375834
-   height: 1313
+   elevation: 1313
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 63
@@ -1578,8 +1639,9 @@
    chinese: 紅毛埤山
    english: Hongmaopishan
    location: 23.4800170,120.4919669
-   height: 150
+   elevation: 150
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 67
@@ -1589,8 +1651,9 @@
    chinese: 大凍山
    english: Dadongshan
    location: 23.3113537,120.5225707
-   height: 1241
+   elevation: 1241
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 68
@@ -1600,8 +1663,9 @@
    chinese: 崁頭山
    english: Kantoushan
    location: 23.2659963,120.5045064
-   height: 844
+   elevation: 844
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 69
@@ -1611,8 +1675,9 @@
    chinese: 三腳南山
    english: Sanjiaonanshan
    location: 23.2405978,120.5924625
-   height: 1187.20
+   elevation: 1187.20
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 71
@@ -1622,8 +1687,9 @@
    chinese: 西阿里關山
    english: Xialiguanshan
    location: 23.1830176,120.6412594
-   height: 973
+   elevation: 973
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 72
@@ -1633,8 +1699,9 @@
    chinese: 竹子尖山
    english: Zhuzijianshan
    location: 23.1758845,120.5655125
-   height: 1111
+   elevation: 1111
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1644,8 +1711,9 @@
    chinese: 藤枝山
    english: Tengzhishan
    location: 23.0620555,120.7384927
-   height: 1560
+   elevation: 1560
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 74
@@ -1655,8 +1723,9 @@
    chinese: 白雲山
    english: Baiyunshan
    location: 23.0558487,120.6226114
-   height: 1043.77
+   elevation: 1043.77
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1666,8 +1735,9 @@
    chinese: 刣牛湖山
    english: Zhongniuhushan
    location: 23.0485217,120.5230702
-   height: 798.1
+   elevation: 798.1
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 75
@@ -1677,8 +1747,9 @@
    chinese: 鳴海山
    english: Minghaishan
    location: 22.9551876,120.6903854
-   height: 1410.61
+   elevation: 1410.61
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 76
@@ -1687,9 +1758,10 @@
    OSM: 4128287417
    chinese: 旗尾山
    english: Qiweishan
-   location: 22.8968064,120.4969896
-   height: 318
+   location: 22.8967656,120.4968374
+   elevation: 318
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 77
@@ -1699,8 +1771,9 @@
    chinese: 尾寮山
    english: Weiliaoshan
    location: 22.8570533,120.6762611
-   height: 1427.39
+   elevation: 1427.39
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 78
@@ -1710,8 +1783,9 @@
    chinese: 大崗山
    english: Dagangshan
    location: 22.8602909,120.3484313
-   height: 290
+   elevation: 290
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 79
@@ -1721,8 +1795,9 @@
    chinese: 觀音山
    english: Guanyinshan
    location: 22.7271139,120.3736512
-   height: 175.4
+   elevation: 175.4
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 81
@@ -1732,8 +1807,9 @@
    chinese: 笠頂山
    english: Lidingshan
    location: 22.6501488,120.6439208
-   height: 658.96
+   elevation: 658.96
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 80
@@ -1743,8 +1819,9 @@
    chinese: 壽山
    english: Shoushan
    location: 22.6420188,120.2655619
-   height: 330
+   elevation: 330
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 82
@@ -1753,9 +1830,10 @@
    OSM: 3801961073
    chinese: 棚集山
    english: Pengjishan
-   location: 22.5079599,120.6575634
-   height: 899
+   location: 22.5080404,120.6575326
+   elevation: 899
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 83
@@ -1765,8 +1843,9 @@
    chinese: 女仍山
    english: Nurengshan
    location: 22.1952545,120.7847965
-   height: 804.26
+   elevation: 804.26
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 84
@@ -1776,8 +1855,9 @@
    chinese: 里龍山
    english: Lilongshan
    location: 22.1638989,120.7328269
-   height: 1062
+   elevation: 1062
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1786,9 +1866,10 @@
    OSM: 2482530511
    chinese: 大山母山
    english: Dashanmushan
-   location: 21.9684724,120.7789430
-   height: 325.03
+   location: 21.9683535,120.7789293
+   elevation: 325.03
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 91
@@ -1798,8 +1879,9 @@
    chinese: 灣坑頭山
    english: Wankengtoushan
    location: 24.9745640,121.9104037
-   height: 616
-   region: north
+   elevation: 616
+   region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1809,8 +1891,9 @@
    chinese: 三角崙山
    english: Sanjiaolunshan
    location: 24.8592157,121.7297019
-   height: 1028
-   region: north
+   elevation: 1028
+   region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 92
@@ -1820,8 +1903,9 @@
    chinese: 鵲子山
    english: Quezishan
    location: 24.8502259,121.7674951
-   height: 679.47
-   region: north
+   elevation: 679.47
+   region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 94
@@ -1831,8 +1915,9 @@
    chinese: 三星山
    english: Sanxingshan
    location: 24.5092212,121.5639406
-   height: 2351.89
-   region: north
+   elevation: 2351.89
+   region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1842,8 +1927,9 @@
    chinese: 卡拉寶山
    english: Kalabaoshan
    location: 24.1773605,121.3993952
-   height: 2397
+   elevation: 2397
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 95
@@ -1852,9 +1938,10 @@
    OSM: 2385618817
    chinese: 立霧山
    english: Liwushan
-   location: 24.1780430,121.6418607
-   height: 1274
+   location: 24.1780413,121.6418906
+   elevation: 1274
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1864,8 +1951,9 @@
    chinese: 初音山
    english: Chuyinshan
    location: 23.9707588,121.5313897
-   height: 905.45
+   elevation: 905.45
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 97
@@ -1875,8 +1963,9 @@
    chinese: 鯉魚山
    english: Liyushan
    location: 23.9190706,121.5207081
-   height: 601
+   elevation: 601
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1885,9 +1974,10 @@
    OSM: 2482524900
    chinese: 月眉山
    english: Yuemeishan
-   location: 23.8254729,121.5520457
-   height: 614.49
+   location: 23.8255385,121.5520363
+   elevation: 614.49
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1897,8 +1987,9 @@
    chinese: 八里灣山
    english: Baliwanshan
    location: 23.5447462,121.4889587
-   height: 924
+   elevation: 924
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1908,8 +1999,9 @@
    chinese: 萬人山
    english: Wanrenshan
    location: 23.2325246,121.3167107
-   height: 886.10
+   elevation: 886.10
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 87
@@ -1919,8 +2011,9 @@
    chinese: 都蘭山
    english: Doulanshan
    location: 22.8951141,121.1882928
-   height: 1190
+   elevation: 1190
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1930,8 +2023,9 @@
    chinese: 太麻里山
    english: Taimalishan
    location: 22.6431486,120.9526034
-   height: 1339.93
+   elevation: 1339.93
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1941,8 +2035,9 @@
    chinese: 加奈美山
    english: Jianaimeishan
    location: 22.4321601,120.9100261
-   height: 780
+   elevation: 780
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -1952,8 +2047,9 @@
    chinese: 巴塱衛山
    english: Balangweishan
    location: 22.3225969,120.8788818
-   height: 325
+   elevation: 325
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 90
@@ -1963,8 +2059,9 @@
    chinese: 紅頭山
    english: Hongtoushan
    location: 22.0530379,121.5346208
-   height: 552
+   elevation: 552
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 100
@@ -1974,8 +2071,9 @@
    chinese: 雲台山
    english: Yuntaishan
    location: 26.1504855,119.9227043
-   height: 248
+   elevation: 248
    region: islands
+   descriptions: 
 -
    type: 小百岳
    id-2003: 99
@@ -1985,8 +2083,9 @@
    chinese: 太武山
    english: Taiwushan
    location: 24.4636958,118.4161071
-   height: 253
+   elevation: 253
    region: islands
+   descriptions: 
 -
    type: 小百岳
    id-2003: 98
@@ -1996,8 +2095,9 @@
    chinese: 蛇頭山
    english: Shetoushan
    location: 23.5535599,119.5486300
-   height: 20
+   elevation: 20
    region: islands
+   descriptions: 
 -
    type: 小百岳
    id-2003: 73
@@ -2007,8 +2107,9 @@
    chinese: 東藤枝山
    english: Dongtengzhishan
    location: 23.0750366,120.7654601
-   height: 1804
+   elevation: 1804
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 85
@@ -2018,8 +2119,9 @@
    chinese: 萬里得山
    english: Wanlideshan
    location: 22.0682123,120.8417473
-   height: 527
+   elevation: 527
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 
@@ -2029,8 +2131,9 @@
    chinese: 祖輪山
    english: Zulunshan
    location: 24.2209341,121.5081753
-   height: 1599
+   elevation: 1599
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 6
@@ -2040,8 +2143,9 @@
    chinese: 丹鳳山
    english: Danfengshan
    location: 25.1340900,121.5097700
-   height: 151
+   elevation: 151
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 11
@@ -2051,8 +2155,9 @@
    chinese: 瑪陵尖
    english: Malingjian
    location: 25.1089204,121.6992003
-   height: 230
+   elevation: 230
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 21
@@ -2062,8 +2167,9 @@
    chinese: 虎頭山
    english: Hutoushan
    location: 25.0167586,121.3306137
-   height: 256
+   elevation: 256
    region: north
+   descriptions: 
 -
    type: 小百岳
    id-2003: 45
@@ -2073,8 +2179,9 @@
    chinese: 八仙山
    english: Baxianshan
    location: 24.1542500,121.0119333
-   height: 2366
+   elevation: 2366
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 53
@@ -2084,8 +2191,9 @@
    chinese: 水社大山
    english: Shuishedashan
    location: 23.8421507,120.9679035
-   height: 2059
+   elevation: 2059
    region: central
+   descriptions: 
 -
    type: 小百岳
    id-2003: 66
@@ -2095,8 +2203,9 @@
    chinese: 桶頭山
    english: Tongtoushan
    location: 23.4051727,120.5795862
-   height: 605
+   elevation: 605
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 65
@@ -2106,8 +2215,9 @@
    chinese: 尖凍山
    english: Jiandongshan
    location: 23.4779617,120.6122974
-   height: 1073
+   elevation: 1073
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 61
@@ -2117,8 +2227,9 @@
    chinese: 文峰山
    english: Wenfengshan
    location: 23.4950470,120.6343795
-   height: 1256
+   elevation: 1256
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 70
@@ -2128,8 +2239,9 @@
    chinese: 烏山
    english: Wushan
    location: 23.0559464,120.5300713
-   height: 729
+   elevation: 729
    region: south
+   descriptions: 
 -
    type: 小百岳
    id-2003: 86
@@ -2139,8 +2251,9 @@
    chinese: 太巴六九山
    english: Taibaliujiushan
    location: 22.8079455,121.0309782
-   height: 1062
+   elevation: 1062
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 89
@@ -2150,8 +2263,9 @@
    chinese: 火燒山
    english: Huoshaoshan
    location: 22.6525703,121.4834769
-   height: 280.31
+   elevation: 280.31
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 96
@@ -2161,8 +2275,9 @@
    chinese: 新城山
    english: Xinchengshan
    location: 24.1322819,121.6036120
-   height: 1440.42
+   elevation: 1440.42
    region: east
+   descriptions: 
 -
    type: 小百岳
    id-2003: 93
@@ -2172,5 +2287,6 @@
    chinese: 龜山島
    english: Guishandaoshan
    location: 24.8415667,121.9531167
-   height: 398
+   elevation: 398
    region: north
+   descriptions:

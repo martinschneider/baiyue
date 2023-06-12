@@ -14,15 +14,16 @@ with open("data.yml") as f:
     oldXiaobaiyue = []
     for x in data:
         baiyue.append(x["OSM"]) if x["type"] == "百岳" else xiaobaiyue.append(x["OSM"]) if x["id-2017"] else oldXiaobaiyue.append(x["OSM"])
-        markers += 'addMarker({}, {}, "{}", "{}", "{}", "{}", "{}", "{}");'.format(
+        markers += 'addMarker({}, {}, "{}", "{}", "{}", "{}", "{}", "{}", "{}");'.format(
             x["OSM"],
             x["location"],
             x["type"] if x["type"] == "百岳" or x["id-2017"] else "小百岳_OLD",
             x["id"] if x["type"] == "百岳" else str(x["id-2017"] or ""),
             x["chinese"],
             x["english"],
-            round(x["height"]),
-            x["region"]
+            round(x["elevation"]),
+            x["region"],
+            x.get("descriptions")
         )
     constants += "const BAIYUE={};const XIAOBAIYUE={};const OLD_XIAOBAIYUE={};".format(baiyue, xiaobaiyue, oldXiaobaiyue)
 a = Airium()
@@ -146,7 +147,7 @@ with a.html(lang="en"):
                             a.th(_t="#", **{"data-priority": "3"}, klass="center")
                             a.th(_t="Chinese name", **{"data-priority": "2"})
                             a.th(_t="English name", **{"data-priority": "1"})
-                            a.th(_t="Height", **{"data-priority": "4"})
+                            a.th(_t="Elevation", **{"data-priority": "4"})
                             a.th(_t="Location", **{"data-priority": "5"})
                     with a.tbody():
                         for x in data:
@@ -184,7 +185,7 @@ with a.html(lang="en"):
                                 ):
                                     a(x["english"])
                                 with a.td():
-                                    a("{}m".format(round(float(x["height"]))))
+                                    a("{}m".format(round(float(x["elevation"]))))
                                 with a.td(klass="location"):
                                     if x["location"] != None:
                                         coords = str(x["location"]).split(",")
@@ -213,7 +214,7 @@ with a.html(lang="en"):
                             a.th(_t="2003", klass="center")
                             a.th(_t="Chinese name", **{"data-priority": "2"})
                             a.th(_t="English name", **{"data-priority": "1"})
-                            a.th(_t="Height", **{"data-priority": "4"})
+                            a.th(_t="Elevation", **{"data-priority": "4"})
                             a.th(_t="Location", **{"data-priority": "5"})
                     with a.tbody():
                         for x in data:
@@ -258,7 +259,7 @@ with a.html(lang="en"):
                                 ):
                                     a(x["english"])
                                 with a.td():
-                                    a("{}m".format(round(float(x["height"]))))
+                                    a("{}m".format(round(float(x["elevation"]))))
                                 with a.td(id="location"):
                                     if x["location"] != None:
                                         coords = str(x["location"]).split(",")

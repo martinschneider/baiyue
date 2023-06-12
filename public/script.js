@@ -341,7 +341,7 @@ function flyTo(lon, lat, osm) {
 }
 
 // Add a peak marker to the map.
-function addMarker(osm, lon, lat, type, id, chinese, english, height, region) {
+function addMarker(osm, lon, lat, type, id, chinese, english, height, region, descriptions) {
   var displayFunction = type == "百岳" ? "displayBaiyue()" : "displayXiaobaiyue()";
   var hikingBiji = type != "小百岳_OLD";
   var hikingBijiCategory = type == "百岳" ? 1 : 2;
@@ -374,7 +374,19 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region) {
 
   
   // Route description
-  if (hikingBiji) {
+  if (descriptions != null && descriptions != "undefined" && descriptions != "None" && descriptions != "") {
+    popup += "<select class=\"btn ui-button\" onChange=\"actionEvent(this, this.value);\">";
+    popup += "<option value=\"0\" class=\"hidden\" selected=\"true\" disabled=\"true\">Route description</option>";
+    for (const descr of descriptions.split(",")) {
+      idx = descr.indexOf(":")
+      name = descr.substring(0, idx)
+      link = descr.substr(idx + 1).trim()
+      console.log(name + "   " + link)
+      popup += "<option value=\"" + link +"\">" + name + "</option>"
+    }
+    popup += "</select>"
+  }
+  else if (hikingBiji) {
     popup += "<select class=\"btn ui-button\" onChange=\"actionEvent(this, this.value);\">";
     popup += "<option value=\"0\" class=\"hidden\" selected=\"true\" disabled=\"true\">Route description</option>";
     popup += "<option value=\"https://hiking.biji.co/index.php?q=mountain&category=" + hikingBijiCategory + "&page=1&keyword=" + chinese + "\" title=\"健行筆記 Hiking Biji\">健行筆記 Hiking Biji</option></select>";
@@ -517,6 +529,7 @@ function restoreProgress() {
             for (marker of Object.values(markers)) {
               map.removeLayer(marker);
             };
+            markers = [];
             initMarkers();
           });
         });
@@ -613,7 +626,7 @@ function photoDialog(type, osm, value, input) {
 }
 
 function actionEvent(dropdown, value) {
-  if (value.startsWith("http://") || value.startsWith("om://")) {
+  if (value.startsWith("http") || value.startsWith("om://")) {
     window.open(value);
   }
   else {
