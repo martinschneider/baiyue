@@ -368,7 +368,9 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region, de
   // Google Maps
   popup += "<option value=\"https://www.google.com/maps/place/" + lon +','+ lat +"\" title=\"Google Maps\">Google Maps</option>";
   // Organic Maps
-  popup += "<option value=\"om://map?v=1&ll=" + lon + ", " + lat + "\" title=\"Organic Maps\">Organic Maps</option>";
+  if (isRenderAppLinks()) {
+    popup += "<option value=\"om://map?v=1&ll=" + lon + ", " + lat + "\" title=\"Organic Maps\">Organic Maps</option>";
+  }
   // Copy location
   popup += "<option value=\"" + lon + ", " + lat +"\">Copy location (WGS84)</option></select>";
 
@@ -381,7 +383,6 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region, de
       idx = descr.indexOf(":")
       name = descr.substring(0, idx)
       link = descr.substr(idx + 1).trim()
-      console.log(name + "   " + link)
       popup += "<option value=\"" + link +"\">" + name + "</option>"
     }
     popup += "</select>"
@@ -508,6 +509,9 @@ async function backupProgress() {
 function restoreProgress() {
   var input = document.createElement('input');
   input.type = 'file';
+  document.body.appendChild(input);
+  input.click();
+  document.body.removeChild(input);
   input.onchange = e => {
     var file = e.target.files[0];
     var reader = new FileReader();
@@ -544,7 +548,6 @@ function restoreProgress() {
       }
     }
   }
-  input.click();
 }
 
 
@@ -552,6 +555,9 @@ function restoreProgress() {
 function uploadPhoto(type, osm) {
   var input = document.createElement('input');
   input.type = 'file';
+  document.body.appendChild(input);
+  input.click();
+  document.body.removeChild(input);
   input.onchange = e => {
     var file = e.target.files[0];
     var reader = new FileReader();
@@ -683,4 +689,12 @@ function menuEvent(value) {
     }
   }
   resetDropdown();
+}
+
+function isWebKit() {
+  return (navigator.userAgent.indexOf('AppleWebKit') != -1)
+}
+
+function isRenderAppLinks() {
+  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
 }
