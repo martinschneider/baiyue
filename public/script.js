@@ -555,9 +555,6 @@ function restoreProgress() {
 function uploadPhoto(type, osm) {
   var input = document.createElement('input');
   input.type = 'file';
-  document.body.appendChild(input);
-  input.click();
-  document.body.removeChild(input);
   input.onchange = e => {
     var file = e.target.files[0];
     var reader = new FileReader();
