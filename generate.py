@@ -291,20 +291,26 @@ with a.html(lang="en"):
                     a.p(
                         _t="At the top of the page, you will find a map of Taiwan. 百岳 peaks are marked in blue, 小百岳 in green."
                     )
+                    a.img(src="screenshot1.png")
                     a.p(
-                        _t="If you click on one of the markers, additional information is displayed. From there, you can jump to Hiking Biji, Google Maps or copy the GPS coordinates (WSG-84) or Chinese name of the peak into the clipboard to use in other apps."
+                        _t="If you click on one of the markers, additional information is displayed. From here, you can jump to various online maps and route descriptions (e.g. Hiking Biji). You can also copy the GPS coordinates (WSG-84) or the Chinese name of the peak into the clipboard."
                     )
                     a.p(
-                        _t="Below the map is a table of all 百岳 and 小百岳. You can use the corresponding buttons to switch between the two."
+                        _t="You can mark a peak as visited and, optionally, attach your summit photo too. As detailled below, all data (including the photos) is only stored locally in your browser and never uploaded anywhere!"
                     )
                     a.p(
-                        _t="Use the check box next to a peak to mark it as climbed; the total count (in the left lower corner of the map) and the icon for that peak will update accordingly.")
+                        _t="Below the map is a table of all mountains. You can use the corresponding buttons to switch between 百岳 and 小百岳."
+                    )
+                    a.img(src="screenshot2.png")
+                    a.p(
+                        _t="Use the check box next to a peak to mark it as climbed. The total count (in the left lower corner of the map) and the icon for that peak will update accordingly.")
+                    a.img(src="screenshot3.png")
                 a.h3(_t="Where is the progress stored? Is my data secure?")
                 with a.div():
                     with a.p():
                         a("All information is stored client-side, which means locally in your browser. Hiking progress and photos are never uploaded to any server.")
                     with a.p():
-                        a("Please note that this also means that your information will not synchronize between multiple devices, for example, your desktop and your phone. You can, however, use the backup & restore functions to copy your data between devices."
+                        a("Please note that this also means that your information won't synchronize between multiple devices, for example, your desktop and your phone. You can use the backup & restore functions to copy your data between devices."
                         )
                 a.h3(_t="What is the history of the 百岳?")
                 with a.div():
@@ -327,7 +333,7 @@ with a.html(lang="en"):
                 a.h3(_t="Why are there more than 100 小百岳?")
                 with a.div():
                     a.p(
-                        _t="In contrast to the Baiyue, the Xiaobaiyue list has been updated several times, and peaks have been replaced for various reasons (for example, difficulty of access). This page displays all versions of the list (at least all that I could find so far)."
+                        _t="In contrast to the Baiyue, the Xiaobaiyue list has been updated several times, and peaks have been replaced for various reasons (for example, difficulty of access). This page displays all versions of the list."
                     )
                 a.h3(_t="Where does the data come from?")
                 with a.div():
@@ -358,17 +364,6 @@ with a.html(lang="en"):
                     ):
                       a.em(_t="Yushan East Peak")
                       a(".")
-                a.h3(_t="Are you planning to add route descriptions for each peak?")
-                with a.div():
-                    a.p(_t="Maybe.")
-                    a.p(
-                        _t="The challenge is that it would be difficult to keep this information accurate and up to date, especially given that there are many different route combinations for most peaks."
-                    )
-                    with a.p(
-                        _t="A community-maintained platform seems to be a better choice. For this reason, I link to a"
-                    ):
-                      a.a(href="https://hiking.biji.co/", _t="Hiking Biji")
-                      a("entry for most peaks.")
                 a.h3(_t="How can I report an error or a problem?")
                 with a.div():
                     with a.p():

@@ -76,8 +76,14 @@ const POSITION_ICON = L.AwesomeMarkers.icon({
 // Load visited peaks from local storage.
 var climbed;
 
+// Initialize set of peaks with a photo from local storage
+var hasPhoto = new Set();
+
 var currPosMarker;
 var currPos;
+
+var baiyueTable;
+var xiaobaiyueTable;
 
 $(document).ready(function() {
   localforage.config({
@@ -89,7 +95,6 @@ $(document).ready(function() {
   });
 
   climbed = {};
-  hasPhoto = new Set();
 
   localforage.getItem(CLIMBED_PEAKS).then(function(value) {
     climbed = value || {};
@@ -99,7 +104,9 @@ $(document).ready(function() {
   })
   
   localforage.getItem(HAS_PHOTO).then(function(value) {
-    hasPhoto = new Set(Object.keys(value || {}));
+    if (value) {
+      value.forEach((val)=>hasPhoto.add(val));
+    }
   })
 
   // Initialize menu
@@ -155,9 +162,10 @@ $(document).ready(function() {
   });
   navigator.geolocation.watchPosition(showPos);
 
-  // Initialize data tables.
-  $("#baiyue").DataTable({
+  // Initialize data tables
+  baiyueTable = $("#baiyue").DataTable({
     paging: false,
+    autoWidth: false,
     info: false,
     responsive: {
       details: false
@@ -191,8 +199,9 @@ $(document).ready(function() {
       }
     ],
   });
-  $("#xiaobaiyue").DataTable({
+  xiaobaiyueTable = $("#xiaobaiyue").DataTable({
     paging: false,
+    autoWidth: false,
     info: false,
     responsive: {
       details: false
@@ -307,7 +316,7 @@ function updateProgress() {
 function displayBaiyue() {
   $("#tab-baiyue").css("display", "unset");
   $("#tab-xiaobaiyue").css("display", "none");
-  $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
+  baiyueTable.columns.adjust().responsive.recalc();
   localStorage.setItem(ACTIVE_TAB, "baiyue");
 }
 
@@ -315,7 +324,7 @@ function displayBaiyue() {
 function displayXiaobaiyue() {
   $("#tab-baiyue").css("display", "none");
   $("#tab-xiaobaiyue").css("display", "unset");
-  $($.fn.dataTable.tables(true)).DataTable().responsive.recalc();
+  xiaobaiyueTable.columns.adjust().responsive.recalc();
   localStorage.setItem(ACTIVE_TAB, "xiaobaiyue");
 }
 
@@ -341,7 +350,7 @@ function flyTo(lon, lat, osm) {
 }
 
 // Add a peak marker to the map.
-function addMarker(osm, lon, lat, type, id, chinese, english, height, region, descriptions) {
+function addMarker(osm, lat, lon, type, id, chinese, english, height, region, descriptions) {
   var displayFunction = type == "百岳" ? "displayBaiyue()" : "displayXiaobaiyue()";
   var hikingBiji = type != "小百岳_OLD";
   var hikingBijiCategory = type == "百岳" ? 1 : 2;
@@ -366,13 +375,24 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region, de
   // Navigation
   popup += "<div class=\"actionset\"><select class=\"btn ui-button\" onChange=\"actionEvent(this, this.value);\"><option value=\"0\" class=\"hidden\" selected=\"true\" disabled=\"true\">Navigation</option>";
   // Google Maps
-  popup += "<option value=\"https://www.google.com/maps/place/" + lon +','+ lat +"\" title=\"Google Maps\">Google Maps</option>";
+  popup += "<option value=\"https://www.google.com/maps/place/" + lat +','+ lon +"\" title=\"Google Maps\">Google Maps</option>";
   // Organic Maps
-  if (isRenderAppLinks()) {
-    popup += "<option value=\"om://map?v=1&ll=" + lon + ", " + lat + "\" title=\"Organic Maps\">Organic Maps</option>";
+  // Deep links don't work, see https://github.com/organicmaps/organicmaps/issues/6381
+  // Falling back to om:// schema which only works on Android
+  //popup += "<option value=\"http://omaps.app/map?v=1&ll=" + lat + ", " + lon + "\" title=\"Organic Maps\">Organic Maps</option>";
+  if (/(android)/i.test(navigator.userAgent)) {
+    popup += "<option value=\"om://map?v=1&ll=" + lat + ", " + lon + "\" title=\"Organic Maps\">Organic Maps</option>";
   }
+
+  // Gaia GPS
+  popup += "<option value=\"http://gaiagps.com/map/?lat=" + lat + "&lng=" + lon + "&z=8&loc=11.0/" + lon + "/" + lat + "\" title=\"Gaia GPS\">Gaia GPS</option>";
+  
   // Copy location
-  popup += "<option value=\"" + lon + ", " + lat +"\">Copy location (WGS84)</option></select>";
+  // Disable for Safari until https://stackoverflow.com/questions/77351436/writing-to-the-clipboard-doesnt-work-in-safari has been resolved
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (!isSafari) {
+    popup += "<option value=\"" + lat + ", " + lon +"\">Copy location (WGS84)</option></select>";
+  }
 
   
   // Route description
@@ -403,7 +423,7 @@ function addMarker(osm, lon, lat, type, id, chinese, english, height, region, de
     icon.options.icon = checked ? value != null ? "photo" : "check" : "mountain";
   
     if (!markers[osm]) {
-      markers[osm] = L.marker([lon, lat], {
+      markers[osm] = L.marker([lat, lon], {
         icon: icon
       }).bindPopup(popup).on('popupopen', function(popup) {
         $(".buttonset").buttonset();
@@ -581,13 +601,13 @@ function uploadPhoto(type, osm) {
       }
     }
   }
-  localforage.getItem("photo_" + osm).then(function(value) {
-    if (!value) {
-      input.click();
-    } else {
+  if (hasPhoto.has(osm)) {
+    localforage.getItem("photo_" + osm).then(function(value) {
       photoDialog(type, osm, value, input);
-    }
-  })
+    })
+  } else {
+    input.click();
+  }
 }
 
 function photoDialog(type, osm, value, input) {
@@ -633,10 +653,14 @@ function actionEvent(dropdown, value) {
     window.open(value);
   }
   else {
-    navigator.clipboard.writeText(value);
+    writeTextToClipboard(value);
   }
   // reset dropdown value
   dropdown.value = 0;
+}
+
+function writeTextToClipboard(value) {
+  navigator.clipboard.writeText(value);
 }
 
 // Helper method for dropdown menu actions.
@@ -686,12 +710,4 @@ function menuEvent(value) {
     }
   }
   resetDropdown();
-}
-
-function isWebKit() {
-  return (navigator.userAgent.indexOf('AppleWebKit') != -1)
-}
-
-function isRenderAppLinks() {
-  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
 }
