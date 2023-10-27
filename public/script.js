@@ -105,7 +105,7 @@ $(document).ready(function() {
   
   localforage.getItem(HAS_PHOTO).then(function(value) {
     if (value) {
-      value.forEach((val)=>hasPhoto.add(val));
+      JSON.parse(value).forEach((val)=>hasPhoto.add(val));
     }
   })
 
@@ -459,7 +459,8 @@ function resetProgress() {
     confirmButtonText: "Yes"
   }).then((result) => {
     if (result.isConfirmed) {
-      climbed = {};
+      climbed = new Set();
+      hasPhoto = new Set();
       localforage.dropInstance();
       updateProgress();
       updateCheckboxes();
@@ -556,6 +557,11 @@ function restoreProgress() {
             markers = [];
             initMarkers();
           });
+          localforage.getItem(HAS_PHOTO).then(function(value) {
+            if (value) {
+              JSON.parse(value).forEach((val)=>hasPhoto.add(val));
+            }
+          });
         });
       } catch (a) {
         Swal.fire({
@@ -587,16 +593,16 @@ function uploadPhoto(type, osm) {
         const maxWidth = 1600;
         const maxHeight = 1200;
         var ratio = Math.min(maxWidth / img.width, maxHeight / img.height);
-        const canvas = document.createElement('canvas');
+        const canvas = document.createElement("canvas");
         canvas.width = img.width * ratio;
         canvas.height = img.height * ratio;
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        const resizedBase64 = canvas.toDataURL('image/jpeg', 1.0);
+        const resizedBase64 = canvas.toDataURL("image/jpeg", 1.0);
         localforage.setItem("photo_" + osm, resizedBase64);
         hasPhoto.add(osm);
         updateUi(type, osm);
-        localforage.setItem(HAS_PHOTO, hasPhoto);
+        localforage.setItem(HAS_PHOTO, JSON.stringify([...hasPhoto]));
         photoDialog(type, osm, resizedBase64, input);
       }
     }
@@ -635,7 +641,7 @@ function photoDialog(type, osm, value, input) {
           localforage.removeItem("photo_" + osm);
           hasPhoto.delete(osm);
           updateUi(type, osm);
-          localforage.setItem(HAS_PHOTO, hasPhoto);
+          localforage.setItem(HAS_PHOTO, JSON.stringify([...hasPhoto]));
         }
         else {
           photoDialog(type, osm, value, input);
@@ -659,8 +665,24 @@ function actionEvent(dropdown, value) {
   dropdown.value = 0;
 }
 
-function writeTextToClipboard(value) {
-  navigator.clipboard.writeText(value);
+async function writeTextToClipboard(value) {
+/*  // Safari, Chrome
+  if(typeof ClipboardItem && navigator.clipboard.write) {
+    const type = 'text/plain'
+    const blob = new Blob([value], {type})
+    const cbi = new ClipboardItem({[type]: blob})
+    await navigator.clipboard.write([cbi])
+    console.log(`Copied: ${value}`)
+  }
+  // Firefox
+  else {
+    navigator.clipboard.writeText(value);
+  }*/
+  navigator.clipboard.writeText(value).then(function() {
+    console.log(value + " has been written to the clipboard");
+  }, function(err) {
+    console.error("could not write to clipboard: " + err);
+ });
 }
 
 // Helper method for dropdown menu actions.
