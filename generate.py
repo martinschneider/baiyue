@@ -293,13 +293,13 @@ with a.html(lang="en"):
                     )
                     a.img(src="screenshot1.png")
                     a.p(
-                        _t="If you click on one of the markers, additional information is displayed. From here, you can jump to various online maps and route descriptions (e.g. Hiking Biji). You can also copy the GPS coordinates (WSG-84) or the Chinese name of the peak into the clipboard."
+                        _t="If you click on one of the markers, additional information is displayed. From here, you can jump to online maps and route descriptions. You can also copy the GPS coordinates (WSG-84) or the Chinese name of the peak into the clipboard."
                     )
                     a.p(
                         _t="You can mark a peak as visited and, optionally, attach your summit photo too. As detailled below, all data (including the photos) is only stored locally in your browser and never uploaded anywhere!"
                     )
                     a.p(
-                        _t="Below the map is a table of all mountains. You can use the corresponding buttons to switch between 百岳 and 小百岳."
+                        _t="Below the map is a table of all mountains. You can use the corresponding buttons to switch between a list of 百岳 and 小百岳."
                     )
                     a.img(src="screenshot2.png")
                     a.p(

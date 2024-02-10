@@ -374,26 +374,13 @@ function addMarker(osm, lat, lon, type, id, chinese, english, height, region, de
 
   // Navigation
   popup += "<div class=\"actionset\"><select class=\"btn ui-button\" onChange=\"actionEvent(this, this.value);\"><option value=\"0\" class=\"hidden\" selected=\"true\" disabled=\"true\">Navigation</option>";
-  // Google Maps
-  popup += "<option value=\"https://www.google.com/maps/place/" + lat +','+ lon +"\" title=\"Google Maps\">Google Maps</option>";
+  // Maps
+  popup += "<option value=\"http://maps.apple.com/?q=" + lat +','+ lon +"\" title=\"Google Maps\">Maps</option>";
   // Organic Maps
-  // Deep links don't work, see https://github.com/organicmaps/organicmaps/issues/6381
-  // Falling back to om:// schema which only works on Android
-  //popup += "<option value=\"http://omaps.app/map?v=1&ll=" + lat + ", " + lon + "\" title=\"Organic Maps\">Organic Maps</option>";
-  if (/(android)/i.test(navigator.userAgent)) {
-    popup += "<option value=\"om://map?v=1&ll=" + lat + ", " + lon + "\" title=\"Organic Maps\">Organic Maps</option>";
-  }
-
-  // Gaia GPS
-  popup += "<option value=\"http://gaiagps.com/map/?lat=" + lat + "&lng=" + lon + "&z=8&loc=11.0/" + lon + "/" + lat + "\" title=\"Gaia GPS\">Gaia GPS</option>";
+  popup += "<option value=\"http://omaps.app/" + encodeLatLon(lat, lon, DEFAULT_ZOOM, english) + "\" title=\"Organic Maps\">Organic Maps</option>";
   
   // Copy location
-  // Disable for Safari until https://stackoverflow.com/questions/77351436/writing-to-the-clipboard-doesnt-work-in-safari has been resolved
-  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  if (!isSafari) {
-    popup += "<option value=\"" + lat + ", " + lon +"\">Copy location (WGS84)</option></select>";
-  }
-
+  popup += "<option value=\"" + lat + ", " + lon +"\">Copy location (WGS84)</option></select>";
   
   // Route description
   if (descriptions != null && descriptions != "undefined" && descriptions != "None" && descriptions != "") {
@@ -656,7 +643,22 @@ function photoDialog(type, osm, value, input) {
 
 function actionEvent(dropdown, value) {
   if (value.startsWith("http") || value.startsWith("om://")) {
-    window.open(value);
+    try {
+      var popup = window.open(value);
+      popup.focus();
+    }
+    catch (e) {
+      Swal.fire({
+          title: "Open external link",
+          text: value,
+          showCancelButton: true,
+          confirmButtonText: "Confirm"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.open(value);
+          }
+        });
+    }
   }
   else {
     writeTextToClipboard(value);
@@ -665,24 +667,43 @@ function actionEvent(dropdown, value) {
   dropdown.value = 0;
 }
 
-async function writeTextToClipboard(value) {
-/*  // Safari, Chrome
+function writeTextToClipboard(value) {
+  writeTextToClipboard(value, false);
+}
+
+function writeTextToClipboard(value, isFallback) {
+  // Safari, Chrome, Edge
   if(typeof ClipboardItem && navigator.clipboard.write) {
     const type = 'text/plain'
     const blob = new Blob([value], {type})
     const cbi = new ClipboardItem({[type]: blob})
-    await navigator.clipboard.write([cbi])
-    console.log(`Copied: ${value}`)
+    navigator.clipboard.write([cbi]).then(function() {
+    }, function(err) {
+      // For security reasons, modifying the clipboard on the onChange event of
+      // a dropdown (select) won't work in Safari (as of 2023) because it's not
+      // an "activation triggering input event", see
+      // https://developer.mozilla.org/en-US/docs/Web/Security/User_activation.
+      //
+      // As a fallback, we display a dialog and use the onClick event of the
+      // 'Copy' button to write to the clipboard. See also:
+      // https://stackoverflow.com/questions/77351436/writing-to-the-clipboard-onchange-of-a-dropdown-element-in-safari/77356042
+      if (!isFallback) {
+        Swal.fire({
+          title: "Copy to clipboard",
+          text: value,
+          confirmButtonText: "Copy"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            writeTextToClipboard(value, true);
+          }
+        });
+      }
+    });
   }
   // Firefox
   else {
     navigator.clipboard.writeText(value);
-  }*/
-  navigator.clipboard.writeText(value).then(function() {
-    console.log(value + " has been written to the clipboard");
-  }, function(err) {
-    console.error("could not write to clipboard: " + err);
- });
+  }
 }
 
 // Helper method for dropdown menu actions.
@@ -694,7 +715,24 @@ function menuEvent(value) {
   } else if (value == MENU_BACKUP) {
     backupProgress();
   } else if (value == MENU_RESTORE) {
-    restoreProgress();
+    var ua = window.navigator.userAgent;
+    var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    var webkit = !!ua.match(/WebKit/i);
+    var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+    if (iOSSafari) {
+      Swal.fire({
+        title: "Restore from file",
+        showCancelButton: true,
+        confirmButtonText: "Select backup file"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          restoreProgress();
+        }
+      });
+    }
+    else {
+      restoreProgress();
+    }
   } else if (value == MENU_RESET) {
     resetProgress();
   } else if (value == MENU_ABOUT) {
@@ -732,4 +770,77 @@ function menuEvent(value) {
     }
   }
   resetDropdown();
+}
+
+function dbhelper() {
+  for (const osm of OLD_XIAOBAIYUE) {
+    localforage.getItem("photo_" + osm).then(function(value) {
+      if (value) {
+        console.log(osm);
+      }
+    })
+  }
+}
+
+// JS implementation of the original maps.me url_generator
+// https://github.com/mapsme/omim/blob/master/ge0/url_generator.cpp
+function encodeLatLon(lat, lon, zoom, name) {
+  const zoomI = (zoom <= 4 ? 0 : (zoom >= 19.75 ? 63 : Math.floor((zoom - 4) * 4)));
+  const latLonString = latLonToString(lat, lon);
+  let result = base64Char(zoomI) + '' + latLonString;
+  if (name !== '') {
+    result += '/' + encodeURI(name);
+  }
+  return result;
+}
+
+function base64Char(x) {
+  if (x < 0 || x >= 64) {
+    throw new Error('Invalid input');
+  }
+  return 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_'.charAt(x);
+}
+
+function latToInt(lat, maxValue) {
+  const x = (lat + 90.0) / 180.0 * maxValue;
+  return Math.min(maxValue, Math.max(0, Math.round(x)));
+}
+
+function lonIn180180(lon) {
+  let l;
+  if (lon >= 0) {
+    l = (lon + 180.0) % 360.0 - 180.0;
+  } else {
+    l = (lon - 180.0) % 360.0 + 180.0;
+    if (l >= 180.0) {
+      l -= 360.0;
+    }
+  }
+  return l;
+}
+
+function lonToInt(lon, maxValue) {
+  const x = (lonIn180180(lon) + 180.0) / 360.0 * (maxValue + 1.0) + 0.5;
+  return (x <= 0 || x >= maxValue + 1) ? 0 : Math.floor(x);
+}
+
+function latLonToString(lat, lon) {
+  const latI = latToInt(lat, (1 << 30) - 1);
+  const lonI = lonToInt(lon, (1 << 30) - 1);
+
+  const result = [];
+  for (let i = 0, shift = 27; i < 9; ++i, shift -= 3) {
+    const latBits = latI >> shift & 7;
+    const lonBits = lonI >> shift & 7;
+
+    const nextByte = ((latBits >> 2) & 1) << 5 |
+                     ((lonBits >> 2) & 1) << 4 |
+                     ((latBits >> 1) & 1) << 3 |
+                     ((lonBits >> 1) & 1) << 2 |
+                     (latBits & 1) << 1 |
+                     (lonBits & 1);
+
+    result.push(base64Char(nextByte));
+  }
+  return result.join('');
 }
