@@ -291,7 +291,7 @@ with a.html(lang="en"):
                     a.p(
                         _t="At the top of the page, you will find a map of Taiwan. 百岳 peaks are marked in blue, 小百岳 in green."
                     )
-                    a.img(src="screenshot1.png")
+                    a.img(src="screencast1.gif")
                     a.p(
                         _t="If you click on one of the markers, additional information is displayed. From here, you can jump to online maps and route descriptions. You can also copy the GPS coordinates (WSG-84) or the Chinese name of the peak into the clipboard."
                     )
@@ -301,10 +301,8 @@ with a.html(lang="en"):
                     a.p(
                         _t="Below the map is a table of all mountains. You can use the corresponding buttons to switch between a list of 百岳 and 小百岳."
                     )
-                    a.img(src="screenshot2.png")
                     a.p(
                         _t="Use the check box next to a peak to mark it as climbed. The total count (in the left lower corner of the map) and the icon for that peak will update accordingly.")
-                    a.img(src="screenshot3.png")
                 a.h3(_t="Where is the progress stored? Is my data secure?")
                 with a.div():
                     with a.p():

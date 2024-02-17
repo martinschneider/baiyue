@@ -380,7 +380,13 @@ function addMarker(osm, lat, lon, type, id, chinese, english, height, region, de
   popup += "<option value=\"http://omaps.app/" + encodeLatLon(lat, lon, DEFAULT_ZOOM, english) + "\" title=\"Organic Maps\">Organic Maps</option>";
   
   // Copy location
-  popup += "<option value=\"" + lat + ", " + lon +"\">Copy location (WGS84)</option></select>";
+  popup += "<option value=\"" + lat + ", " + lon +"\">Copy location (WGS84)</option>";
+  
+  // Copy Chinese name
+  popup += "<option value=\"" + chinese +"\">Copy Chinese name</option>";
+  
+  // Copy English location
+  popup += "<option value=\"" + english +"\">Copy English name</option></select>";
   
   // Route description
   if (descriptions != null && descriptions != "undefined" && descriptions != "None" && descriptions != "") {
