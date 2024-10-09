@@ -64,33 +64,6 @@ with a.html(lang="en"):
         a.meta(content="no-referrer", name="referrer")
         a.meta(content="M.S.", name="author")
         a.meta(content="Taiwan's 百岳 Baiyue", name="description")
-        a.script(src="https://code.jquery.com/jquery-3.6.0.min.js")
-        a.script(src="https://code.jquery.com/ui/1.13.1/jquery-ui.js")
-        a.script(src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js")
-        a.script(
-            src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"
-        )
-        a.script(src="https://cdn.datatables.net/plug-ins/1.12.1/sorting/natural.js")
-        a.script(src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js")
-        a.script(
-            src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"
-        )
-        a.script(src="https://kit.fontawesome.com/288fa10781.js")
-        a.script(
-            src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"
-        )
-        a.script(
-            src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.33/dist/sweetalert2.all.min.js"
-        )
-        a.script(
-            async_="",
-            src="https://gc.zgo.at/count.js",
-            **{"data-goatcounter": "https://xiaobaiyue.goatcounter.com/count"}
-        )
-        a.script(src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js")
-        a.script(src="https://jjimenezshaw.github.io/Leaflet.Control.Resizer/L.Control.Resizer.js")
-        a.script(src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js")
-        a.script(src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js")
         a.script(src="script.js")
         with a.script():
 

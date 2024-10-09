@@ -385,7 +385,7 @@ function addMarker(osm, lat, lon, type, id, chinese, english, height, region, de
   // Copy Chinese name
   popup += "<option value=\"" + chinese +"\">Copy Chinese name</option>";
   
-  // Copy English location
+  // Copy English name
   popup += "<option value=\"" + english +"\">Copy English name</option></select>";
   
   // Route description
