@@ -7,17 +7,17 @@
    location: 23.4699871,120.9572739
    elevation: 3952
    region: central
-   descriptions: ""
+   descriptions: "5164.at (English) #1: https://blog.5164.at/posts/2021-10-24-yushan/,5164.at (English) #2: https://blog.5164.at/posts/2022-02-05-yushan/,Bergwelten.com (Deutsch): https://www.bergwelten.com/lp/wandern-auf-den-hoechsten-gipfel-taiwans,Catherine Lee (English): https://catherinelee234.com/2017/07/29/on-top-of-the-world-yushan-jade-mountain-玉山-taiwans-highest-mountain-3952-m-12966-ft/,Chloe Chows (English): https://www.chloechows.com/blog/climbing-taiwans-tallest-mountain-jade-mountain-,English in Taiwan (English): https://www.englishintaiwan.com/hikes/climbing-jade-mountain-yushan-reaching-the-peak,Hiking Taiwan (English): https://hikingtaiwan.wordpress.com/2010/07/07/yushan-玉山/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Littlenomadid.com (English): https://www.littlenomadid.com/hiking-jade-mountain/,Steven's Peak-Bagging Journey (English): https://stevensong.com/international/taiwan/yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-main-peak/,The Adventure Log (English): https://www.lostfilipina.com/2020/06/mt-yu-yushan.html,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=1,輝哥的天空 (English): http://輝哥的天空.tw/English/001icsun.htm"
 -
    type: 百岳
    id: 2
-   OSM: 1444178127
+   OSM: 2101224904
    chinese: 雪山主峰
    english: Xueshan
-   location: 24.3834110,121.2317621
+   location: 24.3834072,121.2317916
    elevation: 3884.6
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/snow-mountain"
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-12-xueshan/,Peaks of Taiwan (English): https://peaks.tw/routes/snow-mountain,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/xueshan-main-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=2,輝哥的天空 (English): http://輝哥的天空.tw/English/002seisun.htm"
 -
    type: 百岳
    id: 3
@@ -27,7 +27,7 @@
    location: 23.4707431,120.9651927
    elevation: 3869
    region: central
-   descriptions: ""
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2022-02-05-yushan/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-east-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=3,輝哥的天空 (English): http://輝哥的天空.tw/English/002icsune.htm"
 -
    type: 百岳
    id: 4
@@ -37,7 +37,7 @@
    location: 23.4875704,120.9594971
    elevation: 3858
    region: central
-   descriptions: ""
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2022-02-05-yushan/,Bergwelten.com (Deutsch): https://www.bergwelten.com/lp/wandern-auf-den-hoechsten-gipfel-taiwans,Catherine Lee (English): https://catherinelee234.com/2017/07/29/on-top-of-the-world-yushan-jade-mountain-玉山-taiwans-highest-mountain-3952-m-12966-ft/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-north-peak/Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=4,輝哥的天空 (English): http://輝哥的天空.tw/English/003icsunn107.htm"
 -
    type: 百岳
    id: 5
@@ -47,7 +47,7 @@
    location: 23.4465941,120.9589514
    elevation: 3844
    region: central
-   descriptions: ""
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2022-02-05-yushan/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-south-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=5,輝哥的天空 (English): http://輝哥的天空.tw/English/icsunfivemaotain.htm"
 -
    type: 百岳
    id: 6
@@ -67,7 +67,7 @@
    location: 23.5204009,121.0671084
    elevation: 3776.3
    region: central
-   descriptions: ""
+   descriptions: "Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/mt-mabolasi/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7"
 -
    type: 百岳
    id: 8
@@ -77,7 +77,7 @@
    location: 24.3619911,121.4392800
    elevation: 3740.9
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/nanhu"
+   descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/mt-nanhuda/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=8"
 -
    type: 百岳
    id: 9
@@ -87,7 +87,7 @@
    location: 23.4390982,120.9633530
    elevation: 3707.9
    region: central
-   descriptions: ""
+   descriptions: "Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/mt-dongxiaonan/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=9,輝哥的天空 (English): http://輝哥的天空.tw/English/icsunfivemaotain.htm"
 -
    type: 百岳
    id: 10
@@ -97,17 +97,17 @@
    location: 24.3102241,121.4162655
    elevation: 3697.7
    region: central
-   descriptions: ""
+   descriptions: "Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/xueshan-north-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=10"
 -
    type: 百岳
    id: 11
    OSM: 2268473329
    chinese: 雪山北峰
    english: Xueshan North Peak
-   location: 24.4147120,121.2404040
+   location: 24.4147141,121.2404040
    elevation: 3703.0
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=11"
 -
    type: 百岳
    id: 12
@@ -117,7 +117,7 @@
    location: 23.2281831,120.9117441
    elevation: 3667.4
    region: east
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=12"
 -
    type: 百岳
    id: 13
@@ -127,7 +127,7 @@
    location: 23.4739767,121.0384772
    elevation: 3643
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=13"
 -
    type: 百岳
    id: 14
@@ -137,7 +137,7 @@
    location: 24.3655943,121.4508533
    elevation: 3639
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/nanhu"
+   descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=14"
 -
    type: 百岳
    id: 15
@@ -147,7 +147,7 @@
    location: 23.6268066,121.0918666
    elevation: 3617
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=15"
 -
    type: 百岳
    id: 16
@@ -157,7 +157,7 @@
    location: 24.1183121,121.3344957
    elevation: 3605.6
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=16"
 -
    type: 百岳
    id: 17
@@ -167,7 +167,7 @@
    location: 23.2843613,120.9924466
    elevation: 3602
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=17,輝哥的天空 (English): http://輝哥的天空.tw/English/016chaminhu.htm"
 -
    type: 百岳
    id: 18
@@ -177,7 +177,7 @@
    location: 24.3409271,121.2005007
    elevation: 3593.3
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=18"
 -
    type: 百岳
    id: 19
@@ -187,7 +187,7 @@
    location: 23.3537891,120.9757930
    elevation: 3562
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=19"
 -
    type: 百岳
    id: 20
@@ -197,7 +197,7 @@
    location: 24.0864580,121.3232629
    elevation: 3561.7
    region: central
-   descriptions: ""
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=20"
 -
    type: 百岳
    id: 21
@@ -217,7 +217,7 @@
    location: 24.3836701,121.4372559
    elevation: 3534.2
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/nanhu"
+   descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu"
 -
    type: 百岳
    id: 23
@@ -231,13 +231,13 @@
 -
    type: 百岳
    id: 24
-   OSM: 1529105572
+   OSM: 2101226634
    chinese: 品田山
    english: Pintianshan
-   location: 24.4282936,121.2667680
+   location: 24.4283001,121.2667663
    elevation: 3524
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
 -
    type: 百岳
    id: 25
@@ -247,7 +247,7 @@
    location: 23.4718712,120.9337289
    elevation: 3518
    region: central
-   descriptions: ""
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2022-01-05-yushan-west-peak/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-west/English in Taiwan (English): https://www.englishintaiwan.com/hikes/jade-mountain-west-peak-how-to-hike"
 -
    type: 百岳
    id: 26
@@ -267,17 +267,17 @@
    location: 23.2971931,121.0286649
    elevation: 3495
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/016chaminhu.htm"
 -
    type: 百岳
    id: 28
-   OSM: 1529107439
+   OSM: 4705115484
    chinese: 大霸尖山
    english: Dabajianshan
-   location: 24.4577421,121.2579990
+   location: 24.4577424,121.2579988
    elevation: 3489.8
    region: central
-   descriptions: "Catherine Lee (English): https://catherinelee234.com/2020/07/27/almost-on-top-of-the-world-dabajianshan-大霸尖山-3492-m-11456-ft/,English in Taiwan (English): https://www.englishintaiwan.com/hikes/da-ba-jian-mountain-how-to-hike-it-part-1,Hiking Taiwan (English): https://hikingtaiwan.wordpress.com/2010/08/27/dabajianshan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-dabajian-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/029-mt-dabajian/,Tu Meke Tina (English): https://tumeketina.com/2017/08/17/hiking-in-taiwan-dabajianshan-大霸尖山-4-day-solo-hike/,johansvennung(臺灣) (English): https://johansvennung.blogg.se/2013/march/a-daytrip-to-dabajianshan.html"
+   descriptions: "Catherine Lee (English): https://catherinelee234.com/2020/07/27/almost-on-top-of-the-world-dabajianshan-大霸尖山-3492-m-11456-ft/,English in Taiwan (English): https://www.englishintaiwan.com/hikes/da-ba-jian-mountain-how-to-hike-it-part-1,Hiking Taiwan (English): https://hikingtaiwan.wordpress.com/2010/08/27/dabajianshan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-dabajian-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/029-mt-dabajian/,Tu Meke Tina (English): https://tumeketina.com/2017/08/17/hiking-in-taiwan-dabajianshan-大霸尖山-4-day-solo-hike/,johansvennung(臺灣) (English): https://johansvennung.blogg.se/2013/march/a-daytrip-to-dabajianshan.html,輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
 -
    type: 百岳
    id: 29
@@ -337,7 +337,7 @@
    location: 24.1815171,121.2815980
    elevation: 3421.8
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
 -
    type: 百岳
    id: 35
@@ -347,7 +347,7 @@
    location: 24.1357613,121.2811661
    elevation: 3419
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
 -
    type: 百岳
    id: 36
@@ -357,7 +357,7 @@
    location: 24.4556307,121.2520909
    elevation: 3419
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
 -
    type: 百岳
    id: 37
@@ -367,7 +367,7 @@
    location: 24.1426431,121.2711773
    elevation: 3416.6
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
 -
    type: 百岳
    id: 38
@@ -377,7 +377,7 @@
    location: 23.4292361,120.9249381
    elevation: 3380.8
    region: central
-   descriptions: ""
+   descriptions: "Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,輝哥的天空 (English): http://輝哥的天空.tw/English/icsunfivemaotain.htm"
 -
    type: 百岳
    id: 39
@@ -387,7 +387,7 @@
    location: 24.2135771,121.3471869
    elevation: 3369.9
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/039piruh.htm"
 -
    type: 百岳
    id: 40
@@ -407,7 +407,7 @@
    location: 24.0612990,121.2799750
    elevation: 3357.3
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/qilai-nanhua"
+   descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/qilai-nanhua,輝哥的天空 (English): http://輝哥的天空.tw/English/nanhain.htm"
 -
    type: 百岳
    id: 42
@@ -437,7 +437,7 @@
    location: 24.3599680,121.2481508
    elevation: 3346
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/047quchayan.htm"
 -
    type: 百岳
    id: 45
@@ -487,7 +487,7 @@
    location: 24.4326351,121.3048926
    elevation: 3323.5
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
 -
    type: 百岳
    id: 50
@@ -517,7 +517,7 @@
    location: 24.4310981,121.2881540
    elevation: 3300.2
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
 -
    type: 百岳
    id: 53
@@ -527,7 +527,7 @@
    location: 24.4699811,121.2436120
    elevation: 3296.3
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
 -
    type: 百岳
    id: 54
@@ -577,7 +577,7 @@
    location: 23.5773691,120.9626009
    elevation: 3277.6
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/054gindasun.htm"
 -
    type: 百岳
    id: 59
@@ -647,7 +647,7 @@
    location: 24.1492329,121.3430149
    elevation: 3247.5
    region: east
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/060pinfonsun107.htm"
 -
    type: 百岳
    id: 66
@@ -687,7 +687,7 @@
    location: 23.4755783,120.9176632
    elevation: 3239
    region: central
-   descriptions: ""
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2021-10-24-yushan/,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,輝哥的天空 (English): http://輝哥的天空.tw/English/065icsunbeforsun.htm"
 -
    type: 百岳
    id: 70
@@ -697,7 +697,7 @@
    location: 24.1523850,121.2845920
    elevation: 3235.9
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
 -
    type: 百岳
    id: 71
@@ -744,10 +744,10 @@
    OSM: 2268473334
    chinese: 雪山東峰
    english: Xueshan East Peak
-   location: 24.3887221,121.2720387
+   location: 24.3887001,121.2720685
    elevation: 3199.0
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/snow-mountain"
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-12-xueshan/,Peaks of Taiwan (English): https://peaks.tw/routes/snow-mountain,輝哥的天空 (English): http://輝哥的天空.tw/English/002seisun.htm"
 -
    type: 百岳
    id: 76
@@ -757,7 +757,7 @@
    location: 24.0393451,121.2859310
    elevation: 3181.6
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/qilai-nanhua"
+   descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/qilai-nanhua,輝哥的天空 (English): http://輝哥的天空.tw/English/nanhain.htm"
 -
    type: 百岳
    id: 77
@@ -817,7 +817,7 @@
    location: 24.1776441,121.2445400
    elevation: 3144.1
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
 -
    type: 百岳
    id: 83
@@ -827,7 +827,7 @@
    location: 24.3801643,121.4174920
    elevation: 3139.9
    region: central
-   descriptions: "Peaks of Taiwan: https://peaks.tw/routes/nanhu"
+   descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu"
 -
    type: 百岳
    id: 84
@@ -837,7 +837,7 @@
    location: 24.4497761,121.3212180
    elevation: 3132.5
    region: north
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
 -
    type: 百岳
    id: 85
@@ -857,7 +857,7 @@
    location: 24.4594489,121.2161839
    elevation: 3111.9
    region: central
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
 -
    type: 百岳
    id: 87
@@ -912,7 +912,7 @@
    type: 百岳
    id: 92
    OSM: 5582288244
-   chinese: 達芬山
+   chinese: 塔芬山
    english: Dafenshan
    location: 23.4060111,121.0268120
    elevation: 3068.8
@@ -934,7 +934,7 @@
    OSM: 4380698727
    chinese: 光頭山
    english: Guangtoushan
-   location: 23.9380801,121.2720140
+   location: 23.9390826,121.2731015
    elevation: 3077
    region: central
    descriptions: ""
@@ -957,7 +957,7 @@
    location: 24.2086897,121.3797299
    elevation: 3032.8
    region: east
-   descriptions: ""
+   descriptions: "輝哥的天空 (English): http://輝哥的天空.tw/English/100yanto107.htm"
 -
    type: 百岳
    id: 97
@@ -997,7 +997,7 @@
    location: 23.4506311,120.9886179
    elevation: 2981.4
    region: central
-   descriptions: ""
+   descriptions: "Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,輝哥的天空 (English): http://輝哥的天空.tw/English/icsunfivemaotain.htm"
 -
    type: 小百岳
    id-2003: 1
@@ -1009,7 +1009,7 @@
    location: 25.1787409,121.5221922
    elevation: 1093.6
    region: north
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大屯山,Foreigners in Taiwan (English): https://www.foreignersintaiwan.com/blog-370963385326684/datunshan,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/datunshan-yangmingshan.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/datunshan,Trails and Tales (English): https://taiwantrailsandtales.com/2019/02/14/mount-datun-multi-peak-trail,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=100,輝哥的天空: http://輝哥的天空.tw/mountain/nopaiA/taipeiAA001.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大屯山,Foreigners in Taiwan (English): https://www.foreignersintaiwan.com/blog-370963385326684/datunshan,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/datunshan-yangmingshan.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/datunshan,Trails and Tales (English): https://taiwantrailsandtales.com/2019/02/14/mount-datun-multi-peak-trail,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=100,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA001.htm"
 -
    type: 小百岳
    id-2003: 2
@@ -1081,7 +1081,7 @@
    location: 25.1188861,121.7519177
    elevation: 208.3
    region: north
-   descriptions: "5164.at (English): https://blog.5164.at/posts/2022-01-28-hongdanshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/紅淡山,Taiwan Outdoors (English): https://taiwanoutdoors.com/007-hongdanshan-紅淡山/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/04/30/keelung-mountain/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=106,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chilonAA007.htm"
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2022-01-28-hongdanshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/紅淡山,Taiwan Outdoors (English): https://taiwanoutdoors.com/007-hongdanshan-紅淡山/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=106,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chilonAA007.htm"
 -
    type: 小百岳
    id-2003: 9
@@ -1736,7 +1736,7 @@
    id-2006: 62
    id-2017: 62
    OSM: 4381460217
-   chinese: 紅毛埤山最高點
+   chinese: 紅毛埤山
    english: Hongmaopishan
    location: 23.4796332,120.4934236
    elevation: 150.7
@@ -2293,7 +2293,7 @@
    location: 23.8421360,120.9677039
    elevation: 2057.5
    region: central
-   descriptions: "NI HAO CHINA – 你好 中国 (Deutsch): https://dontblog.wordpress.com/2019/03/05/shuishedashan-trail-水社大山步道/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7515,輝哥的天空: http://輝哥的天空.tw/mountain/nopaiA/nantour003.htm"
+   descriptions: "NI HAO CHINA – 你好 中国 (Deutsch): https://dontblog.wordpress.com/2019/03/05/shuishedashan-trail-水社大山步道/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7515,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantour003.htm"
 -
    type: 小百岳
    id-2003: 66
