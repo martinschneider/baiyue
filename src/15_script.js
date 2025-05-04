@@ -349,6 +349,15 @@ function flyTo(lon, lat, osm) {
   $(".buttonset").buttonset();
 }
 
+// Detect platform and generate the appropriate map URL
+function getMapLink(lat, lon) {
+  const isApple = /iPhone|iPad|Macintosh|Mac OS X/i.test(navigator.userAgent);
+  const baseUrl = isApple
+    ? "http://maps.apple.com/?q="
+    : "https://maps.google.com/?q=";
+  return baseUrl + lat + ',' + lon;
+}
+
 // Add a peak marker to the map.
 function addMarker(osm, lat, lon, type, id, chinese, english, height, region, descriptions) {
   var displayFunction = type == "百岳" ? "displayBaiyue()" : "displayXiaobaiyue()";
@@ -374,8 +383,10 @@ function addMarker(osm, lat, lon, type, id, chinese, english, height, region, de
 
   // Navigation
   popup += "<div class=\"actionset\"><select class=\"btn ui-button\" onChange=\"actionEvent(this, this.value);\"><option value=\"0\" class=\"hidden\" selected=\"true\" disabled=\"true\">Navigation</option>";
+  
   // Maps
-  popup += "<option value=\"http://maps.apple.com/?q=" + lat +','+ lon +"\" title=\"Google Maps\">Maps</option>";
+  popup += `<option value="${getMapLink(lat, lon)}" title="Maps">Maps</option>`;
+  
   // Organic Maps
   popup += "<option value=\"http://omaps.app/" + encodeLatLon(lat, lon, DEFAULT_ZOOM, english) + "\" title=\"Organic Maps\">Organic Maps</option>";
   
