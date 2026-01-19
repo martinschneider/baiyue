@@ -4,7 +4,7 @@
    OSM: 3428095932
    chinese: 玉山
    english: Yushan
-   location: 23.4699871,120.9572739
+   location: "23.4699871,120.9572739"
    elevation: 3952
    region: central
    descriptions: "5164.at (English) #1: https://blog.5164.at/posts/2021-10-24-yushan/,5164.at (English) #2: https://blog.5164.at/posts/2022-02-05-yushan/,Bergwelten.com (Deutsch): https://www.bergwelten.com/lp/wandern-auf-den-hoechsten-gipfel-taiwans,Catherine Lee (English): https://catherinelee234.com/2017/07/29/on-top-of-the-world-yushan-jade-mountain-玉山-taiwans-highest-mountain-3952-m-12966-ft/,Chloe Chows (English): https://www.chloechows.com/blog/climbing-taiwans-tallest-mountain-jade-mountain-,English in Taiwan (English): https://www.englishintaiwan.com/hikes/climbing-jade-mountain-yushan-reaching-the-peak,Hiking Taiwan (English): https://hikingtaiwan.wordpress.com/2010/07/07/yushan-玉山/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Littlenomadid.com (English): https://www.littlenomadid.com/hiking-jade-mountain/,Steven's Peak-Bagging Journey (English): https://stevensong.com/international/taiwan/yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-main-peak/,The Adventure Log (English): https://www.lostfilipina.com/2020/06/mt-yu-yushan.html,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=1,輝哥的天空 (English): http://輝哥的天空.tw/English/001icsun.htm"
@@ -14,7 +14,7 @@
    OSM: 2101224904
    chinese: 雪山主峰
    english: Xueshan
-   location: 24.3834072,121.2317916
+   location: "24.3834040,121.2317965"
    elevation: 3884.6
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-12-xueshan/,Peaks of Taiwan (English): https://peaks.tw/routes/snow-mountain,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/xueshan-main-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=2,輝哥的天空 (English): http://輝哥的天空.tw/English/002seisun.htm"
@@ -23,8 +23,8 @@
    id: 3
    OSM: 625245738
    chinese: 玉山東峰
-   english: Yushan East Peak
-   location: 23.4707431,120.9651927
+   english: "Yushan East Peak"
+   location: "23.4707431,120.9651927"
    elevation: 3869
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-02-05-yushan/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-east-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=3,輝哥的天空 (English): http://輝哥的天空.tw/English/002icsune.htm"
@@ -33,8 +33,8 @@
    id: 4
    OSM: 625239452
    chinese: 玉山北峰
-   english: Yushan North Peak
-   location: 23.4875704,120.9594971
+   english: "Yushan North Peak"
+   location: "23.4875704,120.9594971"
    elevation: 3858
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-02-05-yushan/,Bergwelten.com (Deutsch): https://www.bergwelten.com/lp/wandern-auf-den-hoechsten-gipfel-taiwans,Catherine Lee (English): https://catherinelee234.com/2017/07/29/on-top-of-the-world-yushan-jade-mountain-玉山-taiwans-highest-mountain-3952-m-12966-ft/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-north-peak/Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=4,輝哥的天空 (English): http://輝哥的天空.tw/English/003icsunn107.htm"
@@ -43,8 +43,8 @@
    id: 5
    OSM: 625242828
    chinese: 玉山南峰
-   english: Yushan South Peak
-   location: 23.4465941,120.9589514
+   english: "Yushan South Peak"
+   location: "23.4465941,120.9589514"
    elevation: 3844
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-02-05-yushan/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-south-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=5,輝哥的天空 (English): http://輝哥的天空.tw/English/icsunfivemaotain.htm"
@@ -54,7 +54,7 @@
    OSM: 2482536203
    chinese: 秀姑巒山
    english: Xiuguluanshan
-   location: 23.4968501,121.0574570
+   location: "23.4968501,121.0574570"
    elevation: 3829.2
    region: central
    descriptions: "Taiwan Outdoors (English): https://taiwanoutdoors.com/006-mt-xiugulan/,Trekking in Taiwan (English): https://trekkingintaiwan.wordpress.com/treks/central-mountain-range-south/xiuguluan/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=6"
@@ -64,7 +64,7 @@
    OSM: 5582288246
    chinese: 馬博拉斯山
    english: Mabolasishan
-   location: 23.5204009,121.0671084
+   location: "23.5204009,121.0671084"
    elevation: 3776.3
    region: central
    descriptions: "Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/mt-mabolasi/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7"
@@ -74,7 +74,7 @@
    OSM: 2268441044
    chinese: 南湖大山
    english: Nanhudashan
-   location: 24.3618120,121.4393767
+   location: "24.3618120,121.4393767"
    elevation: 3740.9
    region: central
    descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/mt-nanhuda/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=8"
@@ -84,7 +84,7 @@
    OSM: 2482557258
    chinese: 東小南山
    english: Dongxiaonanshan
-   location: 23.4390982,120.9633530
+   location: "23.4390982,120.9633530"
    elevation: 3707.9
    region: central
    descriptions: "Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/mt-dongxiaonan/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=9,輝哥的天空 (English): http://輝哥的天空.tw/English/icsunfivemaotain.htm"
@@ -94,7 +94,7 @@
    OSM: 2268441042
    chinese: 中央尖山
    english: Zhongyangjianshan
-   location: 24.3102241,121.4162655
+   location: "24.3102241,121.4162655"
    elevation: 3697.7
    region: central
    descriptions: "Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/xueshan-north-peak/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=10"
@@ -103,8 +103,8 @@
    id: 11
    OSM: 2268473329
    chinese: 雪山北峰
-   english: Xueshan North Peak
-   location: 24.4147141,121.2404040
+   english: "Xueshan North Peak"
+   location: "24.4147141,121.2404040"
    elevation: 3703.0
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=11"
@@ -114,7 +114,7 @@
    OSM: 2268441054
    chinese: 關山
    english: Guanshan
-   location: 23.2281831,120.9117441
+   location: "23.2281831,120.9117441"
    elevation: 3667.4
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=12"
@@ -124,7 +124,7 @@
    OSM: 4315785196
    chinese: 大水窟山
    english: Dashuikushan
-   location: 23.4739767,121.0384772
+   location: "23.4739767,121.0384772"
    elevation: 3643
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=13"
@@ -133,8 +133,8 @@
    id: 14
    OSM: 2486357959
    chinese: 南湖大山東峰
-   english: Nanhudashan East Peak
-   location: 24.3655943,121.4508533
+   english: "Nanhudashan East Peak"
+   location: "24.3655943,121.4508533"
    elevation: 3639
    region: central
    descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=14"
@@ -144,7 +144,7 @@
    OSM: 660060601
    chinese: 東郡大山
    english: Dongjudashan
-   location: 23.6268066,121.0918666
+   location: "23.6268066,121.0918666"
    elevation: 3617
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=15"
@@ -153,8 +153,8 @@
    id: 16
    OSM: 2268441047
    chinese: 奇萊北峰
-   english: Qilaishan North Peak
-   location: 24.1183377,121.3345459
+   english: "Qilaishan North Peak"
+   location: "24.1183377,121.3345459"
    elevation: 3605.6
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=16"
@@ -164,7 +164,7 @@
    OSM: 2268473278
    chinese: 向陽山
    english: Xiangyangshan
-   location: 23.2843613,120.9924466
+   location: "23.2843613,120.9924466"
    elevation: 3602
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=17,輝哥的天空 (English): http://輝哥的天空.tw/English/016chaminhu.htm"
@@ -174,7 +174,7 @@
    OSM: 1529078482
    chinese: 大劍山
    english: Dajianshan
-   location: 24.3409271,121.2005007
+   location: "24.3409271,121.2005007"
    elevation: 3593.3
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=18"
@@ -184,7 +184,7 @@
    OSM: 5582288243
    chinese: 雲峰
    english: Yunfeng
-   location: 23.3537891,120.9757930
+   location: "23.3537891,120.9757930"
    elevation: 3562
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=19"
@@ -194,7 +194,7 @@
    OSM: 2268473288
    chinese: 奇萊主山
    english: Qilaishan
-   location: 24.0864580,121.3232629
+   location: "24.0864580,121.3232629"
    elevation: 3561.7
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=20"
@@ -204,7 +204,7 @@
    OSM: 2482563184
    chinese: 馬利加南山
    english: Malijiananshan
-   location: 23.5215731,121.1171729
+   location: "23.5215731,121.1171729"
    elevation: 3560.9
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=21"
@@ -214,7 +214,7 @@
    OSM: 2482550800
    chinese: 南湖北山
    english: Nanhubeishan
-   location: 24.3836701,121.4372559
+   location: "24.3836701,121.4372559"
    elevation: 3534.2
    region: central
    descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=22"
@@ -224,7 +224,7 @@
    OSM: 2268441046
    chinese: 大雪山
    english: Daxueshan
-   location: 24.3307752,121.1211940
+   location: "24.3307752,121.1211940"
    elevation: 3529.6
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=23"
@@ -234,7 +234,7 @@
    OSM: 2101226634
    chinese: 品田山
    english: Pintianshan
-   location: 24.4283001,121.2667663
+   location: "24.4283001,121.2667663"
    elevation: 3524
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=24,輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
@@ -243,8 +243,8 @@
    id: 25
    OSM: 3355904061
    chinese: 玉山西峰
-   english: Yushan West Peak
-   location: 23.4718712,120.9337289
+   english: "Yushan West Peak"
+   location: "23.4718712,120.9337289"
    elevation: 3518
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-01-05-yushan-west-peak/,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/tag/Yushan+National+Park,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking/trekking/yushan-west/English in Taiwan (English): https://www.englishintaiwan.com/hikes/jade-mountain-west-peak-how-to-hike,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=25"
@@ -254,7 +254,7 @@
    OSM: 2268473337
    chinese: 頭鷹山
    english: Touyingshan
-   location: 24.3596281,121.1407231
+   location: "24.3596281,121.1407231"
    elevation: 3509.1
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=26"
@@ -264,7 +264,7 @@
    OSM: 660060600
    chinese: 三叉山
    english: Sanchashan
-   location: 23.2971931,121.0286649
+   location: "23.2971931,121.0286649"
    elevation: 3495
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=27,輝哥的天空 (English): http://輝哥的天空.tw/English/016chaminhu.htm"
@@ -274,7 +274,7 @@
    OSM: 4705115484
    chinese: 大霸尖山
    english: Dabajianshan
-   location: 24.4577424,121.2579988
+   location: "24.4577424,121.2579988"
    elevation: 3489.8
    region: central
    descriptions: "Catherine Lee (English): https://catherinelee234.com/2020/07/27/almost-on-top-of-the-world-dabajianshan-大霸尖山-3492-m-11456-ft/,English in Taiwan (English): https://www.englishintaiwan.com/hikes/da-ba-jian-mountain-how-to-hike-it-part-1,Hiking Taiwan (English): https://hikingtaiwan.wordpress.com/2010/08/27/dabajianshan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-dabajian-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/029-mt-dabajian/,Tu Meke Tina (English): https://tumeketina.com/2017/08/17/hiking-in-taiwan-dabajianshan-大霸尖山-4-day-solo-hike/,johansvennung(臺灣) (English): https://johansvennung.blogg.se/2013/march/a-daytrip-to-dabajianshan.html,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=28,輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
@@ -283,8 +283,8 @@
    id: 29
    OSM: 2268473266
    chinese: 南湖大山南峰
-   english: Nanhudashan South Peak
-   location: 24.3476988,121.4347602
+   english: "Nanhudashan South Peak"
+   location: "24.3476988,121.4347602"
    elevation: 3505
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=29"
@@ -294,7 +294,7 @@
    OSM: 4380267221
    chinese: 東巒大山
    english: Dongluandashan
-   location: 23.6486504,121.0815666
+   location: "23.6486504,121.0815666"
    elevation: 3479
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=30"
@@ -304,7 +304,7 @@
    OSM: 2268441051
    chinese: 無明山
    english: Wumingshan
-   location: 24.2553561,121.3847070
+   location: "24.2553561,121.3847070"
    elevation: 3449.2
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=31"
@@ -314,7 +314,7 @@
    OSM: 2482550844
    chinese: 巴巴山
    english: Babashan
-   location: 24.3423911,121.4378289
+   location: "24.3423911,121.4378289"
    elevation: 3448.2
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=32"
@@ -324,7 +324,7 @@
    OSM: 5582288252
    chinese: 馬西山
    english: Maxishan
-   location: 23.4837350,121.1739700
+   location: "23.4837350,121.1739700"
    elevation: 3442.9
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=33"
@@ -333,8 +333,8 @@
    id: 34
    OSM: 800395557
    chinese: 合歡山北峰
-   english: Hehuanshan North Peak
-   location: 24.1815171,121.2815980
+   english: "Hehuanshan North Peak"
+   location: "24.1815171,121.2815980"
    elevation: 3421.8
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=34,輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
@@ -343,8 +343,8 @@
    id: 35
    OSM: 10839210243
    chinese: 合歡山東峰
-   english: Hehuanshan East Peak
-   location: 24.1356665,121.2811125
+   english: "Hehuanshan East Peak"
+   location: "24.1356665,121.2811125"
    elevation: 3419
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=35,輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
@@ -354,7 +354,7 @@
    OSM: 1529106726
    chinese: 小霸尖山
    english: Xiaobajianshan
-   location: 24.4556307,121.2520909
+   location: "24.4556307,121.2520909"
    elevation: 3419
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=36,輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
@@ -364,7 +364,7 @@
    OSM: 1660542386
    chinese: 合歡山
    english: Hehuanshan
-   location: 24.1426062,121.2711951
+   location: "24.1426062,121.2711951"
    elevation: 3416.6
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=37,輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
@@ -374,7 +374,7 @@
    OSM: 2482536166
    chinese: 南玉山
    english: Nanyushan
-   location: 23.4292361,120.9249381
+   location: "23.4292361,120.9249381"
    elevation: 3380.8
    region: central
    descriptions: "Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=38,輝哥的天空 (English): http://輝哥的天空.tw/English/icsunfivemaotain.htm"
@@ -384,7 +384,7 @@
    OSM: 2268473300
    chinese: 畢祿山
    english: Bilushan
-   location: 24.2135771,121.3471869
+   location: "24.2135771,121.3471869"
    elevation: 3369.9
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=39,輝哥的天空 (English): http://輝哥的天空.tw/English/039piruh.htm"
@@ -394,7 +394,7 @@
    OSM: 2482534740
    chinese: 卓社大山
    english: Zhuoshedashan
-   location: 23.8345331,121.1158529
+   location: "23.8345331,121.1158529"
    elevation: 3368.0
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=40"
@@ -403,8 +403,8 @@
    id: 41
    OSM: 2268473289
    chinese: 奇萊南峰
-   english: Qilaishan South Peak
-   location: 24.0612990,121.2799750
+   english: "Qilaishan South Peak"
+   location: "24.0612990,121.2799750"
    elevation: 3357.3
    region: central
    descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/qilai-nanhua,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=41,輝哥的天空 (English): http://輝哥的天空.tw/English/nanhain.htm"
@@ -414,7 +414,7 @@
    OSM: 5582288238
    chinese: 南雙頭山
    english: Nanshuangtoushan
-   location: 23.3458858,121.0105795
+   location: "23.3458858,121.0105795"
    elevation: 3356
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=42"
@@ -423,8 +423,8 @@
    id: 43
    OSM: 2268473315
    chinese: 能高山南峰
-   english: Nenggaoshan South Peak
-   location: 23.9653660,121.2781119
+   english: "Nenggaoshan South Peak"
+   location: "23.9653660,121.2781119"
    elevation: 3348
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=43"
@@ -434,7 +434,7 @@
    OSM: 12031256402
    chinese: 志佳陽大山
    english: Zhijiayangdashan
-   location: 24.3599680,121.2481508
+   location: "24.3599680,121.2481508"
    elevation: 3346
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=44,輝哥的天空 (English): http://輝哥的天空.tw/English/047quchayan.htm"
@@ -444,7 +444,7 @@
    OSM: 2268441052
    chinese: 白姑大山
    english: Baigudashan
-   location: 24.2026781,121.1089570
+   location: "24.2026781,121.1089570"
    elevation: 3341.3
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=45"
@@ -454,7 +454,7 @@
    OSM: 2482563411
    chinese: 八通關山
    english: Batongguanshan
-   location: 23.4901972,121.0096019
+   location: "23.4901972,121.0096019"
    elevation: 3331.2
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=46"
@@ -464,7 +464,7 @@
    OSM: 2268473295
    chinese: 新康山
    english: Xinkangshan
-   location: 23.3165854,121.1276177
+   location: "23.3165854,121.1276177"
    elevation: 3331
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=47"
@@ -474,7 +474,7 @@
    OSM: 2482563185
    chinese: 丹大山
    english: Dandashan
-   location: 23.6004011,121.2134398
+   location: "23.6004011,121.2134398"
    elevation: 3329.0
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=49"
@@ -484,7 +484,7 @@
    OSM: 2268473297
    chinese: 桃山
    english: Taoshan
-   location: 24.4326351,121.3048926
+   location: "24.4326351,121.3048926"
    elevation: 3323.5
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=48,輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
@@ -494,7 +494,7 @@
    OSM: 1529078940
    chinese: 佳陽山
    english: Jiayangshan
-   location: 24.3066288,121.1879968
+   location: "24.3066288,121.1879968"
    elevation: 3314
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=50"
@@ -504,7 +504,7 @@
    OSM: 2482551619
    chinese: 火石山
    english: Huoshishan
-   location: 24.3819401,121.1751151
+   location: "24.3819401,121.1751151"
    elevation: 3308.9
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=51"
@@ -513,8 +513,8 @@
    id: 52
    OSM: 1529104910
    chinese: 池有山
-   english: Chryou Shan
-   location: 24.4310981,121.2881540
+   english: "Chryou Shan"
+   location: "24.4310981,121.2881540"
    elevation: 3300.2
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=52,輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
@@ -524,7 +524,7 @@
    OSM: 1529090959
    chinese: 伊澤山
    english: Yizeshan
-   location: 24.4699811,121.2436120
+   location: "24.4699811,121.2436120"
    elevation: 3296.3
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=205,輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
@@ -534,7 +534,7 @@
    OSM: 2268441043
    chinese: 卑南主山
    english: Beinanzhushan
-   location: 23.0511451,120.8741751
+   location: "23.0511451,120.8741751"
    elevation: 3293.7
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=53"
@@ -544,7 +544,7 @@
    OSM: 2482534753
    chinese: 干卓萬山
    english: Ganzhuowanshan
-   location: 23.8760451,121.1389601
+   location: "23.8760451,121.1389601"
    elevation: 3281.8
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=54"
@@ -554,7 +554,7 @@
    OSM: 2482534754
    chinese: 太魯閣大山
    english: Tailugedashan
-   location: 24.0790711,121.4210010
+   location: "24.0790711,121.4210010"
    elevation: 3282.3
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=55"
@@ -564,7 +564,7 @@
    OSM: 5591528506
    chinese: 轆轆山
    english: Lulushan
-   location: 23.3913576,120.9980804
+   location: "23.3913576,120.9980804"
    elevation: 3279.46
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=56"
@@ -574,7 +574,7 @@
    OSM: 2287592222
    chinese: 郡大山
    english: Jundashan
-   location: 23.5773300,120.9625177
+   location: "23.5773300,120.9625177"
    elevation: 3277.6
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=60,輝哥的天空 (English): http://輝哥的天空.tw/English/054gindasun.htm"
@@ -584,7 +584,7 @@
    OSM: 2999412926
    chinese: 喀西帕南山
    english: Kaxipananshan
-   location: 23.4632113,121.1926092
+   location: "23.4632113,121.1926092"
    elevation: 3276
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=57"
@@ -594,7 +594,7 @@
    OSM: 4380572864
    chinese: 內嶺爾山
    english: Neilingershan
-   location: 23.5792780,121.1960432
+   location: "23.5792780,121.1960432"
    elevation: 3275
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=58"
@@ -604,7 +604,7 @@
    OSM: 2482550973
    chinese: 鈴鳴山
    english: Lingmingshan
-   location: 24.2443721,121.3516629
+   location: "24.2443721,121.3516629"
    elevation: 3271.2
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=59"
@@ -614,7 +614,7 @@
    OSM: 2268473312
    chinese: 能高山
    english: Nenggaoshan
-   location: 23.9923208,121.2602380
+   location: "23.9923208,121.2602380"
    elevation: 3260.8
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=61"
@@ -624,7 +624,7 @@
    OSM: 2482548350
    chinese: 火山
    english: Huoshan
-   location: 23.8518821,121.1855090
+   location: "23.8518821,121.1855090"
    elevation: 3257
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=62"
@@ -634,7 +634,7 @@
    OSM: 1529078480
    chinese: 劍山
    english: Jianshan
-   location: 24.2954923,121.1703157
+   location: "24.2954923,121.1703157"
    elevation: 3256
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=63"
@@ -644,7 +644,7 @@
    OSM: 2297213046
    chinese: 屏風山
    english: Pingfengshan
-   location: 24.1492329,121.3430149
+   location: "24.1492329,121.3430149"
    elevation: 3247.5
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=64,輝哥的天空 (English): http://輝哥的天空.tw/English/060pinfonsun107.htm"
@@ -654,7 +654,7 @@
    OSM: 2482535952
    chinese: 小關山
    english: Xiaoguanshan
-   location: 23.1516351,120.8761240
+   location: "23.1516351,120.8761240"
    elevation: 3248.1
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=65"
@@ -664,7 +664,7 @@
    OSM: 4380572865
    chinese: 義西請馬至山
    english: Yixiqingmazhishan
-   location: 23.5867171,121.1532605
+   location: "23.5867171,121.1532605"
    elevation: 3252
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=66"
@@ -674,7 +674,7 @@
    OSM: 2482548487
    chinese: 牧山
    english: Mushan
-   location: 23.8629019,121.1602091
+   location: "23.8629019,121.1602091"
    elevation: 3239.3
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=67"
@@ -683,8 +683,8 @@
    id: 69
    OSM: 625249201
    chinese: 玉山前峰
-   english: Yushan Front Peak
-   location: 23.4755783,120.9176632
+   english: "Yushan Front Peak"
+   location: "23.4755783,120.9176632"
    elevation: 3239
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-10-24-yushan/,LTL Language School (English): https://ltl-taiwan.com/climbing-yushan/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/100-peaks-jade-mountain.html,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=68,輝哥的天空 (English): http://輝哥的天空.tw/English/065icsunbeforsun.htm"
@@ -694,7 +694,7 @@
    OSM: 800396801
    chinese: 石門山
    english: Shimenshan
-   location: 24.1523850,121.2845920
+   location: "24.1523850,121.2845920"
    elevation: 3235.9
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=69,輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
@@ -704,7 +704,7 @@
    OSM: 2482564149
    chinese: 無雙山基點峰
    english: Wushuangshan
-   location: 23.5910110,121.0571492
+   location: "23.5910110,121.0571492"
    elevation: 3242.8
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=74"
@@ -714,7 +714,7 @@
    OSM: 2268473286
    chinese: 塔關山
    english: Taguanshan
-   location: 23.2519395,120.9412445
+   location: "23.2519395,120.9412445"
    elevation: 3219
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=70"
@@ -724,7 +724,7 @@
    OSM: 2482550838
    chinese: 馬比杉山
    english: Mabishanshan
-   location: 24.3482252,121.4856375
+   location: "24.3482252,121.4856375"
    elevation: 3211.0
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=71"
@@ -734,7 +734,7 @@
    OSM: 4380698728
    chinese: 達芬尖山
    english: Dafenjianshan
-   location: 23.4327284,121.0132027
+   location: "23.4327284,121.0132027"
    elevation: 3208
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=72"
@@ -743,8 +743,8 @@
    id: 75
    OSM: 2268473334
    chinese: 雪山東峰
-   english: Xueshan East Peak
-   location: 24.3887001,121.2720685
+   english: "Xueshan East Peak"
+   location: "24.3887322,121.2719622"
    elevation: 3199.0
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-12-xueshan/,Peaks of Taiwan (English): https://peaks.tw/routes/snow-mountain,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=73,輝哥的天空 (English): http://輝哥的天空.tw/English/002seisun.htm"
@@ -754,7 +754,7 @@
    OSM: 2268473272
    chinese: 南華山
    english: Nanhuashan
-   location: 24.0393451,121.2859310
+   location: "24.0393451,121.2859310"
    elevation: 3181.6
    region: central
    descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/qilai-nanhua,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=75,輝哥的天空 (English): http://輝哥的天空.tw/English/nanhain.htm"
@@ -764,7 +764,7 @@
    OSM: 2268473325
    chinese: 關山嶺山
    english: Guanshanlingshan
-   location: 23.2709936,120.9594825
+   location: "23.2709936,120.9594825"
    elevation: 3176
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=76"
@@ -774,7 +774,7 @@
    OSM: 2482556810
    chinese: 海諾南山
    english: Hainuonanshan
-   location: 23.1855281,120.9112970
+   location: "23.1855281,120.9112970"
    elevation: 3173.2
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=77"
@@ -784,7 +784,7 @@
    OSM: 2268473258
    chinese: 中雪山
    english: Zhongxueshan
-   location: 24.3364811,121.0780609
+   location: "24.3364811,121.0780609"
    elevation: 3172.4
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=78"
@@ -794,7 +794,7 @@
    OSM: 2268473322
    chinese: 閂山
    english: Shuanshan
-   location: 24.2587041,121.3098680
+   location: "24.2587041,121.3098680"
    elevation: 3167.5
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=79"
@@ -804,7 +804,7 @@
    OSM: 2482550947
    chinese: 甘薯峰
    english: Ganshufeng
-   location: 24.2904781,121.3898579
+   location: "24.2904781,121.3898579"
    elevation: 3157.1
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=80"
@@ -813,8 +813,8 @@
    id: 82
    OSM: 2268473318
    chinese: 合歡山西峰
-   english: Hehuanshan West Peak
-   location: 24.1776441,121.2445400
+   english: "Hehuanshan West Peak"
+   location: "24.1776441,121.2445400"
    elevation: 3144.1
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=81,輝哥的天空 (English): http://輝哥的天空.tw/English/aaahohaone.htm"
@@ -824,7 +824,7 @@
    OSM: 2482550727
    chinese: 審馬陣山
    english: Shenmazhenshan
-   location: 24.3801643,121.4174920
+   location: "24.3801643,121.4174920"
    elevation: 3139.9
    region: central
    descriptions: "Peaks of Taiwan (English): https://peaks.tw/routes/nanhu,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=82"
@@ -834,7 +834,7 @@
    OSM: 2449034020
    chinese: 喀拉業山
    english: Kalayeshan
-   location: 24.4497761,121.3212180
+   location: "24.4497761,121.3212180"
    elevation: 3132.5
    region: north
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=83,輝哥的天空 (English): http://輝哥的天空.tw/English/aaaulien4h.htm"
@@ -844,7 +844,7 @@
    OSM: 2268473292
    chinese: 庫哈諾辛山
    english: Kuhanuoxinshan
-   location: 23.2627391,120.9000240
+   location: "23.2627391,120.9000240"
    elevation: 3114.0
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=84"
@@ -854,7 +854,7 @@
    OSM: 1529108306
    chinese: 加利山
    english: Jialishan
-   location: 24.4594489,121.2161839
+   location: "24.4594489,121.2161839"
    elevation: 3111.9
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=85,輝哥的天空 (English): http://輝哥的天空.tw/English/027dapar5.htm"
@@ -864,7 +864,7 @@
    OSM: 2482547866
    chinese: 白石山
    english: Baishishan
-   location: 23.9074809,121.2748650
+   location: "23.9074809,121.2748650"
    elevation: 3106.5
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=86"
@@ -874,7 +874,7 @@
    OSM: 2482548966
    chinese: 磐石山
    english: Panshishan
-   location: 24.1047101,121.3882680
+   location: "24.1047101,121.3882680"
    elevation: 3104.9
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=87"
@@ -884,7 +884,7 @@
    OSM: 2482548965
    chinese: 帕托魯山
    english: Patuolushan
-   location: 24.0994579,121.4665347
+   location: "24.0994579,121.4665347"
    elevation: 3102.1
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=88"
@@ -894,7 +894,7 @@
    OSM: 2299246284
    chinese: 北大武山
    english: Beidawushan
-   location: 22.6270610,120.7613809
+   location: "22.6270610,120.7613809"
    elevation: 3089.1
    region: south
    descriptions: "English in Taiwan (English): https://www.englishintaiwan.com/travel-in-taiwan/hiking-beidawu-mountain-south-taiwan,Han Cheung (English): https://www.taipeitimes.com/News/feat/archives/2020/08/27/2003742349,Hiking Taiwan (English): https://hikingtaiwan.wordpress.com/2012/02/16/beidawu-北大武山/,Pashan (English): http://hikingintaiwan.blogspot.com/2009/03/beidawushan-ship-of-south.html,The Cloud Ocean (English): https://thecloudocean.com/tag/beidawu-shan/,The World Is Not That Big (English): https://theworldisnotthatbig.wordpress.com/2015/05/22/beidawushan/,Tyler Cottenie (English): https://www.taipeitimes.com/News/feat/archives/2023/12/08/2003810306,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=89,輝哥的天空 (English): http://輝哥的天空.tw/English/92peidawusun.htm,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/92peidawusun112.htm"
@@ -904,7 +904,7 @@
    OSM: 2268441053
    chinese: 西巒大山
    english: Xiluandashan
-   location: 23.6940120,120.9472206
+   location: "23.6940120,120.9472206"
    elevation: 3085
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=90"
@@ -914,7 +914,7 @@
    OSM: 5582288244
    chinese: 塔芬山
    english: Dafenshan
-   location: 23.4060111,121.0268120
+   location: "23.4060111,121.0268120"
    elevation: 3068.8
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=91"
@@ -924,7 +924,7 @@
    OSM: 2482548914
    chinese: 立霧主山
    english: Liwuzhushan
-   location: 24.1247960,121.4456341
+   location: "24.1247960,121.4456341"
    elevation: 3070.6
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=92"
@@ -934,7 +934,7 @@
    OSM: 4380698727
    chinese: 光頭山
    english: Guangtoushan
-   location: 23.9390826,121.2731015
+   location: "23.9390826,121.2731015"
    elevation: 3077
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=93"
@@ -944,7 +944,7 @@
    OSM: 2482523770
    chinese: 安東軍山
    english: Andongjunshan
-   location: 23.8727074,121.2661139
+   location: "23.8727074,121.2661139"
    elevation: 3066.5
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=94"
@@ -954,7 +954,7 @@
    OSM: 2268473306
    chinese: 羊頭山
    english: Yangtoushan
-   location: 24.2086897,121.3797299
+   location: "24.2086897,121.3797299"
    elevation: 3032.8
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=95,輝哥的天空 (English): http://輝哥的天空.tw/English/100yanto107.htm"
@@ -964,7 +964,7 @@
    OSM: 5582288251
    chinese: 布拉克桑山
    english: Bulakesangshan
-   location: 23.2331222,121.0787129
+   location: "23.2331222,121.0787129"
    elevation: 3021
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=96"
@@ -974,7 +974,7 @@
    OSM: 5582288247
    chinese: 盆駒山
    english: Penjushan
-   location: 23.5483790,121.0324932
+   location: "23.5483790,121.0324932"
    elevation: 3030
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=97"
@@ -984,7 +984,7 @@
    OSM: 2341560544
    chinese: 六順山
    english: Liushunshan
-   location: 23.7245095,121.2395739
+   location: "23.7245095,121.2395739"
    elevation: 3009.1
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=98"
@@ -994,7 +994,7 @@
    OSM: 2482557259
    chinese: 鹿山
    english: Lushan
-   location: 23.4506311,120.9886179
+   location: "23.4506311,120.9886179"
    elevation: 2981.4
    region: central
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=99"
@@ -1006,8 +1006,8 @@
    OSM: 1519026317
    chinese: 大屯山
    english: Datunshan
-   location: 25.1787406,121.5221914
-   elevation: 1093.6
+   location: "25.1787406,121.5221914"
+   elevation: 1093.18
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大屯山,Foreigners in Taiwan (English): https://www.foreignersintaiwan.com/blog-370963385326684/datunshan,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/datunshan-yangmingshan.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/datunshan,Trails and Tales (English): https://taiwantrailsandtales.com/2019/02/14/mount-datun-multi-peak-trail,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=1,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=100,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA001.htm"
 -
@@ -1018,7 +1018,7 @@
    OSM: 4254423699
    chinese: 七星山
    english: Qixingshan
-   location: 25.1707017,121.5534401
+   location: "25.1707017,121.5534401"
    elevation: 1118.21
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2020-12-28-qixingshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/七星山,Foreigners in Taiwan (English): https://www.foreignersintaiwan.com/blog-370963385326684/qixing-mountain,Hikingbook (中文): https://hikingbook.net/posts/登上臺北市最高峰-七星山路線全攻略,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/qixingshan-yangmingshan.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/002-qixingshan,Tony Huang (中文): http://www.tonyhuang39.com/tony0063.html,Trails and Tales (English): https://taiwantrailsandtales.com/2016/12/12/qixing-mountain-七星山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=2,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=101,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA001.htm"
@@ -1030,8 +1030,8 @@
    OSM: 2268440740
    chinese: 大武崙山
    english: Dawulunshan
-   location: 25.1585001,121.7097410
-   elevation: 231.0
+   location: "25.1585074,121.7097303"
+   elevation: 231
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大武崙山,Taiwan Outdoors (English): https://taiwanoutdoors.com/dawulun-mountain/,Trails and Tales (English): https://taiwantrailsandtales.com/2023/02/25/taipei-skyline-trail-section-5a-keelung/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=3,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=102,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA003.htm"
 -
@@ -1042,7 +1042,7 @@
    OSM: 2356788687
    chinese: 槓子寮山
    english: Gangziliaoshan
-   location: 25.1430781,121.7756570
+   location: "25.1431291,121.7756426"
    elevation: 161.75
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-02-12-gangziliaoshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/槓子寮山,Taiwan Outdoors (English): https://taiwanoutdoors.com/004-gangziliaoshan-槓子寮山/,Trails and Tales (English): https://taiwantrailsandtales.com/2023/05/13/mount-gongziliao-and-gongziliao-fort/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=4,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=103,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chilonAA007.htm"
@@ -1054,7 +1054,7 @@
    OSM: 2268440742
    chinese: 觀音山
    english: Guanyinshan
-   location: 25.1359390,121.4266759
+   location: "25.1359390,121.4266759"
    elevation: 610.8
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-10-yinghanling/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/八里觀音山,Taiwan Outdoors (English): https://taiwanoutdoors.com/005-guanyinshan-觀音山/,Trails and Tales (English): https://taiwantrailsandtales.com/2020/06/06/guanyin-shan-northern-cross-route/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=5,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=104,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA005.htm"
@@ -1066,7 +1066,7 @@
    OSM: 2079679446
    chinese: 基隆山
    english: Jilongshan
-   location: 25.1189121,121.8492141
+   location: "25.1189121,121.8492141"
    elevation: 586.37
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-16-jilongshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/基隆山,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking-in-taiwan-keelung-mountain/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/04/30/keelung-mountain/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=6,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=105,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chilonAA007.htm"
@@ -1075,10 +1075,10 @@
    id-2003: 6
    id-2006: ""
    id-2017: ""
-   OSM: 2482647754
+   OSM: 13469011651
    chinese: 大師岩
    english: Danfengshan
-   location: 25.1340768,121.5097445
+   location: "25.1340774,121.5097334"
    elevation: 141.92
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2023-01-16-danfengshan/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=234,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipei013.htm"
@@ -1090,7 +1090,7 @@
    OSM: 2356788884
    chinese: 紅淡山
    english: Hongdanshan
-   location: 25.1188861,121.7519177
+   location: "25.1188477,121.7520325"
    elevation: 208.3
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-01-28-hongdanshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/紅淡山,Taiwan Outdoors (English): https://taiwanoutdoors.com/007-hongdanshan-紅淡山/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=7,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=106,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chilonAA007.htm"
@@ -1102,7 +1102,7 @@
    OSM: 1662377765
    chinese: 大崙頭山
    english: Daluntoushan
-   location: 25.1089582,121.5853460
+   location: "25.1088307,121.5853232"
    elevation: 475.27
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大崙頭山,Taiwan Outdoors (English): https://taiwanoutdoors.com/008-daluntou-mountain-大崙頭山/,Trails and Tales (English): https://taiwantrailsandtales.com/2019/03/24/xiao-xi-tou-loop-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=8,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=107,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA008.htm"
@@ -1114,7 +1114,7 @@
    OSM: 2268440738
    chinese: 劍潭山
    english: Jiantanshan
-   location: 25.0842332,121.5292650
+   location: "25.0842687,121.5293056"
    elevation: 152.74
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/劍潭山,Taiwan Outdoors (English): https://taiwanoutdoors.com/jiantanshan-劍潭山/,Trails and Tales (English): https://taiwantrailsandtales.com/2018/12/18/jiantan-hiking-trail-to-wende/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=9,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=108,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA009.htm"
@@ -1126,7 +1126,7 @@
    OSM: 2268440737
    chinese: 五分山
    english: Wufenshan
-   location: 25.0710251,121.7806839
+   location: "25.0709531,121.7806620"
    elevation: 757.7
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/五分山,Hiking/Cycling Taipei (English): https://bikehiketaipei.wordpress.com/wufenshan/,Taiwan Outdoors (English): https://taiwanoutdoors.com/wufenshan-五分山/,Trails and Tales (English): https://taiwantrailsandtales.com/2022/03/22/mount-wufen/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=10,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=109,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA010.htm"
@@ -1138,7 +1138,7 @@
    OSM: 2299907364
    chinese: 姜子寮山
    english: Jiangziliaoshan
-   location: 25.0532601,121.7300480
+   location: "25.0532639,121.7300579"
    elevation: 728.2
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/姜子寮山,Taiwan Outdoors (English): https://taiwanoutdoors.com/011-jiangziliaoshan-姜子寮山/,Trails and Tales (English): https://taiwantrailsandtales.com/2023/02/11/taipei-skyline-trail-section-3-panshiling-to-sijiaoting/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=11,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=110,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chilonAA011.htm"
@@ -1150,7 +1150,7 @@
    OSM: 2300982455
    chinese: 瑪陵尖
    english: Malingjian
-   location: 25.1089661,121.6992120
+   location: "25.1089108,121.6991931"
    elevation: 231.41
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2023-01-08-malingjian/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=5544,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaia/chilon003.htm"
@@ -1162,7 +1162,7 @@
    OSM: 2299907396
    chinese: 汐止大尖山
    english: Xizhidajianshan
-   location: 25.0508938,121.6681995
+   location: "25.0509042,121.6681525"
    elevation: 461.0
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/汐止大尖山,Hiking/Cycling in Taiwan: https://bikehiketaipei.wordpress.com/dajianshan/,Taiwan Outdoors (English): https://taiwanoutdoors.com/dajianshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/07/30/da-jian-shan-via-xiufeng-falls-秀峰瀑布到大尖山/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=12,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=111,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chilonAA011.htm"
@@ -1174,7 +1174,7 @@
    OSM: 5585727570
    chinese: 南港山
    english: Nangangshan
-   location: 25.0255990,121.5862360
+   location: "25.0255990,121.5862360"
    elevation: 373.93
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/南港山,Josh Ellis Photography: https://www.goteamjosh.com/blog/sishou,Taiwan Outdoors (English): https://taiwanoutdoors.com/nangangshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2018/03/11/skirting-the-elephant/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=13,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=112,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA008.htm"
@@ -1186,7 +1186,7 @@
    OSM: 2299907353
    chinese: 土庫岳
    english: Tukuyue
-   location: 25.0231391,121.6355120
+   location: "25.0231391,121.6355120"
    elevation: 388.21
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/土庫岳,Taiwan Outdoors (English): https://taiwanoutdoors.com/tukuyue/,Trails and Tales (English): https://taiwantrailsandtales.com/2024/09/28/tukuyue/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=14,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=113,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA008.htm"
@@ -1198,7 +1198,7 @@
    OSM: 5579557329
    chinese: 大棟山
    english: Dadongshan
-   location: 24.9958770,121.3841072
+   location: "24.9958770,121.3841072"
    elevation: 405
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-21-dadongshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/新北大棟山,Taiwan Outdoors (English): https://taiwanoutdoors.com/dadongshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2023/03/18/taipei-skyline-trail-linkou-to-sanxia/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=15,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=114,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA005.htm"
@@ -1210,7 +1210,7 @@
    OSM: 5585899084
    chinese: 南勢角山
    english: Nanshijiaoshan
-   location: 24.9692672,121.4957650
+   location: "24.9692769,121.4957509"
    elevation: 304.48
    region: north
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-10-31-nanshijiaoshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/南勢角山,Taiwan Outdoors (English): https://taiwanoutdoors.com/nanshijiaoshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2023/04/01/taipei-skyline-trail-section-10b-wangyue-pavilion-to-xindian/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=16,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=115,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA016.htm"
@@ -1222,10 +1222,10 @@
    OSM: 2268440736
    chinese: 二格山
    english: Ergeshan
-   location: 24.9672245,121.6196399
+   location: "24.9672245,121.6196399"
    elevation: 677.65
    region: north
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/二格山,Hiking/Cycling in Taiwan (English): https://bikehiketaipei.wordpress.com/ergeshan,Foreigners in Taiwan (English): https://www.foreignersintaiwan.com/blog/ergeshan,Taiwan Outdoors (English): https://taiwanoutdoors.com/ergeshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/02/11/erge-shan-via-nanbangliao-loop-二格山，南邦寮山/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=17,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=116,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA017.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/二格山,Hiking/Cycling in Taiwan (English): https://bikehiketaipei.wordpress.com/ergeshan,Taiwan Outdoors (English): https://taiwanoutdoors.com/ergeshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/02/11/erge-shan-via-nanbangliao-loop-二格山，南邦寮山/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=17,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=116,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA017.htm"
 -
    type: 小百岳
    id-2003: 19
@@ -1234,10 +1234,10 @@
    OSM: 5585899083
    chinese: 天上山
    english: Tianshangshan
-   location: 24.9462931,121.4560850
+   location: "24.9462931,121.4560850"
    elevation: 425.7
    region: north
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/天上山,Taiwan Outdoors (English): https://taiwanoutdoors.com/tianshangshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2023/04/01/taipei-skyline-trail-section-10b-wangyue-pavilion-to-xindian/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=18,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=117,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA021.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/天上山,Foreigners in Taiwan (English): https://www.foreignersintaiwan.com/blog/ergeshan,Taiwan Outdoors (English): https://taiwanoutdoors.com/tianshangshan/,Tony的自然人文旅記 (中文): http://www.tonyhuang39.com/tony0467/dbtt0467.html,Trails and Tales (English): https://taiwantrailsandtales.com/2023/04/01/taipei-skyline-trail-section-10b-wangyue-pavilion-to-xindian/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=18,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=117,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA021.htm"
 -
    type: 小百岳
    id-2003: 22
@@ -1246,7 +1246,7 @@
    OSM: 2300441179
    chinese: 鳶山
    english: Yuanshan
-   location: 24.9265991,121.3450961
+   location: "24.9265991,121.3450961"
    elevation: 321
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/鳶山,Taiwan Outdoors (English): https://taiwanoutdoors.com/yuanshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2019/03/10/yuan-shan-hiking-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=19,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=118,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA023.htm"
@@ -1258,7 +1258,7 @@
    OSM: 1871675300
    chinese: 獅仔頭山
    english: Shizitoushan
-   location: 24.9046961,121.4911781
+   location: "24.9047102,121.4911681"
    elevation: 856.9
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/獅仔頭山,Taiwan Outdoors (English): https://taiwanoutdoors.com/shizitoushan/,Trails and Tales (English): https://taiwantrailsandtales.com/2021/12/24/sanxia-lions-head-mountain/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=20,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=119,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taipeiAA008.htm"
@@ -1270,10 +1270,10 @@
    OSM: 2313335681
    chinese: 金面山
    english: Jinmianshan
-   location: 24.8664851,121.3354429
+   location: "24.8664851,121.3354429"
    elevation: 664.9
    region: north
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountai/金面山,Taiwan Outdoors (English): https://taiwanoutdoors.com/jinmianshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2020/02/26/datieliao-old-trail-to-baishi-shan-and-jinmian-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=21,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=120,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA021-1.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/金面山,Taiwan Outdoors (English): https://taiwanoutdoors.com/jinmianshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2020/02/26/datieliao-old-trail-to-baishi-shan-and-jinmian-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=21,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=120,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA021-1.htm"
 -
    type: 小百岳
    id-2003: 21
@@ -1282,7 +1282,7 @@
    OSM: 2341649598
    chinese: 虎頭山
    english: Hutoushan
-   location: 25.0167801,121.3305900
+   location: "25.0167063,121.3306413"
    elevation: 251.80
    region: north
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=318,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyan0ldAA003.htm"
@@ -1294,10 +1294,10 @@
    OSM: 1474242645
    chinese: 東眼山
    english: Dongyanshan
-   location: 24.8249811,121.4182530
+   location: "24.8249811,121.4182530"
    elevation: 1218.3
    region: north
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/東眼山,Taiwan Outdoors (English): https://taiwanoutdoors.com/dongyan-mountain-東眼山/,Trails and Tales (English): https://taiwantrailsandtales.com/2023/08/12/mount-dongyan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=22,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=121,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA022.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/東眼山,Josh Ellis Photography (English): https://www.goteamjosh.com/blog/dongyan,Josh Ellis Photography 2 (English): https://www.goteamjosh.com/blog/manyueyuan,Taiwan Outdoors (English): https://taiwanoutdoors.com/dongyan-mountain-東眼山/,Taiwan Outdoors 2 (English): https://taiwanoutdoors.com/hiking/dongyanshan-2/,Tony Huang (中文): http://www.tonyhuang39.com/tony/tony1335.html,Trails and Tales (English): https://taiwantrailsandtales.com/2023/08/12/mount-dongyan/,Trails and Tales 2(English): https://taiwantrailsandtales.com/2024/08/24/dongman-trail/,Trails and Tales 3 (English): https://taiwantrailsandtales.com/2025/04/09/dongyanshan-forest-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=22,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=121,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA022.htm"
 -
    type: 小百岳
    id-2003: 25
@@ -1306,7 +1306,7 @@
    OSM: 2482550086
    chinese: 溪洲山
    english: Xizhoushan
-   location: 24.8244591,121.2771791
+   location: "24.8244512,121.2771898"
    elevation: 575.54
    region: north
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/溪州山,Taiwan Outdoors (English): https://taiwanoutdoors.com/xizhoushan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=23,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=122,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA023.htm"
@@ -1318,10 +1318,10 @@
    OSM: 2301484960
    chinese: 石門山
    english: Shimenshan
-   location: 24.8099952,121.2294150
+   location: "24.8099952,121.2294150"
    elevation: 550.31
    region: north
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/石門山,Taiwan Outdoors (English): https://taiwanoutdoors.com/shimenshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/02/26/xiaocukeng-ancient-trail-to-shimen-hill-小粗坑古道往石門山/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=24,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=123,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA023.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/石門山,Taiwan Outdoors (English): https://taiwanoutdoors.com/shimenshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/02/26/xiaocukeng-ancient-trail-to-shimen-hill-小粗坑古道往石門山/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=24,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=123,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taoyanAA024.htm"
 -
    type: 小百岳
    id-2003: 27
@@ -1330,10 +1330,10 @@
    OSM: 2474785614
    chinese: 石牛山
    english: Shihnioushan
-   location: 24.7935291,121.2532859
+   location: "24.7935139,121.2533235"
    elevation: 669.65
    region: central
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/石牛山,Taiwan Outdoors (English): https://taiwanoutdoors.com/shiniushan/,Trails and Tales (English): https://taiwantrailsandtales.com/2018/04/03/shi-niu-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=25,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=124,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA027.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/石牛山,Taiwan Outdoors (English): https://taiwanoutdoors.com/shiniushan/,Tony Huang (中文): http://www.tonyhuang39.com/tony0444/tony0444.html,Trails and Tales (English): https://taiwantrailsandtales.com/2018/04/03/shi-niu-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=25,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=124,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA027.htm"
 -
    type: 小百岳
    id-2003: 28
@@ -1342,10 +1342,10 @@
    OSM: 2308379546
    chinese: 十八尖山
    english: Shibajianshan
-   location: 24.7925311,120.9846391
+   location: "24.7925323,120.9846069"
    elevation: 129.91
    region: central
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/十八尖山,Taiwan Outdoors (English): https://taiwanoutdoors.com/026-shibajianshan-十八尖山/,Trails and Tales (English): https://taiwantrailsandtales.com/2020/08/14/18-peaks-mountain-park/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=26,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=125,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA027.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/十八尖山,Taiwan Outdoors (English): https://taiwanoutdoors.com/026-shibajianshan-十八尖山/,Trails and Tales (English): https://taiwantrailsandtales.com/2020/08/14/18-peaks-mountain-park/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=26,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=125,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA026.htm"
 -
    type: 小百岳
    id-2003: 29
@@ -1354,7 +1354,7 @@
    OSM: 2293771773
    chinese: 飛鳳山
    english: Feifengshan
-   location: 24.7656671,121.1122320
+   location: "24.7656671,121.1122320"
    elevation: 423.9
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/飛鳳山,Taiwan Outdoors (English): https://taiwanoutdoors.com/feifengshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2021/10/08/feifeng-shan-zhongkeng-shan-and-shibitan-shan-loop/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=27,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=126,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA027-1.htm"
@@ -1366,7 +1366,7 @@
    OSM: 1506293185
    chinese: 李棟山
    english: Lidongshan
-   location: 24.6925821,121.3036441
+   location: "24.6926375,121.3036444"
    elevation: 1913.1
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2023-11-11-lidongshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/李崠山,Han Cheung (English): https://www.taipeitimes.com/News/feat/archives/2024/08/18/2003822391,Richard Saunders (English): https://www.taipeitimes.com/News/feat/archives/2017/07/14/2003674515,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/dahun-lidong-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/liweishan/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/04/05/lidong-shan-and-tapung-castle-via-dahun-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=28,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=127,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA028.htm"
@@ -1378,10 +1378,10 @@
    OSM: 2289242535
    chinese: 獅頭山
    english: Shitoushan
-   location: 24.6442411,121.0065260
+   location: "24.6442411,121.0065260"
    elevation: 490.3
    region: central
-   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/獅頭山,Richard Saunders (English): https://taiwandiscovery.wordpress.com/2021/02/18/lions-head-mountain-miaoli/,Taiwan Outdoors (English): https://taiwanoutdoors.com/shitoushan-hiking-in-taiwan/,Trails and Tales (English): https://taiwantrailsandtales.com/2021/09/17/lions-head-mountain-miaoli/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=29,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=126,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulih005.htm"
+   descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/獅頭山,Richard Saunders (English): https://taiwandiscovery.wordpress.com/2021/02/18/lions-head-mountain-miaoli/,Taiwan Outdoors (English): https://taiwanoutdoors.com/shitoushan-hiking-in-taiwan/,Tony Huang (中文): https://www.tonyhuang39.com/tony0393.html,Tony Huang (中文): https://www.tonyhuang39.com/tony0456/tony0456.html,Trails and Tales (English): https://taiwantrailsandtales.com/2021/09/17/lions-head-mountain-miaoli/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=29,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=126,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulih005.htm"
 -
    type: 小百岳
    id-2003: 31
@@ -1390,7 +1390,7 @@
    OSM: 3008000235
    chinese: 五指山
    english: Wuzhishan
-   location: 24.6412881,121.0961600
+   location: "24.6412881,121.0961600"
    elevation: 1061.2
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/五指山,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking-wuzhishan/,Trails and Tales (English): https://taiwantrailsandtales.com/2022/10/29/five-finger-mountain/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=30,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=129,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA030.htm"
@@ -1402,7 +1402,7 @@
    OSM: 1974838911
    chinese: 鵝公髻山
    english: Egongjishan
-   location: 24.6099831,121.0755450
+   location: "24.6099831,121.0755450"
    elevation: 1577.7
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/鵝公髻山,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking-egongjishan-鵝公髻山/,Trails and Tales (English): https://taiwantrailsandtales.com/2021/12/03/mount-egongji-and-mount-niaozui/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=31,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=130,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/shinjwuAA031.htm"
@@ -1414,7 +1414,7 @@
    OSM: 2482561170
    chinese: 向天湖山
    english: Xiangtianhushan
-   location: 24.5669727,121.0270120
+   location: "24.5669727,121.0270120"
    elevation: 1252.9
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/向天湖山,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/xiangtianhu-guantiangao-mountain.html,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking-xiantianhushan/,Trails and Tales (English): https://taiwantrailsandtales.com/2021/08/13/mount-xiangtianhu-loop/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=32,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=131,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulihAA032.htm"
@@ -1426,7 +1426,7 @@
    OSM: 2659173937
    chinese: 仙山
    english: Shienshan
-   location: 24.5425271,120.9529518
+   location: "24.5425597,120.9529739"
    elevation: 964.3
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/仙山,Taiwan Outdoors (English): https://taiwanoutdoors.com/xianshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2022/04/22/shen-xian-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=33,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=132,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulihaa033.htm"
@@ -1438,7 +1438,7 @@
    OSM: 1513705302
    chinese: 加里山
    english: Jialishan
-   location: 24.5108031,121.0124000
+   location: "24.5108062,121.0124262"
    elevation: 2220.1
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/加里山,Taiwan Outdoors (English): https://taiwanoutdoors.com/jialimountain/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/01/30/jiali-mountain-加里山/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=34,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=133,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulihAA034-2.htm"
@@ -1450,7 +1450,7 @@
    OSM: 12031269004
    chinese: 火炎山
    english: Huoyanshan
-   location: 24.3773236,120.7309748
+   location: "24.3773236,120.7309748"
    elevation: 600.7
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/火炎山,Foreigners in Taiwan (English): https://www.foreignersintaiwan.com/blog-370963385326684/huoyanshan,Josh Ellis Photography: https://www.goteamjosh.com/blog/huoyan,Taiwan Outdoors (English): https://taiwanoutdoors.com/hiking-huyanshan/,Trails and Tales (English): https://taiwantrailsandtales.com/2021/10/22/huoyan-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=35,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=134,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulihAA035.htm"
@@ -1462,7 +1462,7 @@
    OSM: 2383917979
    chinese: 關刀山
    english: Guandaoshan
-   location: 24.3753721,120.8110030
+   location: "24.3753721,120.8110030"
    elevation: 888.4
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/關刀山,Trails and Tales (English): https://taiwantrailsandtales.com/2023/12/30/guandao-mountain/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=36,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=135,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulihAA036.htm"
@@ -1474,7 +1474,7 @@
    OSM: 1513715598
    chinese: 馬那邦山
    english: Manabangshan
-   location: 24.3672571,120.9138090
+   location: "24.3672314,120.9138043"
    elevation: 1406.5
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/馬那邦山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=37,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=136,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/miaulihaa037.htm"
@@ -1486,7 +1486,7 @@
    OSM: 2365740800
    chinese: 鐵砧山
    english: Tiezhenshan
-   location: 24.3563532,120.6552483
+   location: "24.3563397,120.6551166"
    elevation: 235.74
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/鐵砧山,Trails and Tales (English): https://taiwantrailsandtales.com/2023/07/08/tiezhan-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=100,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=206,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA038.htm"
@@ -1498,8 +1498,8 @@
    OSM: 2306474941
    chinese: 稍來山
    english: Shaolaishan
-   location: 24.2375461,120.9715651
-   elevation: 2307.1
+   location: "24.2374501,120.9718454"
+   elevation: 2305
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/稍來山,Trails and Tales (English): https://taiwantrailsandtales.com/2018/01/15/yuan-zai-shao-lai-shan-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=38,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=137,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA039-107.htm"
 -
@@ -1510,7 +1510,7 @@
    OSM: 2457648791
    chinese: 聚興山
    english: Juxingshan
-   location: 24.2202215,120.7427184
+   location: "24.2202215,120.7427184"
    elevation: 500
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/聚興山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=39,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=138,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA040.htm"
@@ -1522,7 +1522,7 @@
    OSM: 2110803156
    chinese: 頭嵙山
    english: Toukeshan
-   location: 24.1793651,120.8001460
+   location: "24.1793651,120.8001460"
    elevation: 857.6
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/頭嵙山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=40,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=139,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA041.htm"
@@ -1534,7 +1534,7 @@
    OSM: 2290100470
    chinese: 南觀音山
    english: Nanguanyinshan
-   location: 24.1731560,120.7410720
+   location: "24.1731080,120.7409775"
    elevation: 316.71
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2023-01-02-nanguanyinshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/南觀音山,Trails and Tales (English): https://taiwantrailsandtales.com/2023/04/29/taichung-south-guanyin-mountain/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=41,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=140,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA042.htm"
@@ -1546,7 +1546,7 @@
    OSM: 2112345723
    chinese: 三汀山
    english: Santingshan
-   location: 24.1391361,120.7526097
+   location: "24.1391361,120.7526097"
    elevation: 480
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2023-10-31-santingshan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/三汀山,Trails and Tales (English): https://taiwantrailsandtales.com/2022/05/06/mount-santing/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=42,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=141,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA042.htm"
@@ -1558,7 +1558,7 @@
    OSM: 2482543245
    chinese: 暗影山
    english: Anyingshan
-   location: 24.1379851,120.8178011
+   location: "24.1379851,120.8178011"
    elevation: 995.2
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/暗影山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=43,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=142,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA044.htm"
@@ -1570,7 +1570,7 @@
    OSM: 2482625497
    chinese: 大橫屏山
    english: Dahengpingshan
-   location: 24.0749541,120.8289530
+   location: "24.0749541,120.8289530"
    elevation: 1205.1
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大橫屏山,Trails and Tales (English): https://taiwantrailsandtales.com/2024/10/12/mount-dahengping/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=44,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=143,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantourAA045.htm"
@@ -1582,7 +1582,7 @@
    OSM: 2303922378
    chinese: 八仙山
    english: Baxianshan
-   location: 24.1542784,121.0119553
+   location: "24.1543353,121.0121142"
    elevation: 2365.5
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-12-11-baxianshan/,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=422,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijon001.htm"
@@ -1594,7 +1594,7 @@
    OSM: 2356277010
    chinese: 阿罩霧山
    english: Azhaowushan
-   location: 24.0612796,120.7135121
+   location: "24.0612980,120.7136087"
    elevation: 249.0
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/阿罩霧山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=45,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=144,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taijonAA046.htm"
@@ -1606,7 +1606,7 @@
    OSM: 2482530189
    chinese: 九份二山
    english: Jiufenershan
-   location: 23.9346181,120.8416179
+   location: "23.9345856,120.8416300"
    elevation: 1173.63
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/九份二山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=46,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=145,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantourAA047.htm"
@@ -1618,7 +1618,7 @@
    OSM: 2283843201
    chinese: 橫山
    english: Hengshan
-   location: 23.8892939,120.6315484
+   location: "23.8892087,120.6315779"
    elevation: 443
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/橫山,Trails and Tales (English): https://taiwantrailsandtales.com/2023/09/09/heng-shan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=47,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=146,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/changhuaAA048.htm"
@@ -1630,7 +1630,7 @@
    OSM: 4381460218
    chinese: 貓囒山
    english: Maolanshan
-   location: 23.8813974,120.9079643
+   location: "23.8813974,120.9079643"
    elevation: 1016
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/貓囒山,Trails and Tales (English): https://taiwantrailsandtales.com/2024/02/03/mount-maolan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=48,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=147,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantour049.htm"
@@ -1642,7 +1642,7 @@
    OSM: 2349661219
    chinese: 集集大山
    english: Jijidashan
-   location: 23.8552550,120.8376149
+   location: "23.8552550,120.8376149"
    elevation: 1386.2
    region: central
    descriptions: "5164.at (English): https://blog.5164.at/posts/2023-10-30-jijidashan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/集集大山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=49,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=148,天才阿呆小玩家 (中文): https://burner75819.pixnet.net/blog/post/576401460,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantourAA050.htm"
@@ -1654,7 +1654,7 @@
    OSM: 4607823743
    chinese: 松柏坑山
    english: Songbaikengshan
-   location: 23.8196940,120.6425610
+   location: "23.8196940,120.6425610"
    elevation: 430.6
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/松柏坑山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=50,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=149,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/changhuaAA051.htm"
@@ -1666,7 +1666,7 @@
    OSM: 2341498881
    chinese: 後尖山
    english: Houjianshan
-   location: 23.8141251,120.8981419
+   location: "23.8141251,120.8981419"
    elevation: 1004.3
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/後尖山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=51,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=150,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantourAA052.htm"
@@ -1678,7 +1678,7 @@
    OSM: 2482530193
    chinese: 鳳凰山
    english: Fenghuangshan
-   location: 23.6916901,120.8061779
+   location: "23.6916901,120.8061779"
    elevation: 1695.6
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/鳳凰山,Trails and Tales (English): https://taiwantrailsandtales.com/2022/08/12/phoenix-mountain/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=52,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=151,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantourAA053.htm"
@@ -1690,7 +1690,7 @@
    OSM: 4586404755
    chinese: 水社大山
    english: Shuishedashan
-   location: 23.8421360,120.9677039
+   location: "23.8421483,120.9676811"
    elevation: 2057.5
    region: central
    descriptions: "NI HAO CHINA – 你好 中国 (Deutsch): https://dontblog.wordpress.com/2019/03/05/shuishedashan-trail-水社大山步道/,Owl Hostel (English): https://www.owlhostel.com/post/hiking-sun-moon-lake-s-shuishe-great-mountain-nature-trail?lang=en,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7515,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantour003.htm"
@@ -1702,7 +1702,7 @@
    OSM: 2482543708
    chinese: 金柑樹山
    english: Jinganshushan
-   location: 23.6412022,120.8138856
+   location: "23.6411180,120.8138816"
    elevation: 2090.63
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/金柑樹山,Trails and Tales (English): https://taiwantrailsandtales.com/2024/03/23/mount-jinganshu/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=53,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=152,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/nantourAA054.htm"
@@ -1714,7 +1714,7 @@
    OSM: 2482543563
    chinese: 石壁山
    english: Shibishan
-   location: 23.6037601,120.7245889
+   location: "23.6037601,120.7245889"
    elevation: 1749.2
    region: central
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/石壁山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=54,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=153,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/yunlinKK056.htm"
@@ -1725,8 +1725,8 @@
    id-2017: 56
    OSM: 2482523883
    chinese: 大尖山
-   english: Yunjia Dajianshan
-   location: 23.5900114,120.6231401
+   english: "Yunjia Dajianshan"
+   location: "23.5900114,120.6231401"
    elevation: 1300.5
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/雲嘉大尖山,Trails and Tales (English): https://taiwantrailsandtales.com/2022/03/18/yun-chia-five-peak-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=55,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=154,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA057-3.htm"
@@ -1738,7 +1738,7 @@
    OSM: 2939071017
    chinese: 梨子腳山
    english: Lizijiaoshan
-   location: 23.5672131,120.6082229
+   location: "23.5672131,120.6082229"
    elevation: 1176
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/梨子腳山,Trails and Tales (English): https://taiwantrailsandtales.com/2022/03/18/yun-chia-five-peak-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=56,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=155,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA057.htm"
@@ -1750,7 +1750,7 @@
    OSM: 2377741632
    chinese: 獨立山
    english: Dulishan
-   location: 23.5370074,120.6076787
+   location: "23.5368844,120.6077219"
    elevation: 840
    region: south
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-12-24-alishan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/獨立山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=57,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=156,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA058.htm"
@@ -1762,7 +1762,7 @@
    OSM: 4381460215
    chinese: 大塔山
    english: Datashan
-   location: 23.5357016,120.8084860
+   location: "23.5357311,120.8085319"
    elevation: 2663
    region: south
    descriptions: "5164.at (English): https://blog.5164.at/posts/2021-01-09-alishan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大塔山,Trails and Tales (English): https://taiwantrailsandtales.com/2024/11/16/mount-data/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=58,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=157,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA059.htm"
@@ -1774,7 +1774,7 @@
    OSM: 4462742356
    chinese: 大凍山
    english: Dadongshan
-   location: 23.4977793,120.7193826
+   location: "23.4978586,120.7198932"
    elevation: 1976
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大凍山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=59,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=158,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiaa060.htm"
@@ -1786,8 +1786,8 @@
    OSM: 2465722604
    chinese: 大湖尖山
    english: Dahujianshan
-   location: 23.4873398,120.6375834
-   elevation: 1313
+   location: "23.4873398,120.6375834"
+   elevation: 1311
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大湖尖山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=60,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=159,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA061.htm"
 -
@@ -1798,7 +1798,7 @@
    OSM: 4175074118
    chinese: 文峰山
    english: Wenfengshan
-   location: 23.4950470,120.6343795
+   location: "23.4950470,120.6343795"
    elevation: 1256
    region: south
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7398,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayi025.htm"
@@ -1810,7 +1810,7 @@
    OSM: 12468292421
    chinese: 紅毛埤山
    english: Hongmaopishan
-   location: 23.4799930,120.4919669
+   location: "23.4799739,120.4919421"
    elevation: 150
    region: south
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-12-24-alishan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/紅毛埤山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=61,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=160,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA062.htm"
@@ -1822,7 +1822,7 @@
    OSM: 5247059730
    chinese: 大凍山
    english: Dadongshan
-   location: 23.3114648,120.5226129
+   location: "23.3113216,120.5226270"
    elevation: 1236.6
    region: south
    descriptions: "5164.at (English): https://blog.5164.at/posts/2022-12-24-alishan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大凍山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=62,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=161,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/tainanAA063-1.htm"
@@ -1834,7 +1834,7 @@
    OSM: 2318615579
    chinese: 崁頭山
    english: Kantoushan
-   location: 23.2662141,120.5046351
+   location: "23.2662141,120.5046351"
    elevation: 839.6
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/崁頭山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=63,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=162,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/tainanAA064.htm"
@@ -1846,7 +1846,7 @@
    OSM: 2482533793
    chinese: 三腳南山
    english: Sanjiaonanshan
-   location: 23.2406280,120.5924560
+   location: "23.2406280,120.5924560"
    elevation: 1184.3
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/三腳南山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=64,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=163,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA065-110.htm"
@@ -1858,7 +1858,7 @@
    OSM: 4129461712
    chinese: 尖凍山
    english: Jiandongshan
-   location: 23.4779617,120.6122974
+   location: "23.4777621,120.6120180"
    elevation: 1073
    region: south
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7375,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayiAA061.htm"
@@ -1870,7 +1870,7 @@
    OSM: 2316047802
    chinese: 西阿里關山
    english: Xialiguanshan
-   location: 23.1829831,120.6413192
+   location: "23.1829831,120.6413192"
    elevation: 970.9
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/西阿里關山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=65,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=164,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA066.htm"
@@ -1882,10 +1882,10 @@
    OSM: 2482565550
    chinese: 桶頭山
    english: Tongtoushan
-   location: 23.4052458,120.5798370
+   location: "23.4052433,120.5798407"
    elevation: 604.5
    region: south
-   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=6170,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayi004.htm"
+   descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=6170,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/chiayi004.htm,雨林 (中文): https://www.mobile01.com/topicdetail.php?f=201&t=1102797"
 -
    type: 小百岳
    id-2003: 72
@@ -1894,7 +1894,7 @@
    OSM: 2318615582
    chinese: 竹子尖山
    english: Zhuzijianshan
-   location: 23.1759191,120.5655559
+   location: "23.1759191,120.5655559"
    elevation: 1108.8
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/竹子尖山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=66,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=165,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/tainanAA067.htm"
@@ -1906,7 +1906,7 @@
    OSM: 5434716513
    chinese: 藤枝山
    english: Tengzhishan
-   location: 23.0620210,120.7384950
+   location: "23.0620574,120.7384876"
    elevation: 1563.3
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/藤枝山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=67,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=784,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisung008.htm"
@@ -1918,7 +1918,7 @@
    OSM: 2482524152
    chinese: 廍亭山
    english: Baiyunshan
-   location: 23.0558371,120.6225650
+   location: "23.0558320,120.6225643"
    elevation: 1042.8
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/白雲山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=68,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=167,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA069.htm"
@@ -1930,7 +1930,7 @@
    OSM: 5582288235
    chinese: 刣牛湖山
    english: Zhongniuhushan
-   location: 23.0484711,120.5230849
+   location: "23.0484711,120.5230849"
    elevation: 798.1
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/刣牛湖山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=69,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=168,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/tainanAA070-112.htm"
@@ -1942,7 +1942,7 @@
    OSM: 4603099074
    chinese: 烏山
    english: Wushan
-   location: 23.0559464,120.5300713
+   location: "23.0559612,120.5301236"
    elevation: 729
    region: south
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=168,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/tainanAA070-112.htm"
@@ -1954,8 +1954,8 @@
    OSM: 2482555648
    chinese: 鳴海山
    english: Minghaishan
-   location: 22.9551876,120.6903854
-   elevation: 1410.61
+   location: "22.9551876,120.6903854"
+   elevation: 1408
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/鳴海山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=70,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=169,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA071.htm"
 -
@@ -1965,8 +1965,8 @@
    id-2017: 72
    OSM: 4128287417
    chinese: 旗尾山
-   english: Qiweishan
-   location: 22.8967631,120.4968300
+   english: "Qiwei Mountain"
+   location: "22.8968168,120.4969346"
    elevation: 305.5
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/旗尾山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=71,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=170,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA072-113.htm"
@@ -1978,7 +1978,7 @@
    OSM: 5582288232
    chinese: 尾寮山
    english: Weiliaoshan
-   location: 22.8570476,120.6762536
+   location: "22.8570617,120.6762601"
    elevation: 1426.2
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/尾寮山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=72,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=171,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/pingtungAA073.htm"
@@ -1990,7 +1990,7 @@
    OSM: 3929769749
    chinese: 東藤枝山
    english: Dongtengzhishan
-   location: 23.0747541,120.7652650
+   location: "23.0747541,120.7652650"
    elevation: 1803.6
    region: south
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=166,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA068.htm"
@@ -1999,11 +1999,11 @@
    id-2003: 78
    id-2006: 74
    id-2017: 74
-   OSM: 2475281250
+   OSM: 12468295017
    chinese: 大崗山
    english: Dagangshan
-   location: 22.8603418,120.3484128
-   elevation: 290
+   location: "22.8603359,120.3484667"
+   elevation: 284
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大崗山,Trails and Tales (English): https://taiwantrailsandtales.com/2023/11/18/mount-dagang-and-panlong-canyon/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=73,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=172,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA074.htm"
 -
@@ -2012,10 +2012,10 @@
    id-2006: 75
    id-2017: 75
    OSM: 4297448668
-   chinese: 觀音山
+   chinese: 大社觀音山
    english: Guanyinshan
-   location: 22.7270496,120.3737229
-   elevation: 175.4
+   location: "22.7271572,120.3736600"
+   elevation: 172
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/觀音山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=74,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=173,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA075.htm"
 -
@@ -2026,7 +2026,7 @@
    OSM: 2482554923
    chinese: 笠頂山
    english: Lidingshan
-   location: 22.6501011,120.6439581
+   location: "22.6501011,120.6439581"
    elevation: 656.8
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/笠頂山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=75,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=174,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/pingtungAA078.htm"
@@ -2038,7 +2038,7 @@
    OSM: 4936308096
    chinese: 壽山
    english: Shoushan
-   location: 22.6420188,120.2655619
+   location: "22.6420188,120.2655619"
    elevation: 330
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/壽山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=76,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=175,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/kaohisungAA077-112.htm"
@@ -2050,7 +2050,7 @@
    OSM: 3801961073
    chinese: 棚集山
    english: Pengjishan
-   location: 22.5080311,120.6575330
+   location: "22.5080311,120.6575330"
    elevation: 898.3
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/棚集山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=77,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=176,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/pingtungAA078.htm"
@@ -2062,7 +2062,7 @@
    OSM: 5591528724
    chinese: 女仍山
    english: Nurengshan
-   location: 22.1953371,120.7848621
+   location: "22.1953371,120.7848621"
    elevation: 804.9
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/女仍山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=78,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=177,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/pingtungAA079.htm"
@@ -2074,7 +2074,7 @@
    OSM: 2376729675
    chinese: 里龍山
    english: Lilongshan
-   location: 22.1638989,120.7328269
+   location: "22.1638989,120.7328269"
    elevation: 1059.4
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/里龍山,Trails and Tales (English): https://taiwantrailsandtales.com/2022/11/19/mount-lilong/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=79,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=178,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/pingtungAA080.htm"
@@ -2086,7 +2086,7 @@
    OSM: 2482530511
    chinese: 大山母山
    english: Dashanmushan
-   location: 21.9684680,120.7789411
+   location: "21.9684680,120.7789411"
    elevation: 324.9
    region: south
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/大山母山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=80,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=783,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/pingtung017.htm"
@@ -2098,7 +2098,7 @@
    OSM: 2356795872
    chinese: 灣坑頭山
    english: Wankengtoushan
-   location: 24.9745621,121.9104311
+   location: "24.9745606,121.9104242"
    elevation: 616.1
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/灣坑頭山,Trails and Tales (English): https://taiwantrailsandtales.com/2023/10/28/taoyuan-valley-trail-shiguanyin-trail/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=81,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=180,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/ilanAA082.htm"
@@ -2110,7 +2110,7 @@
    OSM: 2313335131
    chinese: 三角崙山
    english: Sanjiaolunshan
-   location: 24.8592153,121.7296913
+   location: "24.8592296,121.7296869"
    elevation: 1027.6
    region: east
    descriptions: "5164.at (English): https://blog.5164.at/posts/2023-11-05-sanjiaolunshan/,Angela Lo (English): https://medium.com/@angela12190824/travels-yilan-taiwan-matcha-mountain-聖母山莊步道-抹茶山-2c805d8214ca,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/三角崙山,Hikingbook (English): https://hikingbook.net/trails/聖母登山步道-抹茶山,Justaiwantour (English): https://www.justaiwantour.com/blog/2020/09/15/the-matcha-you-cannot-eat-the-matcha-mountain/,Parkbus (English): https://blog.parkbus.com.tw/article/10/Matcha Mountain – 抹茶山,Taiwan Everything (English): https://taiwaneverything.cc/2020/09/10/matcha-mountain/,Taiwan Hikes (English): https://www.taiwanhikes.com/blog-posts/st-marian-trail.html,Therese's Little Corner (English): https://itstheresechua.wordpress.com/2021/02/28/first-hike-of-2021-mt-sanjiaolun-三角崙山-aka-matcha-mountain-抹茶山-jiaoxi-yilan-宜蘭礁溪/,Trails and Tales (English): https://taiwantrailsandtales.com/2017/01/28/st-marians-hiking-trail-聖母山莊/,Trails and Tales (English): https://taiwantrailsandtales.com/2024/05/18/matcha-mountain-mount-sanjiaolun/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=82,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=181,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/ilanAA083.htm"
@@ -2122,7 +2122,7 @@
    OSM: 2482609407
    chinese: 鵲子山
    english: Quezishan
-   location: 24.8502370,121.7673300
+   location: "24.8502370,121.7673300"
    elevation: 679.2
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/鵲子山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=83,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=182,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/ilanAA084.htm"
@@ -2134,7 +2134,7 @@
    OSM: 2482523283
    chinese: 三星山
    english: Sanxingshan
-   location: 24.5091900,121.5639521
+   location: "24.5091900,121.5639521"
    elevation: 2352.4
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/三星山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=84,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=183,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/ilanAA085.htm"
@@ -2146,7 +2146,7 @@
    OSM: 2474870602
    chinese: 萬里得山
    english: Wanlideshan
-   location: 22.0682019,120.8417570
+   location: "22.0682019,120.8417570"
    elevation: 517.9
    region: south
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=179,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/pingtungAA081.htm"
@@ -2158,7 +2158,7 @@
    OSM: 4272959977
    chinese: 卡拉寶山
    english: Kalabaoshan
-   location: 24.1773561,121.3993960
+   location: "24.1773561,121.3993960"
    elevation: 2394.7
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/卡拉寶山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=85,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=782,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA086-1.htm"
@@ -2170,7 +2170,7 @@
    OSM: 2376751215
    chinese: 祖輪山
    english: Zulunshan
-   location: 24.2209341,121.5081753
+   location: "24.2209078,121.5081337"
    elevation: 1599
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=184,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA086.htm"
@@ -2180,9 +2180,9 @@
    id-2006: ""
    id-2017: ""
    OSM: 4178131549
-   chinese: 大巴六九山
-   english: Dabaliujiushan
-   location: 22.8079461,121.0309761
+   chinese: 太巴六九山
+   english: Tabaliujiushan
+   location: "22.8079541,121.0309842"
    elevation: 1061
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=7399,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taitung007.htm"
@@ -2194,7 +2194,7 @@
    OSM: 2385618817
    chinese: 立霧山
    english: Liwushan
-   location: 24.1785501,121.6423291
+   location: "24.1781017,121.6418959"
    elevation: 1275.6
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/立霧山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=86,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=185,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA087.htm"
@@ -2206,7 +2206,7 @@
    OSM: 2482534699
    chinese: 初音山
    english: Chuyinshan
-   location: 23.9708781,121.5313700
+   location: "23.9708781,121.5313700"
    elevation: 903.9
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/初音山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=87,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=186,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA088.htm"
@@ -2218,7 +2218,7 @@
    OSM: 2268441058
    chinese: 鯉魚山
    english: Liyushan
-   location: 23.9190621,121.5206023
+   location: "23.9190894,121.5206564"
    elevation: 599.92
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/鯉魚山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=88,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=187,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA089.htm"
@@ -2230,7 +2230,7 @@
    OSM: 2482642913
    chinese: 火燒山
    english: Huoshaoshan
-   location: 22.6525601,121.4835260
+   location: "22.6525757,121.4834579"
    elevation: 274
    region: east
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=572,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/100namemoun/097mountain.htm"
@@ -2242,7 +2242,7 @@
    OSM: 2482524900
    chinese: 月眉山
    english: Yuemeishan
-   location: 23.8255341,121.5520349
+   location: "23.8254869,121.5520386"
    elevation: 612.9
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/月眉山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=89,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=188,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA090.htm"
@@ -2254,7 +2254,7 @@
    OSM: 2474775996
    chinese: 八里灣山
    english: Baliwanshan
-   location: 23.5447230,121.4890239
+   location: "23.5447215,121.4889850"
    elevation: 921.6
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/八里灣山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=90,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=189,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA091.htm"
@@ -2266,7 +2266,7 @@
    OSM: 5582288254
    chinese: 萬人山
    english: Wanrenshan
-   location: 23.2324121,121.3167371
+   location: "23.2324121,121.3167371"
    elevation: 880.7
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/萬人山,Trails and Tales (English): https://taiwantrailsandtales.com/2024/07/06/mount-wanren-sixty-stone-mountain/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=91,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=190,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualienAA092.htm"
@@ -2278,7 +2278,7 @@
    OSM: 2383229271
    chinese: 都蘭山
    english: Doulanshan
-   location: 22.8950891,121.1882991
+   location: "22.8950852,121.1882989"
    elevation: 1189.9
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/都蘭山,Trails and Tales (English): https://taiwantrailsandtales.com/2023/06/24/mount-dulan/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=92,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=191,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taitungAA096.htm"
@@ -2290,7 +2290,7 @@
    OSM: 2278520716
    chinese: 龜山島山
    english: Guishandaoshan
-   location: 24.8415589,121.9531254
+   location: "24.8415571,121.9531906"
    elevation: 397.6
    region: north
    descriptions: "健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=5522,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/lsland-Turtle.htm"
@@ -2302,7 +2302,7 @@
    OSM: 2482530525
    chinese: 太麻里山
    english: Taimalishan
-   location: 22.6431536,120.9525756
+   location: "22.6431616,120.9524888"
    elevation: 1339.93
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/太麻里山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=93,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=192,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taitungAA096.htm"
@@ -2314,7 +2314,7 @@
    OSM: 2383191303
    chinese: 加奈美山
    english: Jianaimeishan
-   location: 22.4320749,120.9099340
+   location: "22.4320749,120.9099340"
    elevation: 779.1
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/加奈美山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=94,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=193,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taitungAA096.htm"
@@ -2326,7 +2326,7 @@
    OSM: 2383146026
    chinese: 巴塱衛山
    english: Balangweishan
-   location: 22.3226551,120.8780831
+   location: "22.3226551,120.8780831"
    elevation: 325.7
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/巴塱衛山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=95,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=194,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/taitungAA096.htm"
@@ -2338,10 +2338,10 @@
    OSM: 2482534547
    chinese: 新城山
    english: Xinchengshan
-   location: 24.1322931,121.6035801
+   location: "24.1323653,121.6040039"
    elevation: 1440.5
    region: east
-   descriptions: "輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualien011.htm"
+   descriptions: ",輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/hualien011.htm"
 -
    type: 小百岳
    id-2003: 90
@@ -2350,7 +2350,7 @@
    OSM: 2383293859
    chinese: 紅頭山
    english: Hongtoushan
-   location: 22.0530160,121.5345321
+   location: "22.0530309,121.5345515"
    elevation: 548
    region: east
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/紅頭山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=96,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=195,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/lanyuAA097.htm"
@@ -2362,7 +2362,7 @@
    OSM: 3947428325
    chinese: 雲台山
    english: Yuntaishan
-   location: 26.1504855,119.9227043
+   location: "26.1501484,119.9234513"
    elevation: 248
    region: islands
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/雲台山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=97,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=196,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/majurAA100.htm"
@@ -2374,10 +2374,10 @@
    OSM: 2357167485
    chinese: 太武山
    english: Taiwushan
-   location: 24.4616402,118.4176707
+   location: "24.4616402,118.4176707"
    elevation: 252.5
    region: islands
-   descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-06-taiwushan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/太武山,Trails and Tales (English): https://taiwantrailsandtales.com/2024/12/07/mount-taiwu/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=98,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=197,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/eleseland/Taiwu111.htm"
+   descriptions: "5164.at (English): https://blog.5164.at/posts/2021-02-06-taiwushan/,Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/太武山,Richard Saunders (English): https://www.taipeitimes.com/News/feat/archives/2018/07/13/2003696582,Trails and Tales (English): https://taiwantrailsandtales.com/2024/12/07/mount-taiwu/,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=98,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=197,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/eleseland/Taiwu111.htm"
 -
    type: 小百岳
    id-2003: 98
@@ -2386,7 +2386,8 @@
    OSM: 4381519227
    chinese: 蛇頭山
    english: Shetoushan
-   location: 23.5535599,119.5486300
+   location: "23.5535365,119.5486266"
    elevation: 20
    region: islands
    descriptions: "Atunas (中文): https://www.atunas.com.tw/tw/outdoor/mountains/蛇頭山,iSports Taiwan (中文): https://isports.sa.gov.tw/apps/TIS/TIS05/TIS0550M_02V1.aspx?PKNO=99,健行筆記 Hiking Biji (中文): https://hiking.biji.co/index.php?q=mountain&act=detail&id=198,輝哥的天空 (中文): http://輝哥的天空.tw/mountain/nopaiA/penghu.htm"
+
