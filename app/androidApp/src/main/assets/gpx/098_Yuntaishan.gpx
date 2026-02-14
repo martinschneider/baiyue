@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="Martin Schneider">
+  <wpt lat="26.148807" lon="119.923132">
+    <ele>190.0</ele>
+    <name>Start</name>
+  </wpt>
+  <wpt lat="26.148808" lon="119.923123">
+    <ele>190.0</ele>
+    <name>End</name>
+  </wpt>
+  <wpt lat="26.1504855" lon="119.9227043">
+    <ele>224.0</ele>
+    <name>Summit Yuntaishan</name>
+  </wpt>
+  <trk>
+    <name>98_Yuntaishan</name>
+    <trkseg>
+      <trkpt lat="26.148807" lon="119.923132">
+        <ele>190.0</ele>
+      </trkpt>
+      <trkpt lat="26.148807" lon="119.923132">
+        <ele>190.0</ele>
+      </trkpt>
+      <trkpt lat="26.148809" lon="119.923109">
+        <ele>190.0</ele>
+      </trkpt>
+      <trkpt lat="26.14895" lon="119.923544">
+        <ele>196.0</ele>
+      </trkpt>
+      <trkpt lat="26.14952" lon="119.924197">
+        <ele>209.0</ele>
+      </trkpt>
+      <trkpt lat="26.149696" lon="119.924487">
+        <ele>206.0</ele>
+      </trkpt>
+      <trkpt lat="26.149922" lon="119.924468">
+        <ele>211.0</ele>
+      </trkpt>
+      <trkpt lat="26.15014" lon="119.924328">
+        <ele>216.0</ele>
+      </trkpt>
+      <trkpt lat="26.150484" lon="119.923684">
+        <ele>224.0</ele>
+      </trkpt>
+      <trkpt lat="26.150508" lon="119.92326">
+        <ele>229.0</ele>
+      </trkpt>
+      <trkpt lat="26.150508" lon="119.92326">
+        <ele>229.0</ele>
+      </trkpt>
+      <trkpt lat="26.150509" lon="119.923235">
+        <ele>229.0</ele>
+      </trkpt>
+      <trkpt lat="26.1504855" lon="119.9227043">
+        <ele>224.0</ele>
+      </trkpt>
+      <trkpt lat="26.150509" lon="119.923235">
+        <ele>229.0</ele>
+      </trkpt>
+      <trkpt lat="26.150484" lon="119.923684">
+        <ele>224.0</ele>
+      </trkpt>
+      <trkpt lat="26.15014" lon="119.924328">
+        <ele>216.0</ele>
+      </trkpt>
+      <trkpt lat="26.149922" lon="119.924468">
+        <ele>211.0</ele>
+      </trkpt>
+      <trkpt lat="26.149696" lon="119.924487">
+        <ele>206.0</ele>
+      </trkpt>
+      <trkpt lat="26.14952" lon="119.924197">
+        <ele>209.0</ele>
+      </trkpt>
+      <trkpt lat="26.14952" lon="119.924197">
+        <ele>209.0</ele>
+      </trkpt>
+      <trkpt lat="26.14895" lon="119.923544">
+        <ele>196.0</ele>
+      </trkpt>
+      <trkpt lat="26.148809" lon="119.923109">
+        <ele>190.0</ele>
+      </trkpt>
+      <trkpt lat="26.148809" lon="119.923109">
+        <ele>190.0</ele>
+      </trkpt>
+      <trkpt lat="26.148808" lon="119.923123">
+        <ele>190.0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

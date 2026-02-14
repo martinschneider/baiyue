@@ -1,0 +1,9 @@
+CREATE TABLE climb_dates (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    osm_id INTEGER NOT NULL,
+    climb_date TEXT NOT NULL
+);
+
+INSERT INTO climb_dates (osm_id, climb_date)
+SELECT osm_id, climbed_date FROM climbed_peaks
+WHERE climbed_date IS NOT NULL AND climbed_date != '';

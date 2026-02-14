@@ -1,0 +1,90 @@
+CREATE TABLE climbed_peaks (
+    osm_id INTEGER PRIMARY KEY NOT NULL,
+    climbed INTEGER NOT NULL DEFAULT 0,
+    climbed_date TEXT
+);
+
+CREATE TABLE peak_photos (
+    osm_id INTEGER PRIMARY KEY NOT NULL,
+    photo_path TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
+
+-- Climbed status queries
+getClimbedStatus:
+SELECT osm_id, climbed, climbed_date
+FROM climbed_peaks
+WHERE osm_id = ?;
+
+getAllClimbed:
+SELECT osm_id, climbed, climbed_date
+FROM climbed_peaks
+WHERE climbed = 1;
+
+getAllClimbedStatus:
+SELECT osm_id, climbed, climbed_date
+FROM climbed_peaks;
+
+setClimbed:
+INSERT OR REPLACE INTO climbed_peaks (osm_id, climbed, climbed_date)
+VALUES (?, ?, ?);
+
+deleteClimbed:
+DELETE FROM climbed_peaks WHERE osm_id = ?;
+
+deleteAllClimbed:
+DELETE FROM climbed_peaks;
+
+-- Photo queries
+getPhoto:
+SELECT osm_id, photo_path, created_at
+FROM peak_photos
+WHERE osm_id = ?;
+
+getAllPhotos:
+SELECT osm_id, photo_path, created_at
+FROM peak_photos;
+
+getPhotoOsmIds:
+SELECT osm_id FROM peak_photos;
+
+setPhoto:
+INSERT OR REPLACE INTO peak_photos (osm_id, photo_path, created_at)
+VALUES (?, ?, ?);
+
+deletePhoto:
+DELETE FROM peak_photos WHERE osm_id = ?;
+
+deleteAllPhotos:
+DELETE FROM peak_photos;
+
+-- Climb dates table and queries
+CREATE TABLE climb_dates (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    osm_id INTEGER NOT NULL,
+    climb_date TEXT NOT NULL
+);
+
+getClimbDates:
+SELECT id, osm_id, climb_date
+FROM climb_dates
+WHERE osm_id = ?
+ORDER BY climb_date;
+
+getAllClimbDates:
+SELECT id, osm_id, climb_date
+FROM climb_dates
+ORDER BY osm_id, climb_date;
+
+addClimbDate:
+INSERT INTO climb_dates (osm_id, climb_date)
+VALUES (?, ?);
+
+deleteClimbDate:
+DELETE FROM climb_dates WHERE id = ?;
+
+deleteClimbDatesByOsmId:
+DELETE FROM climb_dates WHERE osm_id = ?;
+
+deleteAllClimbDates:
+DELETE FROM climb_dates;
