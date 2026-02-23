@@ -17,6 +17,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.layout.boundsInRoot
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -25,10 +28,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import io.github.martinschneider.baiyue.data.OnboardingPreferences
 import io.github.martinschneider.baiyue.data.model.HikeDescription
 import io.github.martinschneider.baiyue.data.model.Mountain
 import io.github.martinschneider.baiyue.platform.MapScreenContent
 import io.github.martinschneider.baiyue.ui.navigation.Screen
+import io.github.martinschneider.baiyue.ui.onboarding.OnboardingOverlay
+import io.github.martinschneider.baiyue.ui.onboarding.OnboardingStep
 import io.github.martinschneider.baiyue.ui.screen.about.AboutScreen
 import io.github.martinschneider.baiyue.ui.screen.detail.ElevationChart
 import io.github.martinschneider.baiyue.ui.screen.detail.MountainInfoDialog
@@ -40,6 +46,7 @@ import io.github.martinschneider.baiyue.ui.screen.settings.SettingsViewModel
 import io.github.martinschneider.baiyue.ui.screen.stats.StatsScreen
 import io.github.martinschneider.baiyue.ui.theme.BaiyueTheme
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.compose.koinInject
@@ -54,15 +61,74 @@ actual fun BaiyueApp() {
         val settingsViewModel: SettingsViewModel = koinInject()
         val mapViewModel: MapViewModel = koinInject()
 
+        val appScope = rememberCoroutineScope()
+        val onboardingPreferences = remember(context) { OnboardingPreferences(context) }
+        var disclaimerAccepted by remember { mutableStateOf(onboardingPreferences.disclaimerAccepted) }
+        var onboardingStep by remember { mutableStateOf<Int?>(null) }
+
+        var mapNavBounds by remember { mutableStateOf<Rect?>(null) }
+        var listNavBounds by remember { mutableStateOf<Rect?>(null) }
+        var statsNavBounds by remember { mutableStateOf<Rect?>(null) }
+        var settingsNavBounds by remember { mutableStateOf<Rect?>(null) }
+        val onboardingSteps = remember(mapNavBounds, listNavBounds, statsNavBounds, settingsNavBounds) {
+            listOf(
+                OnboardingStep(
+                    title = "Welcome to Taiwan Hiking Companion!",
+                    description = "Track your journey through Taiwan's 百岳 Baiyue and 小百岳 Xiaobaiyue peaks. Here's a quick tour.",
+                    targetBounds = null,
+                    route = Screen.Map.route
+                ),
+                OnboardingStep(
+                    title = "Explore on the Map",
+                    description = "The map shows the 100 Baiyue, 100 Xiaobaiyue, 16 \"old\" Xiaobaiyue and selected hiking trails.\n\nTap any peak marker or trail on the map to open its details and see directions. You can also document your hikes and upload summit photos.",
+                    targetBounds = mapNavBounds,
+                    route = Screen.Map.route
+                ),
+                OnboardingStep(
+                    title = "Browse Peaks",
+                    description = "Switch between Baiyue and Xiaobaiyue peaks.\n\nTap the checkbox in front of any peak to mark it as climbed. Tap its name to view it on the map.",
+                    targetBounds = listNavBounds,
+                    route = Screen.List.route
+                ),
+                OnboardingStep(
+                    title = "Track Your Progress",
+                    description = "See your climbing stats, timeline and personal records at a glance.",
+                    targetBounds = statsNavBounds,
+                    route = Screen.Stats.route
+                ),
+                OnboardingStep(
+                    title = "Keep Your Data Safe",
+                    description = "Back up your progress and photos. You can restore them any time.\n\nYour data always stays on your own device, no personal information is synced to the cloud.",
+                    targetBounds = settingsNavBounds,
+                    route = Screen.Settings.route
+                ),
+            )
+        }
+
         // Initialize data on first composition
         LaunchedEffect(Unit) {
             listViewModel.init()
+            if (!onboardingPreferences.onboardingCompleted) {
+                onboardingStep = 0
+            }
         }
 
         val climbed by mapViewModel.climbedPeaks.collectAsState()
         val pendingNavigateToMap by mapViewModel.pendingNavigateToMap.collectAsState()
         var infoDialogMountain by remember { mutableStateOf<Mountain?>(null) }
         var trackDialogHike by remember { mutableStateOf<HikeDescription?>(null) }
+
+        // Navigate to the screen associated with the current onboarding step
+        LaunchedEffect(onboardingStep) {
+            val route = onboardingStep?.let { onboardingSteps.getOrNull(it)?.route }
+            if (route != null) {
+                navController.navigate(route) {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            }
+        }
 
         LaunchedEffect(pendingNavigateToMap) {
             if (pendingNavigateToMap) {
@@ -75,6 +141,7 @@ actual fun BaiyueApp() {
             }
         }
 
+        Box(modifier = Modifier.fillMaxSize()) {
         Scaffold(
             bottomBar = {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -85,6 +152,7 @@ actual fun BaiyueApp() {
                         icon = { Icon(Icons.Default.LocationOn, "Map") },
                         label = { Text("Map") },
                         selected = currentRoute == Screen.Map.route,
+                        modifier = Modifier.onGloballyPositioned { mapNavBounds = it.boundsInRoot() },
                         onClick = {
                             navController.navigate(Screen.Map.route) {
                                 popUpTo(navController.graph.startDestinationId) { saveState = true }
@@ -97,6 +165,7 @@ actual fun BaiyueApp() {
                         icon = { Icon(Icons.AutoMirrored.Filled.List, "List") },
                         label = { Text("List") },
                         selected = currentRoute == Screen.List.route,
+                        modifier = Modifier.onGloballyPositioned { listNavBounds = it.boundsInRoot() },
                         onClick = {
                             navController.navigate(Screen.List.route) {
                                 popUpTo(navController.graph.startDestinationId) { saveState = true }
@@ -109,6 +178,7 @@ actual fun BaiyueApp() {
                         icon = { Icon(Icons.Default.BarChart, "Stats") },
                         label = { Text("Stats") },
                         selected = currentRoute == Screen.Stats.route,
+                        modifier = Modifier.onGloballyPositioned { statsNavBounds = it.boundsInRoot() },
                         onClick = {
                             navController.navigate(Screen.Stats.route) {
                                 popUpTo(navController.graph.startDestinationId) { saveState = true }
@@ -121,6 +191,7 @@ actual fun BaiyueApp() {
                         icon = { Icon(Icons.Default.Settings, "Settings") },
                         label = { Text("Settings") },
                         selected = currentRoute == Screen.Settings.route,
+                        modifier = Modifier.onGloballyPositioned { settingsNavBounds = it.boundsInRoot() },
                         onClick = {
                             navController.navigate(Screen.Settings.route) {
                                 popUpTo(navController.graph.startDestinationId) { saveState = true }
@@ -225,6 +296,42 @@ actual fun BaiyueApp() {
                     AboutScreen(onBack = { navController.popBackStack() })
                 }
             }
+        }
+
+        // Onboarding coachmarks (inside Box so it overlays the Scaffold)
+        onboardingStep?.let { step ->
+            OnboardingOverlay(
+                steps = onboardingSteps,
+                currentStep = step,
+                onNext = {
+                    if (step >= onboardingSteps.lastIndex) {
+                        onboardingPreferences.onboardingCompleted = true
+                        navController.navigate(Screen.Map.route) {
+                            popUpTo(navController.graph.startDestinationId) { inclusive = false }
+                            launchSingleTop = true
+                        }
+                        appScope.launch {
+                            delay(300)
+                            onboardingStep = null
+                        }
+                    } else {
+                        onboardingStep = step + 1
+                    }
+                },
+                onPrevious = { onboardingStep = step - 1 },
+                onSkip = {
+                    onboardingPreferences.onboardingCompleted = true
+                    onboardingStep = null
+                }
+            )
+        }
+        } // end Box
+
+        if (!disclaimerAccepted) {
+            DisclaimerScreen(onAccept = {
+                onboardingPreferences.disclaimerAccepted = true
+                disclaimerAccepted = true
+            })
         }
 
         // Mountain info dialog (from marker tap on map)
